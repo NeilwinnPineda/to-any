@@ -1,0 +1,119 @@
+# =============================================================
+# MOCKDB — REDIS SEED
+# Run these commands against a local Redis instance.
+# redis-cli < redis-seed.txt
+# Same sample world — same IDs as all other formats.
+# =============================================================
+
+
+# ---- Users (JSON strings) ----
+
+SET user:usr_001 '{"id":"usr_001","name":"Sam Rivera","email":"admin@example.com","role":"admin","teamId":"tm_001"}'
+SET user:usr_002 '{"id":"usr_002","name":"Jamie Lee","email":"jamie@example.com","role":"member","teamId":"tm_001"}'
+SET user:usr_003 '{"id":"usr_003","name":"Alex Chen","email":"alex@example.com","role":"member","teamId":"tm_001"}'
+
+# User index (set of all user IDs)
+SADD users usr_001 usr_002 usr_003
+
+
+# ---- Profiles (hashes) ----
+
+HSET profile:usr_001 title "Project Lead" location "Manila"    avatar "/assets/avatars/usr_001.jpg"
+HSET profile:usr_002 title "Designer"     location "Remote"    avatar "/assets/avatars/usr_002.jpg"
+HSET profile:usr_003 title "Developer"    location "Singapore" avatar "/assets/avatars/usr_003.jpg"
+
+
+# ---- Teams ----
+
+SET team:tm_001 '{"id":"tm_001","name":"Core Team","ownerId":"usr_001"}'
+SADD teams tm_001
+SADD team:tm_001:members usr_001 usr_002 usr_003
+
+
+# ---- Projects ----
+
+SET project:prj_001 '{"id":"prj_001","name":"Demo Project","ownerId":"usr_001","teamId":"tm_001","status":"active"}'
+SET project:prj_002 '{"id":"prj_002","name":"Marketing Site","ownerId":"usr_002","teamId":"tm_001","status":"in-progress"}'
+
+SADD projects prj_001 prj_002
+SADD user:usr_001:projects prj_001
+SADD user:usr_002:projects prj_001 prj_002
+SADD user:usr_003:projects prj_001 prj_002
+SADD team:tm_001:projects prj_001 prj_002
+
+
+# ---- Tasks ----
+
+SET task:tsk_001 '{"id":"tsk_001","projectId":"prj_001","assigneeId":"usr_001","title":"Set up base template","status":"done"}'
+SET task:tsk_002 '{"id":"tsk_002","projectId":"prj_001","assigneeId":"usr_002","title":"Configure supercss","status":"in-progress"}'
+SET task:tsk_003 '{"id":"tsk_003","projectId":"prj_002","assigneeId":"usr_003","title":"Write landing copy","status":"todo"}'
+SET task:tsk_004 '{"id":"tsk_004","projectId":"prj_002","assigneeId":"usr_002","title":"Design mockups","status":"todo"}'
+
+SADD project:prj_001:tasks tsk_001 tsk_002
+SADD project:prj_002:tasks tsk_003 tsk_004
+SADD user:usr_001:tasks tsk_001
+SADD user:usr_002:tasks tsk_002 tsk_004
+SADD user:usr_003:tasks tsk_003
+
+
+# ---- Products ----
+
+SET product:prd_001 '{"id":"prd_001","name":"Starter Kit","price":49.00,"currency":"USD","category":"Templates","inStock":true}'
+SET product:prd_002 '{"id":"prd_002","name":"Pro Bundle","price":149.00,"currency":"USD","category":"Templates","inStock":true}'
+SET product:prd_003 '{"id":"prd_003","name":"Enterprise Plan","price":499.00,"currency":"USD","category":"Plans","inStock":true}'
+
+SADD products prd_001 prd_002 prd_003
+
+
+# ---- Orders ----
+
+SET order:ord_001 '{"id":"ord_001","userId":"usr_002","productId":"prd_001","amount":49.00,"currency":"USD","status":"paid"}'
+SET order:ord_002 '{"id":"ord_002","userId":"usr_003","productId":"prd_002","amount":149.00,"currency":"USD","status":"paid"}'
+
+SADD orders ord_001 ord_002
+SADD user:usr_002:orders ord_001
+SADD user:usr_003:orders ord_002
+
+
+# ---- Messages (stored as lists per conversation) ----
+
+RPUSH conversation:usr_001:usr_002 '{"id":"msg_001","from":"usr_001","body":"Welcome to the team. Let me know if you need anything.","createdAt":"2025-01-03T09:00:00Z"}'
+RPUSH conversation:usr_001:usr_002 '{"id":"msg_002","from":"usr_002","body":"Thanks! Ready to start. Where should I begin?","createdAt":"2025-01-03T09:45:00Z"}'
+RPUSH conversation:usr_001:usr_003 '{"id":"msg_003","from":"usr_001","body":"Your first task is tsk_002 — check the project board.","createdAt":"2025-01-05T12:00:00Z"}'
+
+# Unread message counters
+SET unread:usr_003 1
+
+
+# ---- Notifications (list per user, newest first) ----
+
+LPUSH notifications:usr_001 '{"id":"ntf_001","type":"project_created","body":"Demo Project was created successfully.","read":true}'
+LPUSH notifications:usr_002 '{"id":"ntf_002","type":"project_joined","body":"You have been added to Demo Project.","read":true}'
+LPUSH notifications:usr_003 '{"id":"ntf_003","type":"task_assigned","body":"You have been assigned to tsk_002.","read":false}'
+
+# Unread notification counters
+SET unread_notifications:usr_003 1
+
+
+# ---- Sessions ----
+
+HSET session:sess_001 userId usr_001 role admin token demo-token-001 expiresAt 2026-12-31T00:00:00Z
+HSET session:sess_002 userId usr_002 role member token demo-token-002 expiresAt 2026-12-31T00:00:00Z
+EXPIRE session:sess_001 86400
+EXPIRE session:sess_002 86400
+
+
+# ---- Cache (product list, short TTL) ----
+
+SET cache:products '[{"id":"prd_001","name":"Starter Kit","price":49},{"id":"prd_002","name":"Pro Bundle","price":149},{"id":"prd_003","name":"Enterprise Plan","price":499}]'
+EXPIRE cache:products 300
+
+
+# ---- Rate limiting counters ----
+
+SET rate:usr_001:api 0
+SET rate:usr_002:api 0
+SET rate:usr_003:api 0
+EXPIRE rate:usr_001:api 60
+EXPIRE rate:usr_002:api 60
+EXPIRE rate:usr_003:api 60

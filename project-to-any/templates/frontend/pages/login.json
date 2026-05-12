@@ -1,0 +1,21 @@
+{
+  "id": "login",
+  "label": "Login",
+  "path": "/login",
+  "layout": "split-screen-layout",
+  "sections": ["contact-form"],
+  "content": ["site.json", "forms.json"],
+  "meta": {
+    "title": "Sign in — {{site.name}}",
+    "description": "Sign in to your account."
+  },
+  "auth": false,
+  "redirectIfAuth": "/dashboard",
+  "formRef": "forms.json#login",
+  "targets": {
+    "angular": "pages/login/login.component",
+    "react": "pages/LoginPage",
+    "next": "app/(auth)/login/page",
+    "html": "pages/login.html"
+  }
+}

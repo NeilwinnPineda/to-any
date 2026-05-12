@@ -1,0 +1,20 @@
+[
+  {
+    "id": "ord_001",
+    "userId": "usr_002",
+    "productId": "prd_001",
+    "amount": 49.00,
+    "currency": "USD",
+    "status": "paid",
+    "createdAt": "2025-01-20T14:00:00Z"
+  },
+  {
+    "id": "ord_002",
+    "userId": "usr_003",
+    "productId": "prd_002",
+    "amount": 149.00,
+    "currency": "USD",
+    "status": "paid",
+    "createdAt": "2025-01-22T16:30:00Z"
+  }
+]

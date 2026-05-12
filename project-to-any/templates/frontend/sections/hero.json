@@ -1,0 +1,23 @@
+{
+  "id": "hero",
+  "label": "Hero Section",
+  "description": "Full-width hero with headline, subheadline, primary/secondary CTA, and optional media (image or video background).",
+  "variants": ["centered", "left-aligned", "split", "video-bg", "image-bg", "gradient"],
+  "defaultVariant": "centered",
+  "contentKey": "hero",
+  "fields": {
+    "eyebrow": { "type": "string", "required": false },
+    "headline": { "type": "string", "required": true },
+    "subheadline": { "type": "string", "required": false },
+    "ctaPrimary": { "type": "object", "schema": { "label": "string", "href": "string" } },
+    "ctaSecondary": { "type": "object", "schema": { "label": "string", "href": "string" } },
+    "media": { "type": "object", "schema": { "type": "image|video", "src": "string", "alt": "string" } },
+    "badge": { "type": "string", "required": false }
+  },
+  "cssTokens": ["--sc-bg", "--sc-text", "--sc-primary", "--sc-radius-lg"],
+  "targets": {
+    "angular": "sections/hero/hero.section.component",
+    "react": "sections/HeroSection",
+    "html": "sections/hero.html"
+  }
+}

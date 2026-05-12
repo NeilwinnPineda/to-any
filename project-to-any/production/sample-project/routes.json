@@ -1,0 +1,43 @@
+[
+  {
+    "path": "/",
+    "name": "home",
+    "title": "Home",
+    "component": "HomeComponent",
+    "content": "content/home.json",
+    "public": true
+  },
+  {
+    "path": "/about",
+    "name": "about",
+    "title": "About",
+    "component": "AboutComponent",
+    "content": "content/about.json",
+    "public": true
+  },
+  {
+    "path": "/services",
+    "name": "services",
+    "title": "Services",
+    "component": "ServicesComponent",
+    "content": "content/services.json",
+    "public": true
+  },
+  {
+    "path": "/contact",
+    "name": "contact",
+    "title": "Contact",
+    "component": "ContactComponent",
+    "content": "content/contact.json",
+    "public": true
+  },
+  {
+    "path": "/dashboard",
+    "name": "dashboard",
+    "title": "Dashboard",
+    "component": "DashboardComponent",
+    "content": null,
+    "public": false,
+    "auth": true
+  }
+]

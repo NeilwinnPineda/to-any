@@ -1,0 +1,21 @@
+{
+  "id": "register",
+  "label": "Register",
+  "path": "/register",
+  "layout": "split-screen-layout",
+  "sections": ["contact-form"],
+  "content": ["site.json", "forms.json"],
+  "meta": {
+    "title": "Create account — {{site.name}}",
+    "description": "Create your free account."
+  },
+  "auth": false,
+  "redirectIfAuth": "/dashboard",
+  "formRef": "forms.json#register",
+  "targets": {
+    "angular": "pages/register/register.component",
+    "react": "pages/RegisterPage",
+    "next": "app/(auth)/register/page",
+    "html": "pages/register.html"
+  }
+}

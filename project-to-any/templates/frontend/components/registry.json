@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "description": "Registry of reusable UI components consumed by sections and pages. These are atomic/molecular level — below section level.",
+    "lastUpdated": "2025-05-12"
+  },
+  "components": [
+    { "id": "btn",           "label": "Button",         "variants": ["primary", "ghost", "subtle", "danger", "outline"], "cssClass": "sc-btn" },
+    { "id": "badge",         "label": "Badge",          "variants": ["default", "success", "warning", "danger", "info"], "cssClass": "sc-badge" },
+    { "id": "input",         "label": "Input",          "variants": ["text", "email", "password", "number", "tel", "url"], "cssClass": "sc-input" },
+    { "id": "textarea",      "label": "Textarea",       "variants": ["default", "resize-none"], "cssClass": "sc-input" },
+    { "id": "select",        "label": "Select",         "variants": ["default", "multi"], "cssClass": "sc-input" },
+    { "id": "checkbox",      "label": "Checkbox",       "variants": ["default", "switch"], "cssClass": "sc-checkbox" },
+    { "id": "toggle",        "label": "Toggle",         "variants": ["default", "labeled"], "cssClass": "sc-toggle" },
+    { "id": "card",          "label": "Card",           "variants": ["default", "flat", "bordered", "interactive"], "cssClass": "sc-card" },
+    { "id": "panel",         "label": "Panel",          "variants": ["default", "collapsible"], "cssClass": "sc-panel" },
+    { "id": "avatar",        "label": "Avatar",         "variants": ["sm", "md", "lg", "with-status"], "cssClass": "sc-avatar" },
+    { "id": "tag",           "label": "Tag / Chip",     "variants": ["default", "removable", "selectable"], "cssClass": "sc-tag" },
+    { "id": "tooltip",       "label": "Tooltip",        "variants": ["top", "bottom", "left", "right"], "cssClass": "sc-tooltip" },
+    { "id": "modal",         "label": "Modal",          "variants": ["sm", "md", "lg", "fullscreen"], "cssClass": "sc-modal" },
+    { "id": "dropdown",      "label": "Dropdown",       "variants": ["default", "with-search", "multi-select"], "cssClass": "sc-dropdown" },
+    { "id": "tabs",          "label": "Tabs",           "variants": ["default", "pill", "underline"], "cssClass": "sc-tabs" },
+    { "id": "pagination",    "label": "Pagination",     "variants": ["numbered", "prev-next", "load-more"], "cssClass": "sc-pagination" },
+    { "id": "spinner",       "label": "Spinner / Loader", "variants": ["sm", "md", "lg", "overlay"], "cssClass": "sc-spinner" },
+    { "id": "toast",         "label": "Toast",          "variants": ["success", "error", "warning", "info"], "cssClass": "sc-toast" },
+    { "id": "alert",         "label": "Alert",          "variants": ["success", "error", "warning", "info", "dismissible"], "cssClass": "sc-alert" },
+    { "id": "progress-bar",  "label": "Progress Bar",   "variants": ["default", "striped", "labeled"], "cssClass": "sc-progress" },
+    { "id": "skeleton",      "label": "Skeleton Loader","variants": ["text", "card", "avatar", "table-row"], "cssClass": "sc-skeleton" },
+    { "id": "divider",       "label": "Divider",        "variants": ["horizontal", "vertical", "with-label"], "cssClass": "sc-divider" },
+    { "id": "empty-state",   "label": "Empty State",    "variants": ["default", "search", "error", "no-data"], "cssClass": "sc-empty" },
+    { "id": "rating",        "label": "Star Rating",    "variants": ["display", "interactive"], "cssClass": "sc-rating" },
+    { "id": "copy-btn",      "label": "Copy Button",    "variants": ["inline", "block"], "cssClass": "sc-copy" },
+    { "id": "code-block",    "label": "Code Block",     "variants": ["inline", "multi-line", "with-copy"], "cssClass": "sc-code" }
+  ]
+}

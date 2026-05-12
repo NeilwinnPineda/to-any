@@ -1,0 +1,21 @@
+{
+  "id": "search-bar",
+  "label": "Search Bar",
+  "description": "Full-width or inline search input with optional filters, autocomplete, and recent searches.",
+  "variants": ["inline", "hero-size", "with-filters", "with-autocomplete", "command-palette"],
+  "defaultVariant": "inline",
+  "contentKey": "search",
+  "fields": {
+    "placeholder": { "type": "string", "default": "Search..." },
+    "filters": { "type": "array", "required": false, "schema": { "key": "string", "label": "string", "options": "string[]" } },
+    "showRecent": { "type": "boolean", "default": false },
+    "autocomplete": { "type": "boolean", "default": false },
+    "action": { "type": "string", "default": "/search" }
+  },
+  "cssTokens": ["--sc-surface", "--sc-border", "--sc-input", "--sc-primary", "--sc-text"],
+  "targets": {
+    "angular": "sections/search-bar/search-bar.section.component",
+    "react": "sections/SearchBar",
+    "html": "sections/search-bar.html"
+  }
+}

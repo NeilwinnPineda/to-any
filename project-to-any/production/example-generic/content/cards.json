@@ -1,0 +1,22 @@
+{
+  "features": [
+    { "icon": "zap", "title": "Instant setup", "description": "Go from zero to deployed in under 5 minutes. No config files, no boilerplate." },
+    { "icon": "layers", "title": "Any stack", "description": "Angular, React, Next.js — pick your target and compile. Same intent, any output." },
+    { "icon": "palette", "title": "Design system", "description": "SuperCSS ships with every project. Themes, palettes, and components out of the box." },
+    { "icon": "database", "title": "Mock data", "description": "Start building UI without a backend. Real shapes, realistic content, identical IDs." },
+    { "icon": "shield", "title": "Auth ready", "description": "JWT and session patterns ready to wire up. Add authentication in minutes." },
+    { "icon": "refresh-cw", "title": "Live reload", "description": "Frontend and API both hot-reload. No manual restarts, no lost context." }
+  ],
+  "dashboard": [
+    { "label": "Total Revenue", "value": "$48,290", "change": "+12.1%", "changeDirection": "up", "color": "success", "icon": "dollar-sign" },
+    { "label": "Active Users", "value": "12,483", "change": "+8.2%", "changeDirection": "up", "color": "primary", "icon": "users" },
+    { "label": "Open Tickets", "value": "24", "change": "-6", "changeDirection": "up", "color": "warning", "icon": "inbox" },
+    { "label": "Uptime", "value": "99.98%", "change": "stable", "changeDirection": "neutral", "color": "neutral", "icon": "activity" }
+  ],
+  "stats": [
+    { "value": "2,000+", "label": "Teams building", "suffix": null },
+    { "value": "98", "label": "Uptime SLA", "suffix": "%" },
+    { "value": "5", "label": "Avg setup time", "suffix": "min" },
+    { "value": "6", "label": "Target stacks", "suffix": null }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "home",
+  "label": "Home / Landing",
+  "path": "/",
+  "layout": "marketing-layout",
+  "sections": ["hero", "logo-cloud", "feature-grid", "stats", "testimonials", "cta"],
+  "content": ["site.json", "pages.json", "testimonials.json"],
+  "meta": {
+    "title": "{{site.name}} — {{site.tagline}}",
+    "description": "{{site.description}}"
+  },
+  "auth": false,
+  "targets": {
+    "angular": "pages/home/home.component",
+    "react": "pages/HomePage",
+    "next": "app/page",
+    "html": "pages/index.html"
+  }
+}

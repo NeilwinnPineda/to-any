@@ -1,0 +1,30 @@
+{
+  "id": "gallery",
+  "label": "Gallery",
+  "description": "Image/media gallery with lightbox support. Supports masonry, grid, or carousel layout.",
+  "variants": ["masonry", "uniform-grid", "carousel", "featured-first"],
+  "defaultVariant": "uniform-grid",
+  "contentKey": "gallery",
+  "fields": {
+    "headline": { "type": "string", "required": false },
+    "items": {
+      "type": "array",
+      "schema": {
+        "src": "string",
+        "alt": "string",
+        "caption": "string|null",
+        "category": "string|null",
+        "href": "string|null"
+      },
+      "required": true
+    },
+    "lightbox": { "type": "boolean", "default": true },
+    "filterable": { "type": "boolean", "default": false }
+  },
+  "cssTokens": ["--sc-surface", "--sc-radius", "--sc-border", "--sc-shadow"],
+  "targets": {
+    "angular": "sections/gallery/gallery.section.component",
+    "react": "sections/Gallery",
+    "html": "sections/gallery.html"
+  }
+}

@@ -1,0 +1,69 @@
+<div style="padding:1.75rem">
+
+  <!-- Header -->
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;flex-wrap:wrap;gap:1rem">
+    <div>
+      <h1 style="font-size:1.375rem;font-weight:700;margin-bottom:0.25rem">Admin</h1>
+      <p class="text-sm" style="color:var(--text-secondary)">Manage users, plans, and platform settings.</p>
+    </div>
+    <button class="btn btn-primary btn-sm">+ Invite user</button>
+  </div>
+
+  <!-- Stats row -->
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:2rem">
+    <div *ngFor="let s of stats" class="panel" style="padding:1.25rem;text-align:center">
+      <div style="font-size:1.625rem;font-weight:800;letter-spacing:-0.02em">{{ s.value }}</div>
+      <div style="font-size:0.8rem;color:var(--text-secondary);margin-top:0.25rem">{{ s.label }}</div>
+    </div>
+  </div>
+
+  <!-- Users table -->
+  <div class="panel" style="overflow:hidden">
+    <div style="padding:1rem 1.25rem;border-bottom:1px solid var(--border-subtle);display:flex;justify-content:space-between;align-items:center">
+      <h3 style="font-weight:600;font-size:0.9375rem">Users</h3>
+      <input class="input" placeholder="Search users..." style="font-size:0.875rem;max-width:220px">
+    </div>
+    <div style="overflow-x:auto">
+      <table class="data-table" style="width:100%">
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Role</th>
+            <th>Plan</th>
+            <th>Joined</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let u of users">
+            <td>
+              <div style="display:flex;align-items:center;gap:0.625rem">
+                <div style="width:30px;height:30px;border-radius:50%;background:var(--color-primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;flex-shrink:0">{{ initials(u.name) }}</div>
+                <div>
+                  <div style="font-weight:500;font-size:0.875rem">{{ u.name }}</div>
+                  <div style="font-size:0.75rem;color:var(--text-secondary)">{{ u.email }}</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="badge" style="font-size:0.7rem">{{ u.role }}</span></td>
+            <td><span style="font-size:0.875rem;color:var(--text-secondary)">{{ u.plan }}</span></td>
+            <td><span style="font-size:0.875rem;color:var(--text-secondary)">{{ u.joined }}</span></td>
+            <td>
+              <span style="font-size:0.75rem;font-weight:600;padding:0.2rem 0.5rem;border-radius:4px"
+                [style.background]="statusColor(u.status) + '22'"
+                [style.color]="statusColor(u.status)">{{ u.status }}</span>
+            </td>
+            <td>
+              <div style="display:flex;gap:0.25rem;justify-content:flex-end">
+                <button class="btn btn-ghost btn-sm" style="font-size:0.75rem;padding:0.25rem 0.5rem">Edit</button>
+                <button class="btn btn-ghost btn-sm" style="font-size:0.75rem;padding:0.25rem 0.5rem;color:var(--color-danger)">Remove</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

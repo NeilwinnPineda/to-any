@@ -1,0 +1,111 @@
+/* ============================================================
+   SUPERCSS — BASE TOKENS
+   All visual values live here as CSS custom properties.
+   Do not use raw color/size values inside components.
+   ============================================================ */
+
+:root {
+
+  /* --- Color Scale (Dark Surface Palette) --- */
+  --color-scale-0:  #09090c;
+  --color-scale-1:  #111115;
+  --color-scale-2:  #18181d;
+  --color-scale-3:  #1e1e25;
+  --color-scale-4:  #26262f;
+  --color-scale-5:  #2e2e39;
+  --color-scale-6:  #3a3a47;
+  --color-scale-7:  #4a4a58;
+  --color-scale-8:  #6a6a7c;
+  --color-scale-9:  #9898aa;
+  --color-scale-10: #c4c4d4;
+  --color-scale-11: #e2e2ee;
+  --color-scale-12: #f0f0f8;
+
+  /* --- Semantic Backgrounds --- */
+  --bg-base:     var(--color-scale-1);
+  --bg-surface:  var(--color-scale-2);
+  --bg-elevated: var(--color-scale-3);
+  --bg-overlay:  var(--color-scale-4);
+  --bg-sunken:   var(--color-scale-0);
+
+  /* --- Semantic Borders --- */
+  --border-subtle:  var(--color-scale-4);
+  --border-default: var(--color-scale-5);
+  --border-strong:  var(--color-scale-6);
+
+  /* --- Semantic Text --- */
+  --text-primary:   var(--color-scale-12);
+  --text-secondary: var(--color-scale-10);
+  --text-muted:     var(--color-scale-8);
+  --text-disabled:  var(--color-scale-7);
+  --text-inverse:   var(--color-scale-0);
+
+  /* --- Brand / Primary --- */
+  --color-primary:        #6c8aff;
+  --color-primary-hover:  #7f9bff;
+  --color-primary-active: #5a78ef;
+  --color-primary-subtle: rgba(108, 138, 255, 0.12);
+  --color-primary-muted:  rgba(108, 138, 255, 0.06);
+
+  /* --- Status Colors --- */
+  --color-success:        #4caf80;
+  --color-success-subtle: rgba(76, 175, 128, 0.12);
+  --color-warning:        #f0a040;
+  --color-warning-subtle: rgba(240, 160, 64, 0.12);
+  --color-error:          #e05555;
+  --color-error-subtle:   rgba(224, 85, 85, 0.12);
+  --color-info:           #5599dd;
+  --color-info-subtle:    rgba(85, 153, 221, 0.12);
+
+  /* --- Spacing Scale --- */
+  --space-0:  0px;
+  --space-1:  2px;
+  --space-2:  4px;
+  --space-3:  8px;
+  --space-4:  12px;
+  --space-5:  16px;
+  --space-6:  24px;
+  --space-7:  32px;
+  --space-8:  48px;
+  --space-9:  64px;
+  --space-10: 96px;
+
+  /* --- Border Radius --- */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-2xl:  24px;
+  --radius-full: 9999px;
+
+  /* --- Shadows --- */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.30), 0 1px 2px rgba(0, 0, 0, 0.20);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35), 0 2px 6px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.40), 0 4px 12px rgba(0, 0, 0, 0.30);
+  --shadow-xl: 0 16px 40px rgba(0, 0, 0, 0.50);
+  --shadow-inset: inset 0 1px 3px rgba(0, 0, 0, 0.30);
+
+  /* --- Z-Index Scale --- */
+  --z-base:     0;
+  --z-raised:   10;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-overlay:  300;
+  --z-modal:    400;
+  --z-toast:    500;
+  --z-tooltip:  600;
+
+  /* --- Motion --- */
+  --duration-instant: 0ms;
+  --duration-fast:    100ms;
+  --duration-normal:  200ms;
+  --duration-slow:    350ms;
+  --duration-slower:  500ms;
+  --ease-default: cubic-bezier(0.2, 0, 0, 1);
+  --ease-in:      cubic-bezier(0.4, 0, 1, 1);
+  --ease-out:     cubic-bezier(0, 0, 0.2, 1);
+  --ease-spring:  cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* --- Focus Ring --- */
+  --focus-ring: 0 0 0 2px var(--bg-base), 0 0 0 4px var(--color-primary);
+}

@@ -1,0 +1,23 @@
+{
+  "id": "topbar-layout",
+  "label": "Topbar Layout",
+  "description": "Simple sticky topbar + full-width scrollable content. No sidebar. Minimal chrome. Used for portfolio, events, search results, notifications.",
+  "regions": ["topbar", "main", "footer"],
+  "defaultSections": {
+    "topbar": "site-header",
+    "footer": "site-footer"
+  },
+  "supercss": {
+    "theme": "base",
+    "density": "comfortable",
+    "radius": "soft"
+  },
+  "topbarHeight": "60px",
+  "maxContentWidth": "1100px",
+  "targets": {
+    "angular": "layouts/topbar/topbar.layout.component",
+    "react": "layouts/TopbarLayout",
+    "next": "app/(topbar)/layout",
+    "html": "layouts/topbar.html"
+  }
+}

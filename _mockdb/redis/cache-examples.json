@@ -1,0 +1,99 @@
+{
+  "_note": "Example values as they would appear in Redis. All are stored as JSON strings unless noted.",
+
+  "user:usr_001": {
+    "_type": "string",
+    "_ttl": null,
+    "value": { "id": "usr_001", "name": "Sam Rivera", "email": "admin@example.com", "role": "admin", "teamId": "tm_001" }
+  },
+
+  "profile:usr_001": {
+    "_type": "hash",
+    "_ttl": null,
+    "fields": { "title": "Project Lead", "location": "Manila", "avatar": "/assets/avatars/usr_001.jpg" }
+  },
+
+  "session:sess_001": {
+    "_type": "hash",
+    "_ttl": 86400,
+    "fields": { "userId": "usr_001", "role": "admin", "token": "demo-token-001", "expiresAt": "2026-12-31T00:00:00Z" }
+  },
+
+  "cache:products": {
+    "_type": "string",
+    "_ttl": 300,
+    "value": [
+      { "id": "prd_001", "name": "Starter Kit",     "price": 49  },
+      { "id": "prd_002", "name": "Pro Bundle",      "price": 149 },
+      { "id": "prd_003", "name": "Enterprise Plan", "price": 499 }
+    ]
+  },
+
+  "cache:user:usr_001:profile": {
+    "_type": "string",
+    "_ttl": 600,
+    "value": {
+      "id": "usr_001",
+      "name": "Sam Rivera",
+      "email": "admin@example.com",
+      "role": "admin",
+      "profile": { "title": "Project Lead", "location": "Manila", "avatar": "/assets/avatars/usr_001.jpg" }
+    }
+  },
+
+  "unread:usr_003": {
+    "_type": "string",
+    "_ttl": null,
+    "value": 1
+  },
+
+  "unread_notifications:usr_003": {
+    "_type": "string",
+    "_ttl": null,
+    "value": 1
+  },
+
+  "rate:usr_001:api": {
+    "_type": "string",
+    "_ttl": 60,
+    "value": 3,
+    "_note": "Incremented on each API request. Reject when value exceeds limit (e.g. 100). Resets automatically via EXPIRE."
+  },
+
+  "users": {
+    "_type": "set",
+    "_ttl": null,
+    "members": ["usr_001", "usr_002", "usr_003"]
+  },
+
+  "user:usr_001:projects": {
+    "_type": "set",
+    "_ttl": null,
+    "members": ["prj_001"]
+  },
+
+  "project:prj_001:tasks": {
+    "_type": "set",
+    "_ttl": null,
+    "members": ["tsk_001", "tsk_002"]
+  },
+
+  "notifications:usr_003": {
+    "_type": "list",
+    "_ttl": null,
+    "_note": "LPUSH keeps newest at index 0. Use LRANGE notifications:usr_003 0 19 for latest 20.",
+    "items": [
+      { "id": "ntf_003", "type": "task_assigned", "body": "You have been assigned to tsk_002.", "read": false }
+    ]
+  },
+
+  "conversation:usr_001:usr_002": {
+    "_type": "list",
+    "_ttl": null,
+    "_note": "RPUSH appends newest to tail. Use LRANGE -20 -1 for latest 20 messages.",
+    "items": [
+      { "id": "msg_001", "from": "usr_001", "body": "Welcome to the team. Let me know if you need anything.", "createdAt": "2025-01-03T09:00:00Z" },
+      { "id": "msg_002", "from": "usr_002", "body": "Thanks! Ready to start. Where should I begin?",         "createdAt": "2025-01-03T09:45:00Z" }
+    ]
+  }
+}

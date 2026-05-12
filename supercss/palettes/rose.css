@@ -1,0 +1,7 @@
+html[data-palette="rose"] {
+  --sc-primary:        #f43f5e;
+  --sc-primary-hover:  #fb7185;
+  --sc-primary-active: #e11d48;
+  --sc-primary-soft:   rgba(244, 63, 94, 0.16);
+  --sc-primary-muted:  rgba(244, 63, 94, 0.08);
+}

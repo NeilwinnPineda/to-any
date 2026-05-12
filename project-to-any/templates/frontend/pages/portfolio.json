@@ -1,0 +1,19 @@
+{
+  "id": "portfolio",
+  "label": "Portfolio / Gallery",
+  "path": "/portfolio",
+  "layout": "grid-heavy-layout",
+  "sections": ["hero", "filter-panel", "gallery", "cta"],
+  "content": ["pages.json"],
+  "meta": {
+    "title": "Portfolio — {{site.name}}",
+    "description": "Our work, case studies, and projects."
+  },
+  "auth": false,
+  "targets": {
+    "angular": "pages/portfolio/portfolio.component",
+    "react": "pages/PortfolioPage",
+    "next": "app/portfolio/page",
+    "html": "pages/portfolio.html"
+  }
+}

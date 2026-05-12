@@ -1,0 +1,13 @@
+{
+  "id": "sandbox-project",
+  "name": "Sandbox Project",
+  "version": "0.1",
+  "type": "sandbox-project",
+  "stack": { "preferred": "mean", "alternatives": ["static-html", "react", "next"] },
+  "theme": { "base": "supercss/base", "override": null },
+  "routes": null,
+  "contentSource": null,
+  "connectors": null,
+  "deployment": { "target": "local", "port": 4200, "apiPort": 3000 },
+  "meta": { "createdAt": "2026-05-12", "generatedAt": null }
+}

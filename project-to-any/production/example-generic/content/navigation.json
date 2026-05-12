@@ -1,0 +1,75 @@
+{
+  "topbar": {
+    "brand": { "name": "Acme Studio", "logo": "/assets/logo.svg", "href": "/" },
+    "links": [
+      { "label": "Product", "href": "/services", "children": [
+        { "label": "Features", "href": "/services#features" },
+        { "label": "Pricing", "href": "/pricing" },
+        { "label": "Changelog", "href": "/blog?category=changelog" }
+      ]},
+      { "label": "Solutions", "href": "/services" },
+      { "label": "Case Studies", "href": "/case-studies" },
+      { "label": "Blog", "href": "/blog" },
+      { "label": "Docs", "href": "/docs" }
+    ],
+    "cta": { "label": "Get started", "href": "/register" },
+    "ctaSecondary": { "label": "Sign in", "href": "/login" }
+  },
+  "sidebar": {
+    "groups": [
+      {
+        "label": null,
+        "items": [
+          { "label": "Dashboard", "icon": "grid", "href": "/dashboard" },
+          { "label": "Analytics", "icon": "bar-chart", "href": "/analytics" },
+          { "label": "Messages", "icon": "message-circle", "href": "/messages", "badge": "3" },
+          { "label": "Notifications", "icon": "bell", "href": "/notifications" }
+        ]
+      },
+      {
+        "label": "Workspace",
+        "items": [
+          { "label": "Projects", "icon": "folder", "href": "/projects" },
+          { "label": "Team", "icon": "users", "href": "/team" },
+          { "label": "Files", "icon": "file", "href": "/files" }
+        ]
+      },
+      {
+        "label": "Account",
+        "items": [
+          { "label": "Profile", "icon": "user", "href": "/profile" },
+          { "label": "Settings", "icon": "settings", "href": "/settings" },
+          { "label": "Billing", "icon": "credit-card", "href": "/settings/billing" }
+        ]
+      }
+    ]
+  },
+  "docs": {
+    "groups": [
+      {
+        "label": "Getting Started",
+        "items": [
+          { "label": "Introduction", "href": "/docs/getting-started/introduction" },
+          { "label": "Installation", "href": "/docs/getting-started/installation" },
+          { "label": "Quick Start", "href": "/docs/getting-started/quick-start" }
+        ]
+      },
+      {
+        "label": "Core Concepts",
+        "items": [
+          { "label": "Architecture", "href": "/docs/concepts/architecture" },
+          { "label": "Configuration", "href": "/docs/concepts/configuration" },
+          { "label": "Theming", "href": "/docs/concepts/theming" }
+        ]
+      },
+      {
+        "label": "API Reference",
+        "items": [
+          { "label": "REST API", "href": "/docs/api/rest" },
+          { "label": "Webhooks", "href": "/docs/api/webhooks" },
+          { "label": "SDK", "href": "/docs/api/sdk" }
+        ]
+      }
+    ]
+  }
+}

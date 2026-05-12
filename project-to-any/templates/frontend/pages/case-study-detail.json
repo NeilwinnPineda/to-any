@@ -1,0 +1,21 @@
+{
+  "id": "case-study-detail",
+  "label": "Case Study Detail",
+  "path": "/case-studies/:slug",
+  "layout": "blog-layout",
+  "sections": ["breadcrumbs", "hero", "stats", "timeline", "testimonials", "cta"],
+  "content": ["pages.json"],
+  "dynamic": true,
+  "paramKey": "slug",
+  "meta": {
+    "title": "{{caseStudy.title}} — {{site.name}}",
+    "description": "{{caseStudy.summary}}"
+  },
+  "auth": false,
+  "targets": {
+    "angular": "pages/case-study-detail/case-study-detail.component",
+    "react": "pages/CaseStudyDetailPage",
+    "next": "app/case-studies/[slug]/page",
+    "html": "pages/case-study-detail.html"
+  }
+}

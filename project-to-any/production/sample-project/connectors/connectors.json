@@ -1,0 +1,5 @@
+{
+  "active": [],
+  "available": ["database", "auth", "api", "github", "deployment"],
+  "notes": "Add connector IDs to 'active' to include them in the compiled output. Connector contracts live in _connectors/."
+}

@@ -1,0 +1,22 @@
+{
+  "id": "onboarding",
+  "label": "Onboarding",
+  "path": "/onboarding",
+  "layout": "form-heavy-layout",
+  "sections": ["contact-form"],
+  "content": ["site.json", "forms.json"],
+  "meta": {
+    "title": "Get started — {{site.name}}",
+    "description": "Set up your account in a few steps."
+  },
+  "auth": true,
+  "role": "user",
+  "steps": ["profile", "preferences", "invite", "done"],
+  "formRef": "forms.json#onboarding",
+  "targets": {
+    "angular": "pages/onboarding/onboarding.component",
+    "react": "pages/OnboardingPage",
+    "next": "app/(app)/onboarding/page",
+    "html": "pages/onboarding.html"
+  }
+}

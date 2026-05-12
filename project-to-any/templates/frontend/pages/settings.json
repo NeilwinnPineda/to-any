@@ -1,0 +1,21 @@
+{
+  "id": "settings",
+  "label": "Settings",
+  "path": "/settings",
+  "layout": "sidebar-layout",
+  "sections": ["breadcrumbs", "sidebar-nav", "contact-form"],
+  "content": ["navigation.json", "forms.json"],
+  "meta": {
+    "title": "Settings — {{site.name}}",
+    "description": "Manage your account settings."
+  },
+  "auth": true,
+  "role": "user",
+  "formRef": "forms.json#settings",
+  "targets": {
+    "angular": "pages/settings/settings.component",
+    "react": "pages/SettingsPage",
+    "next": "app/(app)/settings/page",
+    "html": "pages/settings.html"
+  }
+}

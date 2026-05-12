@@ -1,0 +1,26 @@
+[
+  {
+    "id": "msg_001",
+    "fromUserId": "usr_001",
+    "toUserId": "usr_002",
+    "body": "Welcome to the team. Let me know if you need anything.",
+    "readAt": "2025-01-03T09:30:00Z",
+    "createdAt": "2025-01-03T09:00:00Z"
+  },
+  {
+    "id": "msg_002",
+    "fromUserId": "usr_002",
+    "toUserId": "usr_001",
+    "body": "Thanks! Ready to start. Where should I begin?",
+    "readAt": "2025-01-03T10:00:00Z",
+    "createdAt": "2025-01-03T09:45:00Z"
+  },
+  {
+    "id": "msg_003",
+    "fromUserId": "usr_001",
+    "toUserId": "usr_003",
+    "body": "Your first task is tsk_002 — check the project board.",
+    "readAt": null,
+    "createdAt": "2025-01-05T12:00:00Z"
+  }
+]

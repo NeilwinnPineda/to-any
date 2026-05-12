@@ -1,0 +1,35 @@
+{
+  "id": "sidebar-nav",
+  "label": "Sidebar Nav",
+  "description": "Left navigation panel with grouped links, icons, active state, and optional collapse. Used inside app-shell and dashboard layouts.",
+  "variants": ["full", "icon-only", "collapsible", "with-footer"],
+  "defaultVariant": "full",
+  "contentKey": "navigation.sidebar",
+  "fields": {
+    "brand": { "type": "object", "schema": { "name": "string", "logo": "string", "href": "string" } },
+    "groups": {
+      "type": "array",
+      "schema": {
+        "label": "string|null",
+        "items": {
+          "type": "array",
+          "schema": {
+            "label": "string",
+            "icon": "string",
+            "href": "string",
+            "badge": "string|null",
+            "children": "array|null"
+          }
+        }
+      }
+    },
+    "footerItems": { "type": "array", "required": false },
+    "collapsible": { "type": "boolean", "default": true }
+  },
+  "cssTokens": ["--sc-surface", "--sc-border", "--sc-text", "--sc-primary", "--sc-muted"],
+  "targets": {
+    "angular": "sections/sidebar-nav/sidebar-nav.section.component",
+    "react": "sections/SidebarNav",
+    "html": "sections/sidebar-nav.html"
+  }
+}

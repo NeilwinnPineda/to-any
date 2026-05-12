@@ -1,0 +1,20 @@
+{
+  "id": "notifications",
+  "label": "Notifications",
+  "path": "/notifications",
+  "layout": "app-shell-layout",
+  "sections": ["breadcrumbs", "filter-panel", "table-placeholder"],
+  "content": ["navigation.json", "dashboard.json"],
+  "meta": {
+    "title": "Notifications — {{site.name}}",
+    "description": "Your recent notifications and alerts."
+  },
+  "auth": true,
+  "role": "user",
+  "targets": {
+    "angular": "pages/notifications/notifications.component",
+    "react": "pages/NotificationsPage",
+    "next": "app/(app)/notifications/page",
+    "html": "pages/notifications.html"
+  }
+}

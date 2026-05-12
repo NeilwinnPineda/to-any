@@ -1,0 +1,35 @@
+[
+  {
+    "id": "service-1",
+    "title": "Web Development",
+    "slug": "web-development",
+    "summary": "Placeholder summary for layout testing.",
+    "description": "Full placeholder description. Replace with real service details before launch.",
+    "icon": "code",
+    "price": "$0,000",
+    "features": ["Feature one", "Feature two", "Feature three"],
+    "cta": "Get Started"
+  },
+  {
+    "id": "service-2",
+    "title": "Mobile Apps",
+    "slug": "mobile-apps",
+    "summary": "Placeholder summary for layout testing.",
+    "description": "Full placeholder description. Replace with real service details before launch.",
+    "icon": "smartphone",
+    "price": "$0,000",
+    "features": ["Feature one", "Feature two", "Feature three"],
+    "cta": "Get Started"
+  },
+  {
+    "id": "service-3",
+    "title": "Consulting",
+    "slug": "consulting",
+    "summary": "Placeholder summary for layout testing.",
+    "description": "Full placeholder description. Replace with real service details before launch.",
+    "icon": "briefcase",
+    "price": "$000/hr",
+    "features": ["Feature one", "Feature two", "Feature three"],
+    "cta": "Book a Call"
+  }
+]

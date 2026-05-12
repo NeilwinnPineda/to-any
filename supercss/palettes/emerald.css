@@ -1,0 +1,7 @@
+html[data-palette="emerald"] {
+  --sc-primary:        #10b981;
+  --sc-primary-hover:  #34d399;
+  --sc-primary-active: #059669;
+  --sc-primary-soft:   rgba(16, 185, 129, 0.16);
+  --sc-primary-muted:  rgba(16, 185, 129, 0.08);
+}

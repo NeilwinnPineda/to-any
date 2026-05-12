@@ -1,0 +1,13 @@
+{
+  "id": "client-project",
+  "name": "Client Project",
+  "version": "0.1",
+  "type": "client-project",
+  "stack": { "preferred": "mean", "alternatives": [] },
+  "theme": { "base": "supercss/base", "override": null },
+  "routes": null,
+  "contentSource": null,
+  "connectors": null,
+  "deployment": { "target": "local", "port": 4200, "apiPort": 3000 },
+  "meta": { "createdAt": "2026-05-12", "generatedAt": null }
+}

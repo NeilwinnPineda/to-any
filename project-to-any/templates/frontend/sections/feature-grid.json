@@ -1,0 +1,28 @@
+{
+  "id": "feature-grid",
+  "label": "Feature Grid",
+  "description": "Responsive grid of feature cards: icon, title, description. Typically 3-column on desktop.",
+  "variants": ["3-col", "4-col", "2-col", "icon-top", "icon-left", "numbered"],
+  "defaultVariant": "3-col",
+  "contentKey": "features",
+  "fields": {
+    "headline": { "type": "string", "required": false },
+    "subheadline": { "type": "string", "required": false },
+    "items": {
+      "type": "array",
+      "schema": {
+        "icon": "string",
+        "title": "string",
+        "description": "string",
+        "href": "string|null"
+      },
+      "required": true
+    }
+  },
+  "cssTokens": ["--sc-surface", "--sc-border", "--sc-text", "--sc-primary"],
+  "targets": {
+    "angular": "sections/feature-grid/feature-grid.section.component",
+    "react": "sections/FeatureGrid",
+    "html": "sections/feature-grid.html"
+  }
+}

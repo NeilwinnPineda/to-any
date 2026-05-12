@@ -1,0 +1,66 @@
+{
+  "headline": "Everything you need to ship.",
+  "subheadline": "From blank canvas to production-ready product — Acme Studio covers the full stack.",
+  "items": [
+    {
+      "id": "svc_001",
+      "slug": "template-compiler",
+      "icon": "cpu",
+      "title": "Template Compiler",
+      "description": "Define your project once. Compile to Angular, React, Next.js, or static HTML. The same intent, any target.",
+      "href": "/services/template-compiler",
+      "tags": ["compiler", "multi-target", "code-gen"],
+      "image": "/assets/services/compiler.png"
+    },
+    {
+      "id": "svc_002",
+      "slug": "supercss",
+      "icon": "palette",
+      "title": "SuperCSS Design System",
+      "description": "A fully attribute-driven CSS token system. Switch themes, palettes, and modes with a single HTML attribute.",
+      "href": "/services/supercss",
+      "tags": ["css", "design-tokens", "theming"],
+      "image": "/assets/services/supercss.png"
+    },
+    {
+      "id": "svc_003",
+      "slug": "mock-data-layer",
+      "icon": "database",
+      "title": "Mock Data Layer",
+      "description": "Realistic sample data across SQL, MongoDB, Firestore, Redis, and JSON. Same IDs, same shapes, any DB.",
+      "href": "/services/mock-data-layer",
+      "tags": ["mock-data", "api", "database"],
+      "image": "/assets/services/mockdb.png"
+    },
+    {
+      "id": "svc_004",
+      "slug": "view-library",
+      "icon": "layout",
+      "title": "View Library",
+      "description": "40+ page definitions, 13 layouts, 23 reusable sections. Fully mapped to routes and content. Just add your data.",
+      "href": "/services/view-library",
+      "tags": ["views", "layouts", "frontend"],
+      "image": "/assets/services/views.png"
+    },
+    {
+      "id": "svc_005",
+      "slug": "connectors",
+      "icon": "plug",
+      "title": "Connectors",
+      "description": "Opt-in database, auth, and API connectors. Wire up MongoDB, JWT auth, or an external API in minutes.",
+      "href": "/services/connectors",
+      "tags": ["connectors", "auth", "api"],
+      "image": "/assets/services/connectors.png"
+    },
+    {
+      "id": "svc_006",
+      "slug": "content-generator",
+      "icon": "file-text",
+      "title": "Content Generator",
+      "description": "JSON placeholder files → TypeScript `as const` exports. Type-safe content, zero manual copy-paste.",
+      "href": "/services/content-generator",
+      "tags": ["content", "typescript", "codegen"],
+      "image": "/assets/services/content-gen.png"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "version": "0.1",
+  "description": "Relationships between entities. Used to inform SQL FK constraints, NoSQL embedding decisions, and Redis key structures.",
+  "relationships": [
+    {
+      "from": "profiles",
+      "to": "users",
+      "type": "one-to-one",
+      "foreignKey": "userId",
+      "description": "Each user has exactly one profile"
+    },
+    {
+      "from": "users",
+      "to": "teams",
+      "type": "many-to-one",
+      "foreignKey": "teamId",
+      "description": "Users belong to one team"
+    },
+    {
+      "from": "projects",
+      "to": "users",
+      "type": "many-to-one",
+      "foreignKey": "ownerId",
+      "description": "Each project has one owner"
+    },
+    {
+      "from": "projects",
+      "to": "teams",
+      "type": "many-to-one",
+      "foreignKey": "teamId",
+      "description": "Projects belong to a team"
+    },
+    {
+      "from": "tasks",
+      "to": "projects",
+      "type": "many-to-one",
+      "foreignKey": "projectId",
+      "description": "Tasks belong to a project"
+    },
+    {
+      "from": "tasks",
+      "to": "users",
+      "type": "many-to-one",
+      "foreignKey": "assigneeId",
+      "description": "Tasks are assigned to a user"
+    },
+    {
+      "from": "orders",
+      "to": "users",
+      "type": "many-to-one",
+      "foreignKey": "userId",
+      "description": "Orders belong to a user"
+    },
+    {
+      "from": "orders",
+      "to": "products",
+      "type": "many-to-one",
+      "foreignKey": "productId",
+      "description": "Orders reference a product"
+    },
+    {
+      "from": "messages",
+      "to": "users",
+      "type": "many-to-one",
+      "foreignKey": "fromUserId",
+      "description": "Message sender"
+    },
+    {
+      "from": "messages",
+      "to": "users",
+      "type": "many-to-one",
+      "foreignKey": "toUserId",
+      "description": "Message recipient"
+    },
+    {
+      "from": "notifications",
+      "to": "users",
+      "type": "many-to-one",
+      "foreignKey": "userId",
+      "description": "Notifications target a user"
+    },
+    {
+      "from": "settings",
+      "to": "users",
+      "type": "one-to-one",
+      "foreignKey": "userId",
+      "description": "Each user has one settings record"
+    },
+    {
+      "from": "activity_logs",
+      "to": "users",
+      "type": "many-to-one",
+      "foreignKey": "userId",
+      "description": "Logs are attributed to a user"
+    },
+    {
+      "junction": "user_roles",
+      "between": ["users", "roles"],
+      "type": "many-to-many",
+      "description": "Users can hold multiple roles"
+    },
+    {
+      "junction": "role_permissions",
+      "between": ["roles", "permissions"],
+      "type": "many-to-many",
+      "description": "Roles grant multiple permissions"
+    },
+    {
+      "junction": "team_members",
+      "between": ["teams", "users"],
+      "type": "many-to-many",
+      "description": "Teams have multiple members"
+    }
+  ]
+}

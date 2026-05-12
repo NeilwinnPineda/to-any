@@ -1,0 +1,26 @@
+{
+  "id": "dashboard-shell",
+  "label": "Dashboard Shell",
+  "description": "Wide data-heavy dashboard layout: collapsible left nav, top breadcrumb bar, multi-column main grid. Used for user, admin, and analytics dashboards.",
+  "regions": ["topbar", "sidebar", "main", "panel"],
+  "defaultSections": {
+    "topbar": "dashboard-topbar",
+    "sidebar": "sidebar-nav"
+  },
+  "supercss": {
+    "theme": "base",
+    "density": "compact",
+    "radius": "sharp"
+  },
+  "grid": "sidebar+main+panel",
+  "sidebarWidth": "220px",
+  "panelWidth": "280px",
+  "topbarHeight": "52px",
+  "collapsibleSidebar": true,
+  "targets": {
+    "angular": "layouts/dashboard-shell/dashboard-shell.layout.component",
+    "react": "layouts/DashboardShellLayout",
+    "next": "app/(dashboard)/layout",
+    "html": "layouts/dashboard-shell.html"
+  }
+}

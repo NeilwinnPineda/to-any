@@ -1,0 +1,20 @@
+{
+  "id": "user-dashboard",
+  "label": "User Dashboard",
+  "path": "/dashboard",
+  "layout": "app-shell-layout",
+  "sections": ["dashboard-card-row", "chart-placeholder", "table-placeholder"],
+  "content": ["dashboard.json", "navigation.json"],
+  "meta": {
+    "title": "Dashboard — {{site.name}}",
+    "description": "Your personal dashboard."
+  },
+  "auth": true,
+  "role": "user",
+  "targets": {
+    "angular": "pages/dashboard/dashboard.component",
+    "react": "pages/DashboardPage",
+    "next": "app/(app)/dashboard/page",
+    "html": "pages/dashboard.html"
+  }
+}

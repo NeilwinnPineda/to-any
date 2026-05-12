@@ -1,0 +1,20 @@
+{
+  "id": "error-404",
+  "label": "Error 404",
+  "path": "/404",
+  "layout": "auth-layout",
+  "sections": ["cta"],
+  "content": ["site.json"],
+  "meta": {
+    "title": "404 — Page not found — {{site.name}}",
+    "description": "The page you're looking for doesn't exist."
+  },
+  "auth": false,
+  "errorCode": 404,
+  "targets": {
+    "angular": "pages/error/error-404.component",
+    "react": "pages/Error404Page",
+    "next": "app/not-found",
+    "html": "pages/404.html"
+  }
+}

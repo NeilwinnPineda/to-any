@@ -1,0 +1,29 @@
+{
+  "id": "testimonials",
+  "label": "Testimonials",
+  "description": "Social proof section: quote cards with avatar, name, role, and company. Supports carousel or grid display.",
+  "variants": ["grid", "carousel", "single-large", "masonry"],
+  "defaultVariant": "grid",
+  "contentKey": "testimonials",
+  "fields": {
+    "headline": { "type": "string", "required": false },
+    "items": {
+      "type": "array",
+      "schema": {
+        "quote": "string",
+        "author": "string",
+        "role": "string",
+        "company": "string",
+        "avatar": "string|null",
+        "rating": "number|null"
+      },
+      "required": true
+    }
+  },
+  "cssTokens": ["--sc-surface", "--sc-text", "--sc-text-2", "--sc-primary"],
+  "targets": {
+    "angular": "sections/testimonials/testimonials.section.component",
+    "react": "sections/TestimonialsSection",
+    "html": "sections/testimonials.html"
+  }
+}

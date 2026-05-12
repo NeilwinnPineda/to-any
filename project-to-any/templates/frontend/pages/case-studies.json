@@ -1,0 +1,19 @@
+{
+  "id": "case-studies",
+  "label": "Case Studies",
+  "path": "/case-studies",
+  "layout": "marketing-layout",
+  "sections": ["hero", "blog-list", "cta"],
+  "content": ["pages.json"],
+  "meta": {
+    "title": "Case Studies — {{site.name}}",
+    "description": "Real results from real customers."
+  },
+  "auth": false,
+  "targets": {
+    "angular": "pages/case-studies/case-studies.component",
+    "react": "pages/CaseStudiesPage",
+    "next": "app/case-studies/page",
+    "html": "pages/case-studies.html"
+  }
+}

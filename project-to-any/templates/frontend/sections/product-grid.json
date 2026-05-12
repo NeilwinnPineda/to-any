@@ -1,0 +1,33 @@
+{
+  "id": "product-grid",
+  "label": "Product Grid",
+  "description": "Responsive grid of product cards with image, name, price, rating, and add-to-cart action.",
+  "variants": ["4-col", "3-col", "list-view", "compact"],
+  "defaultVariant": "4-col",
+  "contentKey": "products",
+  "fields": {
+    "headline": { "type": "string", "required": false },
+    "items": {
+      "type": "array",
+      "schema": {
+        "id": "string",
+        "name": "string",
+        "price": "string",
+        "originalPrice": "string|null",
+        "image": "string",
+        "rating": "number|null",
+        "reviewCount": "number|null",
+        "badge": "string|null",
+        "href": "string"
+      },
+      "required": true
+    },
+    "showFilters": { "type": "boolean", "default": false }
+  },
+  "cssTokens": ["--sc-surface", "--sc-border", "--sc-text", "--sc-primary", "--sc-radius"],
+  "targets": {
+    "angular": "sections/product-grid/product-grid.section.component",
+    "react": "sections/ProductGrid",
+    "html": "sections/product-grid.html"
+  }
+}

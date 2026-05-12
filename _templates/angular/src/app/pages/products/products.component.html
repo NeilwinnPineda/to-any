@@ -1,0 +1,49 @@
+<section class="page-section">
+  <div class="page-container">
+
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem">
+      <div>
+        <span class="label-caps" style="color:var(--color-primary)">Products</span>
+        <h1 style="font-size:2.25rem;font-weight:800;margin-top:0.5rem;letter-spacing:-0.02em">Our products</h1>
+      </div>
+      <div style="display:flex;gap:0.75rem">
+        <input class="input" type="search" placeholder="Search products..." style="width:200px">
+        <select class="input" style="width:160px">
+          <option>All categories</option>
+          <option>Bundles</option>
+          <option>Templates</option>
+          <option>Design</option>
+          <option>Licenses</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="card-grid-3">
+      <div *ngFor="let p of products" class="panel" style="display:flex;flex-direction:column;gap:0">
+        <!-- Placeholder image -->
+        <div style="height:160px;background:var(--bg-elevated);display:flex;align-items:center;justify-content:center;font-size:3rem;border-radius:var(--radius-sm) var(--radius-sm) 0 0;position:relative">
+          📦
+          <span *ngIf="p.badge" class="badge badge-primary" style="position:absolute;top:0.75rem;left:0.75rem;font-size:0.7rem">{{ p.badge }}</span>
+          <span *ngIf="!p.inStock" style="position:absolute;top:0.75rem;right:0.75rem;font-size:0.7rem;background:rgba(0,0,0,0.5);color:#fff;padding:0.2rem 0.5rem;border-radius:4px">Out of stock</span>
+        </div>
+
+        <div style="padding:1.25rem;display:flex;flex-direction:column;gap:0.75rem;flex:1">
+          <a [routerLink]="'/products/' + p.id" style="text-decoration:none;color:inherit">
+            <span class="label-caps" style="font-size:0.65rem;color:var(--text-muted)">{{ p.category }}</span>
+            <h3 style="font-size:1rem;font-weight:700;margin-top:0.25rem">{{ p.name }}</h3>
+          </a>
+          <p class="text-sm" style="color:var(--text-secondary);line-height:1.6;flex:1">{{ p.desc }}</p>
+          <div style="display:flex;align-items:center;gap:0.375rem">
+            <span *ngFor="let _ of stars(p.rating)" style="color:#f59e0b;font-size:0.75rem">★</span>
+            <span class="text-sm" style="color:var(--text-muted)">{{ p.rating }} ({{ p.reviews }})</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:0.25rem">
+            <span style="font-size:1.25rem;font-weight:700;color:var(--text-primary)">{{ p.price }}</span>
+            <button class="btn btn-primary btn-sm" [disabled]="!p.inStock">{{ p.inStock ? 'Add to cart' : 'Notify me' }}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

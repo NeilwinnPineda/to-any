@@ -1,0 +1,20 @@
+{
+  "hero": {
+    "headline": "Sample Project Headline",
+    "subheadline": "This is placeholder content for the home page hero section.",
+    "cta": { "label": "Get Started", "href": "/services" },
+    "secondaryCta": { "label": "Learn More", "href": "/about" }
+  },
+  "sections": [
+    {
+      "id": "features",
+      "title": "Features",
+      "body": "Placeholder features section content.",
+      "items": [
+        { "title": "Feature One", "body": "Short description of feature one." },
+        { "title": "Feature Two", "body": "Short description of feature two." },
+        { "title": "Feature Three", "body": "Short description of feature three." }
+      ]
+    }
+  ]
+}

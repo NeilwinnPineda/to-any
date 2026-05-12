@@ -1,0 +1,26 @@
+{
+  "id": "breadcrumbs",
+  "label": "Breadcrumbs",
+  "description": "Horizontal breadcrumb trail for deep-page navigation. Auto-generated from route or manually defined.",
+  "variants": ["simple", "with-icons", "slash-separated", "chevron-separated"],
+  "defaultVariant": "slash-separated",
+  "contentKey": "route.breadcrumbs",
+  "fields": {
+    "items": {
+      "type": "array",
+      "schema": {
+        "label": "string",
+        "href": "string|null",
+        "icon": "string|null"
+      },
+      "required": true
+    },
+    "autoFromRoute": { "type": "boolean", "default": true }
+  },
+  "cssTokens": ["--sc-text-2", "--sc-primary", "--sc-muted"],
+  "targets": {
+    "angular": "sections/breadcrumbs/breadcrumbs.section.component",
+    "react": "sections/Breadcrumbs",
+    "html": "sections/breadcrumbs.html"
+  }
+}

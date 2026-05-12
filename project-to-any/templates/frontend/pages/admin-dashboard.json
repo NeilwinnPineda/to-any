@@ -1,0 +1,20 @@
+{
+  "id": "admin-dashboard",
+  "label": "Admin Dashboard",
+  "path": "/admin",
+  "layout": "dashboard-shell",
+  "sections": ["dashboard-card-row", "chart-placeholder", "table-placeholder", "blog-list"],
+  "content": ["dashboard.json", "navigation.json"],
+  "meta": {
+    "title": "Admin — {{site.name}}",
+    "description": "Platform administration dashboard."
+  },
+  "auth": true,
+  "role": "admin",
+  "targets": {
+    "angular": "pages/admin/admin-dashboard.component",
+    "react": "pages/AdminDashboardPage",
+    "next": "app/(admin)/dashboard/page",
+    "html": "pages/admin-dashboard.html"
+  }
+}

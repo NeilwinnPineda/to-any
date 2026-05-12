@@ -1,0 +1,14 @@
+/* SuperCSS — Brutalist theme overrides */
+/* Import after mixer.css or base/tokens.css */
+
+html[data-theme="brutalist"] {
+  --sc-radius:    0px;
+  --sc-radius-sm: 0px;
+  --sc-radius-lg: 0px;
+  --sc-shadow-sm: 2px 2px 0 var(--sc-border-3);
+  --sc-shadow:    4px 4px 0 var(--sc-border-3);
+  --sc-shadow-lg: 6px 6px 0 var(--sc-border-3);
+  --sc-border:    var(--sc-text-2);
+  --sc-border-2:  var(--sc-text);
+  --sc-duration:  0ms;
+}

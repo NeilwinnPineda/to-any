@@ -1,0 +1,59 @@
+{
+  "headline": "What teams are saying",
+  "items": [
+    {
+      "id": "tst_001",
+      "quote": "We went from a blank repo to a deployed staging environment in under two hours. I've never experienced that before.",
+      "author": "Priya Nair",
+      "role": "Engineering Manager",
+      "company": "Fintech Startup",
+      "avatar": "/assets/testimonials/priya.jpg",
+      "rating": 5
+    },
+    {
+      "id": "tst_002",
+      "quote": "SuperCSS changed how our design team works with developers. One attribute on the html tag, done. No more CSS debates.",
+      "author": "Tom Eriksson",
+      "role": "Lead Designer",
+      "company": "Agency Partner",
+      "avatar": "/assets/testimonials/tom.jpg",
+      "rating": 5
+    },
+    {
+      "id": "tst_003",
+      "quote": "The view library alone saved our team three weeks. Every page we needed was already defined and mapped to content.",
+      "author": "Chioma Eze",
+      "role": "Product Lead",
+      "company": "SaaS Co",
+      "avatar": "/assets/testimonials/chioma.jpg",
+      "rating": 5
+    },
+    {
+      "id": "tst_004",
+      "quote": "I switched from a different starter kit and never looked back. The mock data layer is genuinely brilliant.",
+      "author": "Ryu Tanaka",
+      "role": "Senior Developer",
+      "company": "Consulting Firm",
+      "avatar": "/assets/testimonials/ryu.jpg",
+      "rating": 5
+    },
+    {
+      "id": "tst_005",
+      "quote": "The compiler concept clicked for me immediately. Intent separate from implementation. Finally.",
+      "author": "Leila Mansouri",
+      "role": "Solutions Architect",
+      "company": "Enterprise Corp",
+      "avatar": "/assets/testimonials/leila.jpg",
+      "rating": 4
+    },
+    {
+      "id": "tst_006",
+      "quote": "Our junior developers were onboarded in days, not weeks. The docs and structure just make sense.",
+      "author": "Marcus Webb",
+      "role": "CTO",
+      "company": "Scale-up",
+      "avatar": "/assets/testimonials/marcus.jpg",
+      "rating": 5
+    }
+  ]
+}

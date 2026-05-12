@@ -1,0 +1,9 @@
+{
+  "headline": "About Us",
+  "body": "Placeholder about page content. Replace with real company or personal background.",
+  "team": [
+    { "name": "Sam Rivera", "role": "Project Lead",  "bio": "Placeholder bio." },
+    { "name": "Jamie Lee",  "role": "Designer",      "bio": "Placeholder bio." },
+    { "name": "Alex Chen",  "role": "Developer",     "bio": "Placeholder bio." }
+  ]
+}

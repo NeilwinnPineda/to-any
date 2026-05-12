@@ -1,0 +1,24 @@
+{
+  "id": "ecommerce-layout",
+  "label": "E-commerce Layout",
+  "description": "Commerce layout: header with cart icon, wide product grid area, persistent filter sidebar, checkout flow. Used for products, cart, checkout, order summary.",
+  "regions": ["topbar", "filter-sidebar", "main", "footer"],
+  "defaultSections": {
+    "topbar": "shop-header",
+    "filter-sidebar": "filter-panel",
+    "footer": "site-footer"
+  },
+  "supercss": {
+    "theme": "base",
+    "density": "comfortable",
+    "radius": "soft"
+  },
+  "filterSidebarWidth": "240px",
+  "maxContentWidth": "1280px",
+  "targets": {
+    "angular": "layouts/ecommerce/ecommerce.layout.component",
+    "react": "layouts/EcommerceLayout",
+    "next": "app/(shop)/layout",
+    "html": "layouts/ecommerce.html"
+  }
+}

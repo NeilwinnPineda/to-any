@@ -1,0 +1,24 @@
+{
+  "id": "form-heavy-layout",
+  "label": "Form-Heavy Layout",
+  "description": "Structured form-first layout with step indicator, field sections, and action bar. Used for checkout, booking, onboarding, settings pages.",
+  "regions": ["topbar", "step-indicator", "form-main", "action-bar"],
+  "defaultSections": {
+    "topbar": "minimal-header",
+    "step-indicator": "progress-steps",
+    "action-bar": "form-actions"
+  },
+  "supercss": {
+    "theme": "base",
+    "density": "comfortable",
+    "radius": "soft"
+  },
+  "maxFormWidth": "640px",
+  "stickyActionBar": true,
+  "targets": {
+    "angular": "layouts/form-heavy/form-heavy.layout.component",
+    "react": "layouts/FormHeavyLayout",
+    "next": "app/(forms)/layout",
+    "html": "layouts/form-heavy.html"
+  }
+}

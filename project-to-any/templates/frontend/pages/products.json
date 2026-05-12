@@ -1,0 +1,19 @@
+{
+  "id": "products",
+  "label": "Products",
+  "path": "/products",
+  "layout": "ecommerce-layout",
+  "sections": ["search-bar", "filter-panel", "product-grid"],
+  "content": ["products.json"],
+  "meta": {
+    "title": "Products — {{site.name}}",
+    "description": "Browse our product catalog."
+  },
+  "auth": false,
+  "targets": {
+    "angular": "pages/products/products.component",
+    "react": "pages/ProductsPage",
+    "next": "app/products/page",
+    "html": "pages/products.html"
+  }
+}

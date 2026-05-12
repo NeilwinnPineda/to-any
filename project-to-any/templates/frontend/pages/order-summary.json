@@ -1,0 +1,22 @@
+{
+  "id": "order-summary",
+  "label": "Order Summary",
+  "path": "/orders/:id",
+  "layout": "topbar-layout",
+  "sections": ["breadcrumbs", "dashboard-card-row", "table-placeholder"],
+  "content": ["products.json"],
+  "meta": {
+    "title": "Order {{order.id}} — {{site.name}}",
+    "description": "Your order summary and tracking."
+  },
+  "auth": true,
+  "role": "user",
+  "dynamic": true,
+  "paramKey": "id",
+  "targets": {
+    "angular": "pages/order-summary/order-summary.component",
+    "react": "pages/OrderSummaryPage",
+    "next": "app/(app)/orders/[id]/page",
+    "html": "pages/order-summary.html"
+  }
+}

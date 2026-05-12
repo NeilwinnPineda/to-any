@@ -1,0 +1,21 @@
+{
+  "id": "profile",
+  "label": "Profile",
+  "path": "/profile",
+  "layout": "sidebar-layout",
+  "sections": ["breadcrumbs", "sidebar-nav", "contact-form", "stats"],
+  "content": ["navigation.json", "forms.json"],
+  "meta": {
+    "title": "Profile — {{site.name}}",
+    "description": "View and edit your profile."
+  },
+  "auth": true,
+  "role": "user",
+  "formRef": "forms.json#profile",
+  "targets": {
+    "angular": "pages/profile/profile.component",
+    "react": "pages/ProfilePage",
+    "next": "app/(app)/profile/page",
+    "html": "pages/profile.html"
+  }
+}

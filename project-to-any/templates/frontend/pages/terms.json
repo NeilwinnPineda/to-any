@@ -1,0 +1,20 @@
+{
+  "id": "terms",
+  "label": "Terms of Service",
+  "path": "/terms",
+  "layout": "blog-layout",
+  "sections": ["breadcrumbs"],
+  "content": ["legal.json"],
+  "meta": {
+    "title": "Terms of Service — {{site.name}}",
+    "description": "Read our terms of service."
+  },
+  "auth": false,
+  "dataSource": "legal.json#terms",
+  "targets": {
+    "angular": "pages/legal/terms.component",
+    "react": "pages/TermsPage",
+    "next": "app/terms/page",
+    "html": "pages/terms.html"
+  }
+}

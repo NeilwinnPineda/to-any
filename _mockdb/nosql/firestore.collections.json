@@ -1,0 +1,120 @@
+{
+  "_note": "Firestore uses flat top-level collections with subcollections. No nested arrays — tasks live under projects/{id}/tasks/{id}.",
+
+  "users": {
+    "usr_001": {
+      "name": "Sam Rivera",
+      "email": "admin@example.com",
+      "role": "admin",
+      "teamId": "tm_001",
+      "createdAt": "2025-01-01T00:00:00Z",
+      "__subcollections": {
+        "notifications": {
+          "ntf_001": { "type": "project_created", "body": "Demo Project was created successfully.", "read": true, "createdAt": "2025-01-10T08:00:01Z" }
+        },
+        "settings": {
+          "preferences": { "theme": "dark", "language": "en", "notifications": true, "updatedAt": "2025-01-01T00:00:00Z" }
+        }
+      }
+    },
+    "usr_002": {
+      "name": "Jamie Lee",
+      "email": "jamie@example.com",
+      "role": "member",
+      "teamId": "tm_001",
+      "createdAt": "2025-01-03T09:00:00Z",
+      "__subcollections": {
+        "notifications": {
+          "ntf_002": { "type": "project_joined", "body": "You have been added to Demo Project.", "read": true, "createdAt": "2025-01-10T08:01:00Z" }
+        },
+        "settings": {
+          "preferences": { "theme": "dark", "language": "en", "notifications": true, "updatedAt": "2025-01-03T09:00:00Z" }
+        }
+      }
+    },
+    "usr_003": {
+      "name": "Alex Chen",
+      "email": "alex@example.com",
+      "role": "member",
+      "teamId": "tm_001",
+      "createdAt": "2025-01-05T11:30:00Z",
+      "__subcollections": {
+        "notifications": {
+          "ntf_003": { "type": "task_assigned", "body": "You have been assigned to tsk_002.", "read": false, "createdAt": "2025-01-10T09:00:01Z" }
+        },
+        "settings": {
+          "preferences": { "theme": "light", "language": "en", "notifications": false, "updatedAt": "2025-01-05T11:30:00Z" }
+        }
+      }
+    }
+  },
+
+  "profiles": {
+    "usr_001": { "userId": "usr_001", "title": "Project Lead", "bio": "Placeholder bio.", "location": "Manila",    "avatar": "/assets/avatars/usr_001.jpg" },
+    "usr_002": { "userId": "usr_002", "title": "Designer",     "bio": "Placeholder bio.", "location": "Remote",    "avatar": "/assets/avatars/usr_002.jpg" },
+    "usr_003": { "userId": "usr_003", "title": "Developer",    "bio": "Placeholder bio.", "location": "Singapore", "avatar": "/assets/avatars/usr_003.jpg" }
+  },
+
+  "teams": {
+    "tm_001": {
+      "name": "Core Team",
+      "ownerId": "usr_001",
+      "members": ["usr_001", "usr_002", "usr_003"],
+      "createdAt": "2025-01-01T00:00:00Z"
+    }
+  },
+
+  "projects": {
+    "prj_001": {
+      "name": "Demo Project",
+      "ownerId": "usr_001",
+      "teamId": "tm_001",
+      "status": "active",
+      "createdAt": "2025-01-10T08:00:00Z",
+      "__subcollections": {
+        "tasks": {
+          "tsk_001": { "title": "Set up base template", "assigneeId": "usr_001", "status": "done",        "dueDate": "2025-01-12T00:00:00Z", "createdAt": "2025-01-10T08:30:00Z" },
+          "tsk_002": { "title": "Configure supercss",   "assigneeId": "usr_002", "status": "in-progress", "dueDate": "2025-01-20T00:00:00Z", "createdAt": "2025-01-10T09:00:00Z" }
+        }
+      }
+    },
+    "prj_002": {
+      "name": "Marketing Site",
+      "ownerId": "usr_002",
+      "teamId": "tm_001",
+      "status": "in-progress",
+      "createdAt": "2025-01-15T10:00:00Z",
+      "__subcollections": {
+        "tasks": {
+          "tsk_003": { "title": "Write landing copy", "assigneeId": "usr_003", "status": "todo", "dueDate": "2025-01-30T00:00:00Z", "createdAt": "2025-01-15T10:30:00Z" },
+          "tsk_004": { "title": "Design mockups",     "assigneeId": "usr_002", "status": "todo", "dueDate": "2025-01-28T00:00:00Z", "createdAt": "2025-01-15T11:00:00Z" }
+        }
+      }
+    }
+  },
+
+  "products": {
+    "prd_001": { "name": "Starter Kit",     "price": 49.00,  "currency": "USD", "category": "Templates", "inStock": true },
+    "prd_002": { "name": "Pro Bundle",      "price": 149.00, "currency": "USD", "category": "Templates", "inStock": true },
+    "prd_003": { "name": "Enterprise Plan", "price": 499.00, "currency": "USD", "category": "Plans",     "inStock": true }
+  },
+
+  "orders": {
+    "ord_001": { "userId": "usr_002", "productId": "prd_001", "amount": 49.00,  "currency": "USD", "status": "paid", "createdAt": "2025-01-20T14:00:00Z" },
+    "ord_002": { "userId": "usr_003", "productId": "prd_002", "amount": 149.00, "currency": "USD", "status": "paid", "createdAt": "2025-01-22T16:30:00Z" }
+  },
+
+  "messages": {
+    "msg_001": { "fromUserId": "usr_001", "toUserId": "usr_002", "body": "Welcome to the team. Let me know if you need anything.", "readAt": "2025-01-03T09:30:00Z", "createdAt": "2025-01-03T09:00:00Z" },
+    "msg_002": { "fromUserId": "usr_002", "toUserId": "usr_001", "body": "Thanks! Ready to start. Where should I begin?",         "readAt": "2025-01-03T10:00:00Z", "createdAt": "2025-01-03T09:45:00Z" },
+    "msg_003": { "fromUserId": "usr_001", "toUserId": "usr_003", "body": "Your first task is tsk_002 — check the project board.",  "readAt": null,                  "createdAt": "2025-01-05T12:00:00Z" }
+  },
+
+  "activity_logs": {
+    "log_001": { "userId": "usr_001", "action": "created_project", "targetType": "project", "targetId": "prj_001", "createdAt": "2025-01-10T08:00:00Z" },
+    "log_002": { "userId": "usr_002", "action": "joined_project",  "targetType": "project", "targetId": "prj_001", "createdAt": "2025-01-10T08:01:00Z" },
+    "log_003": { "userId": "usr_001", "action": "created_task",    "targetType": "task",    "targetId": "tsk_001", "createdAt": "2025-01-10T08:30:00Z" },
+    "log_004": { "userId": "usr_002", "action": "created_project", "targetType": "project", "targetId": "prj_002", "createdAt": "2025-01-15T10:00:00Z" },
+    "log_005": { "userId": "usr_002", "action": "placed_order",    "targetType": "order",   "targetId": "ord_001", "createdAt": "2025-01-20T14:00:00Z" }
+  }
+}

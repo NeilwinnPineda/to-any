@@ -1,0 +1,20 @@
+{
+  "id": "analytics-dashboard",
+  "label": "Analytics Dashboard",
+  "path": "/analytics",
+  "layout": "dashboard-shell",
+  "sections": ["dashboard-card-row", "chart-placeholder", "chart-placeholder", "table-placeholder", "filter-panel"],
+  "content": ["dashboard.json"],
+  "meta": {
+    "title": "Analytics — {{site.name}}",
+    "description": "Data and performance metrics."
+  },
+  "auth": true,
+  "role": "admin",
+  "targets": {
+    "angular": "pages/analytics/analytics-dashboard.component",
+    "react": "pages/AnalyticsDashboardPage",
+    "next": "app/(admin)/analytics/page",
+    "html": "pages/analytics-dashboard.html"
+  }
+}

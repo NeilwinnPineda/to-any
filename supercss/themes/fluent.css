@@ -1,0 +1,11 @@
+/* SuperCSS — Fluent theme overrides */
+/* Import after mixer.css or base/tokens.css */
+
+html[data-theme="fluent"] {
+  --sc-radius:    4px;
+  --sc-radius-sm: 2px;
+  --sc-radius-lg: 8px;
+  --sc-ease:      cubic-bezier(0.1, 0.9, 0.2, 1);
+}
+html[data-theme="fluent"][data-motion="subtle"] { --sc-duration: 60ms; }
+html[data-theme="fluent"][data-motion="normal"] { --sc-duration: 120ms; }

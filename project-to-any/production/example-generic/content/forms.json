@@ -1,0 +1,137 @@
+{
+  "login": {
+    "fields": [
+      { "id": "email", "type": "email", "label": "Email", "placeholder": "you@example.com", "required": true },
+      { "id": "password", "type": "password", "label": "Password", "placeholder": "••••••••", "required": true }
+    ],
+    "submit": "Sign in",
+    "links": [
+      { "label": "Forgot password?", "href": "/forgot-password" },
+      { "label": "Create account", "href": "/register" }
+    ],
+    "oauth": [
+      { "provider": "google", "label": "Continue with Google" },
+      { "provider": "github", "label": "Continue with GitHub" }
+    ]
+  },
+  "register": {
+    "fields": [
+      { "id": "name", "type": "text", "label": "Full name", "placeholder": "Jane Smith", "required": true },
+      { "id": "email", "type": "email", "label": "Email", "placeholder": "you@example.com", "required": true },
+      { "id": "password", "type": "password", "label": "Password", "placeholder": "8+ characters", "required": true, "hint": "Minimum 8 characters" },
+      { "id": "terms", "type": "checkbox", "label": "I agree to the Terms of Service and Privacy Policy", "required": true }
+    ],
+    "submit": "Create account",
+    "links": [{ "label": "Already have an account? Sign in", "href": "/login" }],
+    "oauth": [
+      { "provider": "google", "label": "Sign up with Google" },
+      { "provider": "github", "label": "Sign up with GitHub" }
+    ]
+  },
+  "forgotPassword": {
+    "fields": [
+      { "id": "email", "type": "email", "label": "Email", "placeholder": "you@example.com", "required": true }
+    ],
+    "submit": "Send reset link",
+    "successMessage": "Check your inbox — we sent a reset link.",
+    "links": [{ "label": "Back to sign in", "href": "/login" }]
+  },
+  "resetPassword": {
+    "fields": [
+      { "id": "password", "type": "password", "label": "New password", "placeholder": "8+ characters", "required": true },
+      { "id": "confirmPassword", "type": "password", "label": "Confirm password", "placeholder": "Repeat password", "required": true }
+    ],
+    "submit": "Set new password",
+    "successMessage": "Password updated. You can now sign in."
+  },
+  "contact": {
+    "fields": [
+      { "id": "name", "type": "text", "label": "Name", "placeholder": "Jane Smith", "required": true },
+      { "id": "email", "type": "email", "label": "Email", "placeholder": "you@example.com", "required": true },
+      { "id": "company", "type": "text", "label": "Company", "placeholder": "Acme Corp", "required": false },
+      { "id": "subject", "type": "select", "label": "Subject", "options": ["General inquiry", "Sales", "Support", "Press", "Partnership"], "required": false },
+      { "id": "message", "type": "textarea", "label": "Message", "placeholder": "Tell us what's on your mind...", "required": true, "rows": 5 }
+    ],
+    "submit": "Send message",
+    "successMessage": "Thanks! We'll get back to you within 24 hours."
+  },
+  "settings": {
+    "sections": [
+      {
+        "label": "Profile",
+        "fields": [
+          { "id": "name", "type": "text", "label": "Display name", "required": true },
+          { "id": "bio", "type": "textarea", "label": "Bio", "required": false, "rows": 3 },
+          { "id": "avatar", "type": "file", "label": "Avatar", "accept": "image/*", "required": false }
+        ]
+      },
+      {
+        "label": "Notifications",
+        "fields": [
+          { "id": "emailDigest", "type": "toggle", "label": "Weekly email digest", "default": true },
+          { "id": "projectAlerts", "type": "toggle", "label": "Project activity alerts", "default": true },
+          { "id": "marketing", "type": "toggle", "label": "Product updates and announcements", "default": false }
+        ]
+      },
+      {
+        "label": "Danger Zone",
+        "fields": [
+          { "id": "deleteAccount", "type": "button", "label": "Delete account", "variant": "danger" }
+        ]
+      }
+    ]
+  },
+  "booking": {
+    "steps": [
+      {
+        "id": "service",
+        "label": "Choose service",
+        "fields": [{ "id": "service", "type": "radio-cards", "label": "Select a service", "optionsSource": "services.json#items", "required": true }]
+      },
+      {
+        "id": "datetime",
+        "label": "Pick a time",
+        "fields": [
+          { "id": "date", "type": "date-picker", "label": "Date", "required": true },
+          { "id": "time", "type": "time-slots", "label": "Available times", "required": true }
+        ]
+      },
+      {
+        "id": "details",
+        "label": "Your details",
+        "fields": [
+          { "id": "name", "type": "text", "label": "Name", "required": true },
+          { "id": "email", "type": "email", "label": "Email", "required": true },
+          { "id": "phone", "type": "tel", "label": "Phone", "required": false },
+          { "id": "notes", "type": "textarea", "label": "Notes", "required": false, "rows": 3 }
+        ]
+      }
+    ],
+    "submit": "Confirm booking",
+    "successMessage": "Booking confirmed! Check your email for details."
+  },
+  "checkout": {
+    "steps": [
+      {
+        "id": "shipping",
+        "label": "Shipping",
+        "fields": [
+          { "id": "firstName", "type": "text", "label": "First name", "required": true },
+          { "id": "lastName", "type": "text", "label": "Last name", "required": true },
+          { "id": "address", "type": "text", "label": "Address", "required": true },
+          { "id": "city", "type": "text", "label": "City", "required": true },
+          { "id": "zip", "type": "text", "label": "ZIP code", "required": true },
+          { "id": "country", "type": "select", "label": "Country", "required": true }
+        ]
+      },
+      {
+        "id": "payment",
+        "label": "Payment",
+        "fields": [
+          { "id": "card", "type": "card-element", "label": "Card details", "required": true, "provider": "stripe" }
+        ]
+      }
+    ],
+    "submit": "Place order"
+  }
+}

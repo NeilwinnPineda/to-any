@@ -1,0 +1,31 @@
+{
+  "id": "table-placeholder",
+  "label": "Table Placeholder",
+  "description": "Data table container with sort, filter, pagination, and column config. Defines the slot and data binding — table implementation is per target.",
+  "variants": ["simple", "sortable", "with-filters", "selectable", "striped"],
+  "defaultVariant": "sortable",
+  "contentKey": "dashboard.table",
+  "fields": {
+    "title": { "type": "string", "required": false },
+    "dataKey": { "type": "string", "required": true },
+    "columns": {
+      "type": "array",
+      "schema": {
+        "key": "string",
+        "label": "string",
+        "type": "string|number|date|status|action",
+        "sortable": "boolean",
+        "width": "string|null"
+      }
+    },
+    "pagination": { "type": "boolean", "default": true },
+    "pageSize": { "type": "number", "default": 10 },
+    "selectable": { "type": "boolean", "default": false }
+  },
+  "cssTokens": ["--sc-surface", "--sc-border", "--sc-text", "--sc-text-2"],
+  "targets": {
+    "angular": "sections/table/table-placeholder.section.component",
+    "react": "sections/TablePlaceholder",
+    "html": "sections/table-placeholder.html"
+  }
+}
