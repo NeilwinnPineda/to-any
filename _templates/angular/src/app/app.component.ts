@@ -15,7 +15,7 @@ export class AppComponent {
   url = '';
 
   private authPaths  = ['/login', '/register', '/forgot-password', '/reset-password'];
-  private appPaths   = ['/dashboard', '/profile', '/settings', '/notifications', '/messages', '/admin', '/analytics', '/onboarding'];
+  private appPaths   = ['/dashboard', '/profile', '/settings', '/notifications', '/messages', '/admin', '/analytics', '/onboarding', '/components'];
 
   constructor() {
     this.url = this.router.url;

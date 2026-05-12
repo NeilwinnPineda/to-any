@@ -2,39 +2,67 @@
 
 ## What this is
 
-The default visual language for all projects in this template system.
-Not neutral. Not a blank slate. It has an opinion.
+The foundational CSS layer for all projects in the TO-ANY template system.
+Split into two concerns: normalization and visual defaults.
 
-## Design intent
-
-- Dark UI by default
-- Medium-density spacing — comfortable, not cramped, not spacious
-- Soft Material-inspired surfaces — layered depth, not flat
-- Rounded corners throughout (4–24px scale)
-- Subtle shadows — elevation cues, not decoration
-- Restrained motion — only when it communicates state change
-- Toolbar-first layout — top bar anchors the app, sidebar organizes nav
-- Panelized interfaces — content lives in discrete, bordered panels
-- Semantic color tokens — no raw hex in components
-- Low visual noise — muted secondary text, quiet borders
+---
 
 ## File responsibilities
 
-| File            | Purpose                                                    |
-|-----------------|------------------------------------------------------------|
-| `tokens.css`    | All raw values: color scale, spacing, radius, shadow, z-index, motion |
-| `theme.css`     | Applies tokens to HTML elements and reusable component classes |
-| `typography.css`| Font stacks, heading scale, body text, code, labels        |
-| `layout.css`    | App shell, toolbar, sidebar, panels, grid/flex utilities   |
+| File            | Purpose                                                                          |
+|-----------------|----------------------------------------------------------------------------------|
+| `base.css`      | Normalization, reset, typography defaults, form consistency, layout primitives, accessibility. No colors. No themes. |
+| `tokens.css`    | All raw values: color scale, spacing, radius, shadow, z-index, motion           |
+| `theme.css`     | Component classes using base tokens: buttons, badges, inputs, cards, modals, etc. |
+| `typography.css`| Font stacks, heading scale, body text, code, labels                             |
+| `layout.css`    | App shell, toolbar, sidebar, panels, grid/flex utilities                        |
+
+---
 
 ## Import order
 
 ```css
+@import 'supercss/base/base.css';
 @import 'supercss/base/tokens.css';
 @import 'supercss/base/typography.css';
 @import 'supercss/base/theme.css';
 @import 'supercss/base/layout.css';
 ```
+
+`base.css` must come first — it resets box-model and element defaults that all other files build on.
+
+---
+
+## base.css design intent
+
+Not a theme. Not branding. An internet-standard foundation safe for:
+- dashboards
+- landing pages
+- admin panels
+- documentation sites
+- web apps
+- studio tools
+
+Includes: universal reset, typography scale, form normalization, media defaults,
+table structure, accessibility (focus-visible, reduced-motion, touch targets),
+scroll behavior, layout primitives (container, stack, grid, row), and
+visibility helpers (hidden, sr-only).
+
+**Does not include:** colors, shadows, gradients, animations, branding, component styling.
+
+Depends on: `supercss/config/defaults.css` for CSS variable fallbacks.
+
+---
+
+## theme.css design intent
+
+- Dark-first
+- Generic component system — no Material, Fluent, or framework idioms
+- Medium-density spacing
+- Semantic color tokens only — no raw hex in components
+- Tabs, badges, alerts, toggles, progress, avatar, skeleton, modal, dropdown, tooltip
+
+---
 
 ## Rules
 
@@ -42,3 +70,4 @@ Not neutral. Not a blank slate. It has an opinion.
 - Themes layer on top — they override tokens, not component markup.
 - Keep every file independently importable.
 - Do not couple to any framework (Angular, React, etc.).
+- `base.css` is framework-agnostic and must stay that way.

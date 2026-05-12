@@ -39,9 +39,22 @@
   --color-primary-subtle: var(--sc-primary-soft);
   --color-primary-muted:  var(--sc-primary-muted);
 
-  --color-danger:  var(--sc-error);
-  --color-success: var(--sc-success);
-  --color-warning: var(--sc-warning);
+  --color-danger:        var(--sc-error);
+  --color-danger-subtle: var(--sc-error-soft);
+  --color-success:       var(--sc-success);
+  --color-warning:       var(--sc-warning);
+
+  /* ── Radius bridge — lets themes control component shape ── */
+  --radius-sm:   var(--sc-radius-sm);
+  --radius-md:   var(--sc-radius);
+  --radius-lg:   var(--sc-radius-lg);
+  --radius-xl:   var(--sc-radius-lg);
+  --radius-full: 9999px;
+
+  /* ── Shadow bridge ── */
+  --shadow-sm: var(--sc-shadow-sm);
+  --shadow-md: var(--sc-shadow);
+  --shadow-lg: var(--sc-shadow-lg);
 }
 
 html[data-mode="light"] { color-scheme: light; }

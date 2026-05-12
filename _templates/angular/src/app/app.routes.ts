@@ -35,6 +35,9 @@ export const routes: Routes = [
   { path: 'analytics',     loadComponent: () => import('./pages/analytics/analytics.component').then(m => m.AnalyticsComponent) },
   { path: 'admin',         loadComponent: () => import('./pages/admin/admin.component').then(m => m.AdminComponent) },
 
+  // ── Dev / System ─────────────────────────────────────────────────────────
+  { path: 'components', loadComponent: () => import('./pages/components/components.component').then(m => m.ComponentsComponent) },
+
   // ── Error pages ───────────────────────────────────────────────────────────
   { path: '404', loadComponent: () => import('./pages/error-404/error-404.component').then(m => m.Error404Component) },
   { path: '500', loadComponent: () => import('./pages/error-500/error-500.component').then(m => m.Error500Component) },
