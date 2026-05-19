@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import type { TransformFn } from '../types';
+import { SuperIcons } from '../shared/icons';
 import { transformButton } from '../components/button/button.transform';
 import { transformBadge } from '../components/badge/badge.transform';
 import { transformChip } from '../components/chip/chip.transform';
@@ -128,12 +129,21 @@ function stripRuntimeScripts(html: string): string {
     .replace(/\s*<script src="\.\.\/runtime\/sc-runtime\.js" defer><\/script>/g, '');
 }
 
+function inlineIcons(html: string): string {
+  return html.replace(/data-icon="([^"]+)"/g, (match, name: string) => {
+    const svg = (SuperIcons as Record<string, string>)[name];
+    if (!svg) return match;
+    return `data-icon="${name}">${svg.replace(/width="\d+"/, 'width="20"').replace(/height="\d+"/, 'height="20"')}</`;
+  });
+}
+
 export function compileHtml(inputHtml: string): string {
   let html = inputHtml;
   const orderedTransforms = [...TRANSFORMS].sort((a, b) => b[0].length - a[0].length);
   for (const [tagName, transform] of orderedTransforms) {
     html = compileTag(html, tagName, transform);
   }
+  html = inlineIcons(html);
   return stripRuntimeScripts(html);
 }
 
