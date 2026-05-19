@@ -1,0 +1,8 @@
+.sc-muted { color: var(--sc-color-text-inverse); }
+.sc-border { border: var(--sc-border-thin) solid var(--sc-color-border); }
+.sc-raised { box-shadow: var(--sc-shadow-md); }
+.sc-round { border-radius: var(--sc-radius-round); }
+.sc-pill { border-radius: var(--sc-radius-pill); }
+.sc-bg-surface { background: var(--sc-color-surface); }
+.sc-bg-raised { background: var(--sc-color-surface-raised); }
+.sc-text-inverse { color: var(--sc-color-text-inverse); }

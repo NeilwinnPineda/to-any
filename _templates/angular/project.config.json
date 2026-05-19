@@ -1,12 +1,10 @@
 {
-  "projectType": "frontend",
+  "projectType": "component-expo",
   "template": "angular",
   "theme": "supercss/base",
-  "connectors": [],
-  "contentSource": "_content/placeholders",
   "framework": "Angular 17",
   "build": "ng build",
   "run": "ng serve",
   "port": 4200,
-  "notes": "API URL is set via src/environments/environment.ts — no backend is required to run this template."
+  "scope": "single-page component contract test bench"
 }

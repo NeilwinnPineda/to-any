@@ -1,0 +1,15 @@
+{
+  "core": {
+    "mode": "light",
+    "colors": {
+      "base": "#0a1628",
+      "surface": "#00d4aa",
+      "accent": "#f4911f",
+      "tint": "#ff6b6b"
+    }
+  },
+  "fonts": {
+    "primary": "Inter",
+    "secondary": "Merriweather"
+  }
+}

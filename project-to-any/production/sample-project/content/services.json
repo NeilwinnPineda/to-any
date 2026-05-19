@@ -1,9 +1,0 @@
-{
-  "headline": "Services",
-  "body": "Placeholder services page content.",
-  "items": [
-    { "id": "svc-1", "title": "Service One",   "summary": "Short summary.", "price": "$0,000", "cta": "Get Started" },
-    { "id": "svc-2", "title": "Service Two",   "summary": "Short summary.", "price": "$0,000", "cta": "Get Started" },
-    { "id": "svc-3", "title": "Service Three", "summary": "Short summary.", "price": "$0,000", "cta": "Get Started" }
-  ]
-}

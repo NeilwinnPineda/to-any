@@ -1,37 +1,19 @@
-/*
-  supercss.css — root import
-  Single entry point for the full SuperCSS system.
+﻿@layer reset, tokens, base, layout, components, utilities, accessibility, themes;
 
-  Usage:
-    @import 'supercss/supercss.css';
+/* SuperCSS root entrypoint: canonical contract + layered architecture */
 
-  Or import layers individually for tree-shaking:
-    @import 'supercss/base/tokens.css';
-    @import 'supercss/base/typography.css';
-    @import 'supercss/base/theme.css';
-    @import 'supercss/base/layout.css';
-    @import 'supercss/mixer/mixer.css';
-*/
+@import './base/reset.css' layer(reset);
+@import './base/tokens.css' layer(tokens);
+@import './base/typography.css' layer(base);
+@import './base/layout.css' layer(layout);
+@import './base/components.css' layer(components);
+@import './base/utilities.css' layer(utilities);
+@import './base/accessibility.css' layer(accessibility);
 
-/* Base foundation */
-@import './base/base.css';
-@import './base/tokens.css';
-@import './base/typography.css';
-@import './base/theme.css';
-@import './base/layout.css';
+/* Optional foundation modules can be imported by a target when needed. */
+@import './base/charts.css' layer(components);
 
-/* Mixer — attribute-driven token system (theme, palette, mode, density, radius, motion) */
-@import './mixer/mixer.css';
-
-/* Theme overrides — loaded after mixer so [data-theme] selectors win */
-@import './themes/material.css';
-@import './themes/fluent.css';
-@import './themes/glass.css';
-@import './themes/brutalist.css';
-
-/* Palette overrides */
-@import './palettes/violet.css';
-@import './palettes/blue.css';
-@import './palettes/emerald.css';
-@import './palettes/amber.css';
-@import './palettes/rose.css';
+/* Theme mutation layer: values only, no architecture rewrite */
+@import './themes/material.css' layer(themes);
+@import './themes/fluent.css' layer(themes);
+@import './themes/brutalist.css' layer(themes);

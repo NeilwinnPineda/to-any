@@ -1,11 +1,32 @@
-/* SuperCSS — Fluent theme overrides */
-/* Import after mixer.css or base/tokens.css */
+﻿/* Fluent-inspired mutation layer.
+   Focus-first, calm, geometric; still emits only --sc-* tokens. */
+html[data-theme='fluent'] {
+  --sc-font-sans: "Segoe UI", "Segoe UI Variable", system-ui, -apple-system, sans-serif;
 
-html[data-theme="fluent"] {
-  --sc-radius:    4px;
-  --sc-radius-sm: 2px;
-  --sc-radius-lg: 8px;
-  --sc-ease:      cubic-bezier(0.1, 0.9, 0.2, 1);
+  --sc-color-bg: #0f1218;
+  --sc-color-bg-alt: #151a22;
+  --sc-color-surface: color-mix(in srgb, #1b2230 92%, white 8%);
+  --sc-color-surface-raised: color-mix(in srgb, #212a3b 88%, white 12%);
+  --sc-color-surface-sunken: #0b0f16;
+  --sc-color-surface-overlay: rgba(26, 34, 48, 0.78);
+  --sc-color-text: #eef3ff;
+  --sc-color-text-muted: #b4bfd8;
+  --sc-color-border: rgba(166, 187, 222, 0.22);
+  --sc-color-border-strong: rgba(183, 205, 240, 0.38);
+
+  --sc-color-accent: #5ea0ff;
+  --sc-color-accent-hover: #74adff;
+  --sc-color-accent-active: #4f91ef;
+
+  --sc-radius-sm: 0.25rem;
+  --sc-radius-md: 0.375rem;
+  --sc-radius-lg: 0.5rem;
+
+  --sc-shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.2);
+  --sc-shadow-md: 0 8px 20px rgba(0, 0, 0, 0.24);
+  --sc-shadow-lg: 0 14px 34px rgba(0, 0, 0, 0.28);
+
+  --sc-motion-fast: 90ms;
+  --sc-motion-normal: 160ms;
+  --sc-motion-slow: 260ms;
 }
-html[data-theme="fluent"][data-motion="subtle"] { --sc-duration: 60ms; }
-html[data-theme="fluent"][data-motion="normal"] { --sc-duration: 120ms; }

@@ -1,14 +1,39 @@
-/* SuperCSS — Brutalist theme overrides */
-/* Import after mixer.css or base/tokens.css */
+﻿/* Brutalist/neobrutalist mutation layer.
+   Hard geometry, visible structure, strong contrast. */
+html[data-theme='brutalist'] {
+  --sc-color-bg: #f7f4eb;
+  --sc-color-bg-alt: #ede7d5;
+  --sc-color-surface: #fffaf0;
+  --sc-color-surface-raised: #fff;
+  --sc-color-surface-sunken: #e6dec8;
+  --sc-color-surface-overlay: rgba(255, 250, 240, 0.94);
+  --sc-color-text: #0a0905;
+  --sc-color-text-muted: #3f3a2d;
+  --sc-color-text-inverse: #fffaf0;
+  --sc-color-border: #0a0905;
+  --sc-color-border-strong: #0a0905;
 
-html[data-theme="brutalist"] {
-  --sc-radius:    0px;
-  --sc-radius-sm: 0px;
-  --sc-radius-lg: 0px;
-  --sc-shadow-sm: 2px 2px 0 var(--sc-border-3);
-  --sc-shadow:    4px 4px 0 var(--sc-border-3);
-  --sc-shadow-lg: 6px 6px 0 var(--sc-border-3);
-  --sc-border:    var(--sc-text-2);
-  --sc-border-2:  var(--sc-text);
-  --sc-duration:  0ms;
+  --sc-color-accent: #ff4f2f;
+  --sc-color-accent-hover: #ff6347;
+  --sc-color-accent-active: #df4327;
+  --sc-color-accent-text: #140602;
+
+  --sc-radius-none: 0;
+  --sc-radius-sm: 0;
+  --sc-radius-md: 0;
+  --sc-radius-lg: 0;
+  --sc-radius-xl: 0;
+
+  --sc-border-thin: 2px;
+  --sc-border-medium: 3px;
+  --sc-border-thick: 4px;
+
+  --sc-shadow-sm: var(--sc-shadow-hard);
+  --sc-shadow-md: 6px 6px 0 rgba(10, 9, 5, 0.95);
+  --sc-shadow-lg: 10px 10px 0 rgba(10, 9, 5, 0.95);
+  --sc-shadow-xl: 14px 14px 0 rgba(10, 9, 5, 0.95);
+
+  --sc-motion-fast: 0ms;
+  --sc-motion-normal: 0ms;
+  --sc-motion-slow: 0ms;
 }

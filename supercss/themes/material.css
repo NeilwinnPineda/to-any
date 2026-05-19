@@ -1,51 +1,31 @@
-/* ============================================================
-   SUPERCSS — Material Theme (MD3)
-   Tonal surfaces, expressive curves, deliberate motion.
-   ============================================================ */
+﻿/* Material-inspired mutation layer.
+   Maps Material concepts into canonical --sc-* values only. */
+html[data-theme='material'] {
+  --sc-color-bg: #13111a;
+  --sc-color-bg-alt: #1a1723;
+  --sc-color-surface: #1f1a2b;
+  --sc-color-surface-raised: #282137;
+  --sc-color-surface-sunken: #110e18;
+  --sc-color-surface-overlay: rgba(31, 26, 43, 0.9);
+  --sc-color-text: #f4efff;
+  --sc-color-text-muted: #c5bfd8;
+  --sc-color-border: #3c3550;
+  --sc-color-border-strong: #554b70;
+  --sc-color-accent: #9b83ff;
+  --sc-color-accent-hover: #ab96ff;
+  --sc-color-accent-active: #8a71ef;
+  --sc-color-accent-text: #ffffff;
 
-html[data-theme="material"] {
-  /* MD3 tonal dark surfaces — slight violet undertone */
-  --sc-bg:        #0f0d13;
-  --sc-surface:   #1d1a24;
-  --sc-surface-2: #26222f;
-  --sc-surface-3: #302b3c;
-  --sc-border:    rgba(255, 255, 255, 0.10);
-  --sc-border-2:  rgba(255, 255, 255, 0.16);
-  --sc-border-3:  rgba(255, 255, 255, 0.26);
+  --sc-radius-sm: 0.625rem;
+  --sc-radius-md: 0.875rem;
+  --sc-radius-lg: 1.25rem;
+  --sc-radius-xl: 1.75rem;
 
-  /* Shape — expressively rounded */
-  --sc-radius:    18px;
-  --sc-radius-sm: 12px;
-  --sc-radius-lg: 28px;
+  --sc-shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.28);
+  --sc-shadow-md: 0 10px 24px rgba(0, 0, 0, 0.32);
+  --sc-shadow-lg: 0 18px 40px rgba(0, 0, 0, 0.36);
 
-  /* Motion — deliberate, choreographed */
-  --sc-duration:  280ms;
-  --sc-ease:      cubic-bezier(0.2, 0, 0, 1);
-
-  /* Elevation — MD3 shadow tiers */
-  --sc-shadow-sm: 0 1px 2px rgba(0,0,0,0.30), 0 1px 3px rgba(0,0,0,0.15);
-  --sc-shadow:    0 2px 6px rgba(0,0,0,0.30), 0 4px 8px rgba(0,0,0,0.15);
-  --sc-shadow-lg: 0 6px 16px rgba(0,0,0,0.35), 0 4px 8px rgba(0,0,0,0.20);
+  --sc-motion-fast: 160ms;
+  --sc-motion-normal: 280ms;
+  --sc-motion-slow: 420ms;
 }
-
-/* MD3 light — tonal warm-purple surfaces */
-html[data-theme="material"][data-mode="light"] {
-  --sc-bg:        #fdfbff;
-  --sc-surface:   #fffbfe;
-  --sc-surface-2: #f4eff7;
-  --sc-surface-3: #ece6f0;
-  --sc-text:      #1c1b1f;
-  --sc-text-2:    #49454f;
-  --sc-muted:     #79747e;
-  --sc-disabled:  #aea9b4;
-  --sc-border:    rgba(0, 0, 0, 0.08);
-  --sc-border-2:  rgba(0, 0, 0, 0.14);
-  --sc-border-3:  rgba(0, 0, 0, 0.26);
-  --sc-shadow-sm: 0 1px 2px rgba(0,0,0,0.10), 0 1px 3px rgba(0,0,0,0.06);
-  --sc-shadow:    0 2px 6px rgba(0,0,0,0.12), 0 4px 8px rgba(0,0,0,0.06);
-  --sc-shadow-lg: 0 6px 16px rgba(0,0,0,0.15), 0 4px 8px rgba(0,0,0,0.08);
-}
-
-html[data-theme="material"][data-motion="subtle"] { --sc-duration: 180ms; }
-html[data-theme="material"][data-motion="normal"] { --sc-duration: 280ms; }
-html[data-theme="material"][data-motion="none"]   { --sc-duration:   0ms; }

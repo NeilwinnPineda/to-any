@@ -1,62 +1,35 @@
-# Angular Template
+# Angular Component Expo
 
-Part of the Super Project Template System.
+This template is the runnable foundation test bench for the project-to-any component contract layer.
 
-## Stack
+It intentionally contains:
 
-- Angular 17 (standalone components, signals-ready)
-- SuperCSS base theme
-- Placeholder content from `_content/`
+- one Angular app
+- one component expo page
+- the core theme/font control
+- SuperCSS imports
+
+It intentionally does not contain:
+
+- routing
+- generated pages
+- auth/app shells
+- fake product/dashboard stubs
+- generated content modules
 
 ## Setup
 
 ```bash
 npm install
-npm run content:generate   # generates src/content/generated/*.ts from _content/placeholders
-npm start                  # http://localhost:4200
+npm start
 ```
 
-## Configuration
-
-| File | Purpose |
-|---|---|
-| `project.config.json` | Declares template identity, theme, connectors |
-| `src/environments/environment.ts` | API URL and dev config |
-| `src/environments/environment.prod.ts` | Production config |
-
-## API connection
-
-This template is **not coupled to any backend**.
-
-Set the API base URL in `src/environments/environment.ts`:
-
-```ts
-export const environment = {
-  production: false,
-  apiUrl: 'http://localhost:3000',
-};
-```
-
-Inject `HttpClient` into any service that needs to call the API. No backend is required for `ng serve` to work.
-
-## Styling
-
-Styles flow from `supercss/base/` into `src/styles.css`.
-
-Theme override: swap the import in `styles.css` to another supercss pack (e.g. `supercss/material/`).
-
-## Content
-
-Placeholder content is generated from `_content/placeholders/*.json`.
-
-Run `npm run content:generate` to refresh `src/content/generated/*.ts` after editing placeholders.
-
-Do not edit generated files directly.
-
-## Adding pages
+## Build
 
 ```bash
-# Add a route in src/app/app.routes.ts
-# Create src/app/pages/<name>/<name>.component.ts
-# Use standalone: true — no NgModule needed
+npm run build
 ```
+
+## Contract
+
+The expo exists to test reusable component patterns. Reusable visual behavior belongs in `supercss/base/components.css`; Angular component CSS should stay limited to expo layout and spacing.

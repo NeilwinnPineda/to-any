@@ -1,111 +1,120 @@
-/* ============================================================
-   SUPERCSS — BASE TOKENS
-   All visual values live here as CSS custom properties.
-   Do not use raw color/size values inside components.
-   ============================================================ */
-
+﻿/* SuperCSS canonical public token contract: only --sc-* is public API. */
 :root {
+  /* ── 4 Core Colors ─────────────────────────────────────────────
+     These are mixer inputs. Components consume derived --sc-color-* values.
+     base    = negative space / canvas tint
+     surface = main UI material
+     accent  = action / emphasis
+     tint    = tertiary system flavor
+     ──────────────────────────────────────────────────────────── */
+  --sc-base:    #0a1628;
+  --sc-surface: #00d4aa;
+  --sc-accent:  #00d4aa;
+  --sc-tint:    #ff6b6b;
 
-  /* --- Color Scale (Dark Surface Palette) --- */
-  --color-scale-0:  #09090c;
-  --color-scale-1:  #111115;
-  --color-scale-2:  #18181d;
-  --color-scale-3:  #1e1e25;
-  --color-scale-4:  #26262f;
-  --color-scale-5:  #2e2e39;
-  --color-scale-6:  #3a3a47;
-  --color-scale-7:  #4a4a58;
-  --color-scale-8:  #6a6a7c;
-  --color-scale-9:  #9898aa;
-  --color-scale-10: #c4c4d4;
-  --color-scale-11: #e2e2ee;
-  --color-scale-12: #f0f0f8;
+  /* ── Derived Color Tokens ── */
 
-  /* --- Semantic Backgrounds --- */
-  --bg-base:     var(--color-scale-1);
-  --bg-surface:  var(--color-scale-2);
-  --bg-elevated: var(--color-scale-3);
-  --bg-overlay:  var(--color-scale-4);
-  --bg-sunken:   var(--color-scale-0);
+  /* Backgrounds — base territory (canvas, empty space) */
+  --sc-color-bg:             color-mix(in srgb, var(--sc-base) 34%, black 66%);
+  --sc-color-bg-alt:         color-mix(in srgb, color-mix(in srgb, var(--sc-base) 70%, var(--sc-tint) 30%) 42%, black 58%);
 
-  /* --- Semantic Borders --- */
-  --border-subtle:  var(--color-scale-4);
-  --border-default: var(--color-scale-5);
-  --border-strong:  var(--color-scale-6);
+  /* Surfaces — main UI material */
+  --sc-color-surface:         color-mix(in srgb, var(--sc-surface) 84%, var(--sc-base) 16%);
+  --sc-color-surface-raised:  color-mix(in srgb, var(--sc-color-surface) 80%, white 20%);
+  --sc-color-surface-sunken:  color-mix(in srgb, var(--sc-color-surface) 80%, black 20%);
+  --sc-color-surface-overlay: color-mix(in srgb, color-mix(in srgb, var(--sc-surface) 88%, var(--sc-tint) 12%) 88%, transparent);
 
-  /* --- Semantic Text --- */
-  --text-primary:   var(--color-scale-12);
-  --text-secondary: var(--color-scale-10);
-  --text-muted:     var(--color-scale-8);
-  --text-disabled:  var(--color-scale-7);
-  --text-inverse:   var(--color-scale-0);
+  /* Text — contrast against their background owner, overridden by JS per mode */
+  --sc-color-text:         color-mix(in srgb, var(--sc-base) 5%,  white 95%);
+  --sc-color-text-muted:   color-mix(in srgb, var(--sc-base) 40%, white 60%);
+  --sc-color-text-inverse: color-mix(in srgb, var(--sc-base) 15%, black 85%);
 
-  /* --- Brand / Primary --- */
-  --color-primary:        #6c8aff;
-  --color-primary-hover:  #7f9bff;
-  --color-primary-active: #5a78ef;
-  --color-primary-subtle: rgba(108, 138, 255, 0.12);
-  --color-primary-muted:  rgba(108, 138, 255, 0.06);
+  /* Borders — bridges between base, surface, and accent territories */
+  --sc-color-border:        color-mix(in srgb, var(--sc-color-surface) 45%, var(--sc-base) 55%);
+  --sc-color-border-strong: color-mix(in srgb, var(--sc-accent) 35%, var(--sc-color-surface) 65%);
 
-  /* --- Status Colors --- */
-  --color-success:        #4caf80;
-  --color-success-subtle: rgba(76, 175, 128, 0.12);
-  --color-warning:        #f0a040;
-  --color-warning-subtle: rgba(240, 160, 64, 0.12);
-  --color-error:          #e05555;
-  --color-error-subtle:   rgba(224, 85, 85, 0.12);
-  --color-info:           #5599dd;
-  --color-info-subtle:    rgba(85, 153, 221, 0.12);
+  /* Accent */
+  --sc-color-accent:        var(--sc-accent);
+  --sc-color-accent-hover:  color-mix(in srgb, var(--sc-accent) 82%, white 18%);
+  --sc-color-accent-active: color-mix(in srgb, var(--sc-accent) 82%, black 18%);
+  --sc-color-accent-text:   color-mix(in srgb, var(--sc-accent) 5%,  white 95%);
 
-  /* --- Spacing Scale --- */
-  --space-0:  0px;
-  --space-1:  2px;
-  --space-2:  4px;
-  --space-3:  8px;
-  --space-4:  12px;
-  --space-5:  16px;
-  --space-6:  24px;
-  --space-7:  32px;
-  --space-8:  48px;
-  --space-9:  64px;
-  --space-10: 96px;
+  /* Focus ring — accent + tint blend */
+  --sc-color-focus-ring:    color-mix(in srgb, var(--sc-accent) 55%, var(--sc-tint) 45%);
 
-  /* --- Border Radius --- */
-  --radius-sm:   4px;
-  --radius-md:   8px;
-  --radius-lg:   12px;
-  --radius-xl:   16px;
-  --radius-2xl:  24px;
-  --radius-full: 9999px;
+  /* Semantic — recognizable status colors with a small system hint */
+  --sc-color-success: color-mix(in srgb, #2bb673 96%, var(--sc-tint) 4%);
+  --sc-color-warning: color-mix(in srgb, #d89a27 96%, var(--sc-base) 4%);
+  --sc-color-danger:  color-mix(in srgb, #dd5353 96%, var(--sc-accent) 4%);
+  --sc-color-info:    color-mix(in srgb, #4e90df 96%, var(--sc-surface) 4%);
 
-  /* --- Shadows --- */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.30), 0 1px 2px rgba(0, 0, 0, 0.20);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35), 0 2px 6px rgba(0, 0, 0, 0.25);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.40), 0 4px 12px rgba(0, 0, 0, 0.30);
-  --shadow-xl: 0 16px 40px rgba(0, 0, 0, 0.50);
-  --shadow-inset: inset 0 1px 3px rgba(0, 0, 0, 0.30);
+  /* Spacing */
+  --sc-space-0: 0;
+  --sc-space-1: 0.25rem;
+  --sc-space-2: 0.5rem;
+  --sc-space-3: 0.75rem;
+  --sc-space-4: 1rem;
+  --sc-space-5: 1.5rem;
+  --sc-space-6: 2rem;
+  --sc-space-7: 3rem;
+  --sc-space-8: 4rem;
 
-  /* --- Z-Index Scale --- */
-  --z-base:     0;
-  --z-raised:   10;
-  --z-dropdown: 100;
-  --z-sticky:   200;
-  --z-overlay:  300;
-  --z-modal:    400;
-  --z-toast:    500;
-  --z-tooltip:  600;
+  /* Radius */
+  --sc-radius-none: 0;
+  --sc-radius-sm: 0.375rem;
+  --sc-radius-md: 0.625rem;
+  --sc-radius-lg: 0.875rem;
+  --sc-radius-xl: 1.25rem;
+  --sc-radius-pill: 999px;
+  --sc-radius-round: 9999px;
 
-  /* --- Motion --- */
-  --duration-instant: 0ms;
-  --duration-fast:    100ms;
-  --duration-normal:  200ms;
-  --duration-slow:    350ms;
-  --duration-slower:  500ms;
-  --ease-default: cubic-bezier(0.2, 0, 0, 1);
-  --ease-in:      cubic-bezier(0.4, 0, 1, 1);
-  --ease-out:     cubic-bezier(0, 0, 0.2, 1);
-  --ease-spring:  cubic-bezier(0.34, 1.56, 0.64, 1);
+  /* Border */
+  --sc-border-thin: 1px;
+  --sc-border-medium: 2px;
+  --sc-border-thick: 3px;
 
-  /* --- Focus Ring --- */
-  --focus-ring: 0 0 0 2px var(--bg-base), 0 0 0 4px var(--color-primary);
+  /* Typography */
+  --sc-font-primary:   "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --sc-font-secondary: "Playfair Display", "Georgia", serif;
+  --sc-font-sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --sc-font-serif: "Merriweather", "Georgia", serif;
+  --sc-font-mono: "JetBrains Mono", "Consolas", monospace;
+  --sc-font-size-xs: 0.75rem;
+  --sc-font-size-sm: 0.875rem;
+  --sc-font-size-md: 1rem;
+  --sc-font-size-lg: 1.125rem;
+  --sc-font-size-xl: 1.375rem;
+  --sc-font-size-2xl: 1.75rem;
+  --sc-font-size-3xl: 2.25rem;
+  --sc-font-weight-light: 300;
+  --sc-font-weight-normal: 400;
+  --sc-font-weight-medium: 500;
+  --sc-font-weight-bold: 700;
+  --sc-line-tight: 1.2;
+  --sc-line-normal: 1.5;
+  --sc-line-relaxed: 1.75;
+
+  /* Shadows / Elevation */
+  --sc-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.18);
+  --sc-shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.2);
+  --sc-shadow-md: 0 8px 20px rgba(0, 0, 0, 0.24);
+  --sc-shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.28);
+  --sc-shadow-xl: 0 28px 54px rgba(0, 0, 0, 0.32);
+  --sc-shadow-hard: 4px 4px 0 rgba(0, 0, 0, 0.85);
+
+  /* Motion */
+  --sc-motion-fast: 120ms;
+  --sc-motion-normal: 220ms;
+  --sc-motion-slow: 360ms;
+  --sc-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --sc-ease-emphasis: cubic-bezier(0.22, 1, 0.36, 1);
+  --sc-ease-decelerate: cubic-bezier(0, 0, 0.2, 1);
+  --sc-ease-accelerate: cubic-bezier(0.4, 0, 1, 1);
+
+  /* Layout */
+  --sc-container-xs: 34rem;
+  --sc-container-sm: 42rem;
+  --sc-container-md: 56rem;
+  --sc-container-lg: 72rem;
+  --sc-container-xl: 88rem;
 }

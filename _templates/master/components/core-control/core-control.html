@@ -1,0 +1,56 @@
+<div class="tc-wrap">
+  <div class="tc-panel">
+    <div class="tc-section">
+      <p class="tc-label">Mode</p>
+      <div class="tc-row">
+        <button class="tc-mode-btn" type="button" data-mode="dark">Dark</button>
+        <button class="tc-mode-btn" type="button" data-mode="light">Light</button>
+      </div>
+    </div>
+
+    <div class="tc-section">
+      <p class="tc-label">Colors</p>
+      <label class="tc-color-row">
+        <input type="color" data-color="base" class="tc-swatch">
+        <span>Base</span>
+      </label>
+      <label class="tc-color-row">
+        <input type="color" data-color="surface" class="tc-swatch">
+        <span>Surface</span>
+      </label>
+      <label class="tc-color-row">
+        <input type="color" data-color="accent" class="tc-swatch">
+        <span>Accent</span>
+      </label>
+      <label class="tc-color-row">
+        <input type="color" data-color="tint" class="tc-swatch">
+        <span>Tint</span>
+      </label>
+    </div>
+
+    <div class="tc-section">
+      <label class="tc-label" for="sc-primary-font">Primary Font</label>
+      <select id="sc-primary-font" class="tc-select" data-font="primary"></select>
+    </div>
+
+    <div class="tc-section">
+      <label class="tc-label" for="sc-secondary-font">Secondary Font</label>
+      <select id="sc-secondary-font" class="tc-select" data-font="secondary"></select>
+    </div>
+
+    <div class="tc-memory-row">
+      <button class="tc-sync-btn" type="button" data-save-memory>Save</button>
+      <button class="tc-sync-btn" type="button" data-load-memory>Load</button>
+    </div>
+  </div>
+
+  <button class="tc-fab" type="button" title="Theme controls" aria-label="Theme controls" aria-expanded="false">
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle>
+      <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle>
+      <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle>
+      <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle>
+      <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
+    </svg>
+  </button>
+</div>

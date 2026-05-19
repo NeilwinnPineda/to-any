@@ -1,0 +1,915 @@
+<!doctype html>
+<html lang="en" data-theme="base">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Component Expo - SuperCSS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/expo.css">
+  <link rel="stylesheet" href="../components/core-control/core-control.css">
+</head>
+<body>
+  <div class="expo-page">
+    <div class="expo-wrap">
+
+      <header class="expo-header">
+        <p class="expo-kicker">SuperCSS Sandbox</p>
+        <h1>Component Expo</h1>
+        <p>Every base component should be visible here so theme and framework ports can be checked in one place.</p>
+      </header>
+
+      <!-- Primitives -->
+      <div id="primitives" class="expo-group"><span class="expo-group__label">Primitives</span></div>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Buttons</h2>
+          <p>Primary actions, secondary actions, ghost buttons, destructive actions, sizes, and icon-only actions.</p>
+        </div>
+        <div class="expo-stack">
+          <div class="expo-row">
+            <sc-button variant="primary">Primary</sc-button>
+            <sc-button variant="secondary">Secondary</sc-button>
+            <sc-button variant="ghost">Ghost</sc-button>
+            <sc-button variant="danger">Danger</sc-button>
+            <sc-button variant="primary" disabled>Disabled</sc-button>
+          </div>
+          <div class="expo-row">
+            <sc-button variant="primary" size="xs">Extra small</sc-button>
+            <sc-button variant="primary" size="sm">Small</sc-button>
+            <sc-button variant="primary">Default</sc-button>
+            <sc-button variant="primary" size="lg">Large</sc-button>
+            <sc-button variant="secondary" icon="sparkles" icon-only label="Spark"></sc-button>
+            <sc-button variant="ghost" size="sm" icon="settings" icon-only label="Settings"></sc-button>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Badges And Chips</h2>
+          <p>Status labels, selectable chips, and removable pills.</p>
+        </div>
+        <div class="expo-row">
+          <sc-badge variant="primary">Primary</sc-badge>
+          <sc-badge variant="success">Success</sc-badge>
+          <sc-badge variant="warning">Warning</sc-badge>
+          <sc-badge variant="danger">Danger</sc-badge>
+          <sc-badge variant="muted">Muted</sc-badge>
+          <sc-badge variant="primary" dot>Online</sc-badge>
+          <sc-chip>Default</sc-chip>
+          <sc-chip selected>Selected</sc-chip>
+          <sc-chip button>Removable &times;</sc-chip>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Avatars And Loading</h2>
+          <p>Identity and loading placeholders need predictable sizing.</p>
+        </div>
+        <div class="expo-stack">
+          <div class="expo-row">
+            <sc-avatar size="xs">XS</sc-avatar>
+            <sc-avatar size="sm">SM</sc-avatar>
+            <sc-avatar>MD</sc-avatar>
+            <sc-avatar size="lg">LG</sc-avatar>
+            <sc-avatar size="xl">XL</sc-avatar>
+            <sc-avatar size="2xl">2X</sc-avatar>
+            <sc-avatar-group>
+              <sc-avatar>AB</sc-avatar>
+              <sc-avatar color="accent">CD</sc-avatar>
+              <sc-avatar color="success">EF</sc-avatar>
+              <sc-avatar size="sm" color="muted">+4</sc-avatar>
+            </sc-avatar-group>
+          </div>
+          <sc-skeleton-card></sc-skeleton-card>
+          <sc-skeleton type="block"></sc-skeleton>
+        </div>
+      </section>
+
+      <!-- Form Controls -->
+      <div id="form-controls" class="expo-group"><span class="expo-group__label">Form Controls</span></div>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Inputs</h2>
+          <p>Form fields should keep spacing, radius, labels, and focus states consistent.</p>
+        </div>
+        <div class="expo-form-grid">
+          <div class="field">
+            <label class="label">Default input</label>
+            <sc-input placeholder="Enter value..."></sc-input>
+          </div>
+          <div class="field">
+            <label class="label">Error state</label>
+            <sc-input error value="bad value"></sc-input>
+          </div>
+          <div class="field">
+            <label class="label">Disabled</label>
+            <sc-input placeholder="Disabled" disabled></sc-input>
+          </div>
+        </div>
+        <div class="expo-stack">
+          <div class="field">
+            <label class="label">Textarea</label>
+            <sc-textarea placeholder="Write something..."></sc-textarea>
+          </div>
+          <div class="field">
+            <label class="label">Input group</label>
+            <sc-input-group prefix="https://" suffix=".io" placeholder="yourdomain.com"></sc-input-group>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Controls</h2>
+          <p>Checkboxes, radios, and toggles must align cleanly without custom page hacks.</p>
+        </div>
+        <div class="expo-control-grid">
+          <div class="expo-stack">
+            <sc-checkbox checked>Remember me</sc-checkbox>
+            <sc-checkbox>Subscribe to updates</sc-checkbox>
+            <sc-checkbox disabled>Disabled option</sc-checkbox>
+          </div>
+          <div class="expo-stack">
+            <sc-radio name="billing" checked>Monthly</sc-radio>
+            <sc-radio name="billing">Annually</sc-radio>
+            <sc-radio name="billing" disabled>Enterprise</sc-radio>
+          </div>
+          <div class="expo-stack">
+            <sc-toggle checked>Notifications on</sc-toggle>
+            <sc-toggle>Dark mode</sc-toggle>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feedback & Status -->
+      <div id="feedback" class="expo-group"><span class="expo-group__label">Feedback &amp; Status</span></div>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Progress &amp; Loading</h2>
+          <p>Horizontal progress bars and inline spinners share the same feedback layer.</p>
+        </div>
+        <div class="expo-control-grid">
+          <div class="expo-stack">
+            <p class="eyebrow">Progress Bars</p>
+            <sc-progress value="68">Storage</sc-progress>
+            <sc-progress value="42">Upload</sc-progress>
+            <sc-progress value="88">Processing</sc-progress>
+          </div>
+          <div class="expo-stack">
+            <p class="eyebrow">Spinners</p>
+            <sc-spinner>Loading data...</sc-spinner>
+            <sc-spinner size="sm">Saving changes...</sc-spinner>
+            <sc-spinner size="lg">Processing request...</sc-spinner>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Alerts</h2>
+          <p>Feedback states should be readable and distinct across every theme.</p>
+        </div>
+        <div class="expo-stack">
+          <sc-alert variant="info">Info: Your account will be reviewed within 24 hours.</sc-alert>
+          <sc-alert variant="success">Success: Payment processed successfully. Receipt sent.</sc-alert>
+          <sc-alert variant="warning">Warning: Your trial expires in 3 days. Upgrade to continue.</sc-alert>
+          <sc-alert variant="error">Error: Could not connect to the server. Try again later.</sc-alert>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Pagination</h2>
+          <p>Page navigation should stand on its own with clear active and disabled states.</p>
+        </div>
+        <sc-pagination pages="3" active="2" label="Example pages"></sc-pagination>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Toast And Rating</h2>
+          <p>Interactive samples keep behavior visible while CSS stays structural.</p>
+        </div>
+        <div class="expo-stack">
+          <sc-toast-list>
+            <sc-toast variant="success">Payment processed successfully.</sc-toast>
+            <sc-toast variant="warning">Your trial expires in 3 days.</sc-toast>
+            <sc-toast variant="danger">Could not connect to the server.</sc-toast>
+            <sc-toast variant="info">New release available.</sc-toast>
+          </sc-toast-list>
+          <sc-rating value="4"></sc-rating>
+        </div>
+      </section>
+
+      <!-- Navigation -->
+      <div id="navigation" class="expo-group"><span class="expo-group__label">Navigation</span></div>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Navigation Bar</h2>
+          <p>A reusable top navigation contract with brand, centered links, and right-side actions.</p>
+        </div>
+        <sc-navbar label="Demo navigation">
+          <sc-navbar-brand mark="&#9670;" label="Acme Studio home">Acme Studio</sc-navbar-brand>
+          <sc-navbar-links>
+            <sc-navbar-link active>Dashboard</sc-navbar-link>
+            <sc-navbar-link>Products</sc-navbar-link>
+            <sc-navbar-link>Pricing</sc-navbar-link>
+            <sc-navbar-link>Docs</sc-navbar-link>
+          </sc-navbar-links>
+          <sc-navbar-actions>
+            <sc-button variant="ghost" size="sm">Sign in</sc-button>
+            <sc-button variant="primary" size="sm">Get started</sc-button>
+          </sc-navbar-actions>
+        </sc-navbar>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Tabs</h2>
+          <p>Segmented and pill tabs share the same state logic.</p>
+        </div>
+        <div class="expo-stack expo-stack--loose">
+          <div>
+            <sc-tabs>
+              <sc-tab active>Preview</sc-tab>
+              <sc-tab>Code</sc-tab>
+              <sc-tab>Docs</sc-tab>
+              <sc-tab>History</sc-tab>
+            </sc-tabs>
+            <div class="panel">
+              <div class="panel-body">
+                <div class="expo-row">
+                  <div class="panel" style="flex:1">
+                    <div class="panel-body">
+                      <p class="muted-text">Monthly Revenue</p>
+                      <p class="metric-value">$24,530</p>
+                      <p class="muted-text">&#8593; 12% from last month</p>
+                    </div>
+                  </div>
+                  <div class="panel" style="flex:1">
+                    <div class="panel-body">
+                      <p class="muted-text">Active Users</p>
+                      <p class="metric-value">1,284</p>
+                      <p class="muted-text">&#8593; 4% from last week</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <sc-tabs-pill>
+              <sc-tab active>All</sc-tab>
+              <sc-tab>Active</sc-tab>
+              <sc-tab>Draft</sc-tab>
+              <sc-tab>Archived</sc-tab>
+            </sc-tabs-pill>
+            <div class="panel">
+              <div class="panel-body">
+                <div class="expo-stack">
+                  <div class="sc-cluster"><span class="strong-text">Homepage redesign</span><sc-badge variant="success">Active</sc-badge></div>
+                  <div class="sc-cluster"><span class="strong-text">Token audit</span><sc-badge variant="muted">Draft</sc-badge></div>
+                  <div class="sc-cluster"><span class="strong-text">v1.0 launch assets</span><sc-badge variant="muted">Archived</sc-badge></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Sidebar Navigation</h2>
+          <p>Vertical nav for dashboard shells. Left variant and right context panel.</p>
+        </div>
+        <div class="expo-stack expo-stack--loose">
+          <div>
+            <p class="muted-text" style="margin-bottom:var(--sc-space-2)">Left sidebar — dashboard layout</p>
+            <div style="display:grid;grid-template-columns:13rem 1fr;min-height:22rem;border:var(--sc-border-thin) solid var(--sc-color-border);overflow:hidden">
+              <sc-sidebar-nav>
+                <sc-sidebar-nav-brand><span style="color:var(--sc-color-accent)">&#9670;</span> Acme Studio</sc-sidebar-nav-brand>
+                <sc-sidebar-nav-section>
+                  <sc-sidebar-nav-label>Main</sc-sidebar-nav-label>
+                  <sc-sidebar-nav-item active>
+                    <sc-sidebar-nav-icon icon="layout-dashboard"></sc-sidebar-nav-icon>
+                    <sc-sidebar-nav-item-label>Dashboard</sc-sidebar-nav-item-label>
+                  </sc-sidebar-nav-item>
+                  <sc-sidebar-nav-item>
+                    <sc-sidebar-nav-icon icon="clipboard-list"></sc-sidebar-nav-icon>
+                    <sc-sidebar-nav-item-label>Projects</sc-sidebar-nav-item-label>
+                    <sc-sidebar-nav-badge>3</sc-sidebar-nav-badge>
+                  </sc-sidebar-nav-item>
+                  <sc-sidebar-nav-item>
+                    <sc-sidebar-nav-icon icon="trending-up"></sc-sidebar-nav-icon>
+                    <sc-sidebar-nav-item-label>Analytics</sc-sidebar-nav-item-label>
+                  </sc-sidebar-nav-item>
+                  <sc-sidebar-nav-item>
+                    <sc-sidebar-nav-icon icon="users"></sc-sidebar-nav-icon>
+                    <sc-sidebar-nav-item-label>Team</sc-sidebar-nav-item-label>
+                  </sc-sidebar-nav-item>
+                </sc-sidebar-nav-section>
+                <sc-sidebar-nav-section>
+                  <sc-sidebar-nav-label>Resources</sc-sidebar-nav-label>
+                  <sc-sidebar-nav-item>
+                    <sc-sidebar-nav-icon icon="folder"></sc-sidebar-nav-icon>
+                    <sc-sidebar-nav-item-label>Files</sc-sidebar-nav-item-label>
+                    <sc-sidebar-nav-badge>12</sc-sidebar-nav-badge>
+                  </sc-sidebar-nav-item>
+                  <sc-sidebar-nav-item>
+                    <sc-sidebar-nav-icon icon="link"></sc-sidebar-nav-icon>
+                    <sc-sidebar-nav-item-label>Integrations</sc-sidebar-nav-item-label>
+                  </sc-sidebar-nav-item>
+                </sc-sidebar-nav-section>
+                <sc-sidebar-nav-section bottom>
+                  <sc-sidebar-nav-item>
+                    <sc-sidebar-nav-icon icon="settings"></sc-sidebar-nav-icon>
+                    <sc-sidebar-nav-item-label>Settings</sc-sidebar-nav-item-label>
+                  </sc-sidebar-nav-item>
+                  <sc-sidebar-nav-item>
+                    <sc-sidebar-nav-icon icon="user"></sc-sidebar-nav-icon>
+                    <sc-sidebar-nav-item-label>Profile</sc-sidebar-nav-item-label>
+                  </sc-sidebar-nav-item>
+                </sc-sidebar-nav-section>
+              </sc-sidebar-nav>
+              <div style="padding:var(--sc-space-5);background:var(--sc-color-bg);display:grid;gap:var(--sc-space-4);align-content:start">
+                <div>
+                  <p class="eyebrow">Dashboard</p>
+                  <h3 style="margin:0;font-size:var(--sc-font-size-lg)">Good morning, Maya</h3>
+                </div>
+                <div class="sc-grid" data-cols="3">
+                  <div class="panel"><div class="panel-body"><p class="muted-text">Revenue</p><p class="metric-value" style="font-size:var(--sc-font-size-xl)">$24k</p></div></div>
+                  <div class="panel"><div class="panel-body"><p class="muted-text">Projects</p><p class="metric-value" style="font-size:var(--sc-font-size-xl)">12</p></div></div>
+                  <div class="panel"><div class="panel-body"><p class="muted-text">Team</p><p class="metric-value" style="font-size:var(--sc-font-size-xl)">8</p></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Footer</h2>
+          <p>Page-level footer — brand, link columns, and a bottom copyright bar.</p>
+        </div>
+        <sc-site-footer>
+          <sc-site-footer-brand>
+            <div class="site-footer__brand-mark"><span style="color:var(--sc-color-accent)">&#9670;</span> Acme Studio</div>
+            <p class="site-footer__tagline">Token-driven UI that ships across every frontend stack without drift.</p>
+            <div class="sc-cluster">
+              <sc-badge variant="primary">SuperCSS</sc-badge>
+              <sc-badge variant="muted">v1.4</sc-badge>
+            </div>
+          </sc-site-footer-brand>
+          <sc-site-footer-col>
+            <sc-site-footer-col-label>Product</sc-site-footer-col-label>
+            <sc-site-footer-link>Features</sc-site-footer-link>
+            <sc-site-footer-link>Pricing</sc-site-footer-link>
+            <sc-site-footer-link>Changelog</sc-site-footer-link>
+            <sc-site-footer-link>Roadmap</sc-site-footer-link>
+          </sc-site-footer-col>
+          <sc-site-footer-col>
+            <sc-site-footer-col-label>Developers</sc-site-footer-col-label>
+            <sc-site-footer-link>Documentation</sc-site-footer-link>
+            <sc-site-footer-link>API Reference</sc-site-footer-link>
+            <sc-site-footer-link>GitHub</sc-site-footer-link>
+            <sc-site-footer-link>Status</sc-site-footer-link>
+          </sc-site-footer-col>
+          <sc-site-footer-col>
+            <sc-site-footer-col-label>Company</sc-site-footer-col-label>
+            <sc-site-footer-link>About</sc-site-footer-link>
+            <sc-site-footer-link>Blog</sc-site-footer-link>
+            <sc-site-footer-link>Careers</sc-site-footer-link>
+            <sc-site-footer-link>Contact</sc-site-footer-link>
+          </sc-site-footer-col>
+          <sc-site-footer-col>
+            <sc-site-footer-col-label>Legal</sc-site-footer-col-label>
+            <sc-site-footer-link>Privacy</sc-site-footer-link>
+            <sc-site-footer-link>Terms</sc-site-footer-link>
+            <sc-site-footer-link>Cookies</sc-site-footer-link>
+            <sc-site-footer-link>Licenses</sc-site-footer-link>
+          </sc-site-footer-col>
+          <sc-site-footer-bottom>
+            <p class="site-footer__copy">&#169; 2026 Acme Studio, Inc. All rights reserved.</p>
+            <div class="site-footer__bottom-links">
+              <sc-site-footer-link>Privacy Policy</sc-site-footer-link>
+              <sc-site-footer-link>Terms of Service</sc-site-footer-link>
+              <sc-site-footer-link>Cookie Preferences</sc-site-footer-link>
+            </div>
+          </sc-site-footer-bottom>
+        </sc-site-footer>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Breadcrumb</h2>
+          <p>Navigation trail showing the user's location. Separator and current-page state via CSS only.</p>
+        </div>
+        <div class="expo-stack">
+          <sc-breadcrumb label="Slash separator">
+            <sc-breadcrumb-item home>Home</sc-breadcrumb-item>
+            <sc-breadcrumb-item>Products</sc-breadcrumb-item>
+            <sc-breadcrumb-item>Audio</sc-breadcrumb-item>
+            <sc-breadcrumb-item current>Wireless Headphones</sc-breadcrumb-item>
+          </sc-breadcrumb>
+          <sc-breadcrumb chevron label="Chevron separator">
+            <sc-breadcrumb-item home>Home</sc-breadcrumb-item>
+            <sc-breadcrumb-item>Settings</sc-breadcrumb-item>
+            <sc-breadcrumb-item current>Notifications</sc-breadcrumb-item>
+          </sc-breadcrumb>
+        </div>
+      </section>
+
+      <!-- Surfaces & Layout -->
+      <div id="surfaces" class="expo-group"><span class="expo-group__label">Surfaces &amp; Layout</span></div>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Surfaces</h2>
+          <p>Theme layers should mutate values, not require new markup.</p>
+        </div>
+        <div class="expo-stack">
+          <div class="surface surface-sample"><p class="muted-text">.surface using base surface tokens</p></div>
+          <div class="surface-elevated surface-sample"><p class="muted-text">.surface-elevated using raised surface tokens</p></div>
+          <div class="surface-overlay surface-sample"><p class="muted-text">.surface-overlay using overlay surface tokens</p></div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Grid &amp; Layout</h2>
+          <p>Structural primitives — responsive grid, vertical stack, and horizontal cluster via <code>.sc-*</code> classes.</p>
+        </div>
+        <div class="expo-stack expo-stack--loose">
+          <div>
+            <p class="muted-text" style="margin-bottom:var(--sc-space-2)"><code>.sc-grid data-cols="2"</code></p>
+            <div class="sc-grid" data-cols="2">
+              <div class="surface surface-sample"><p class="muted-text">Col 1</p></div>
+              <div class="surface surface-sample"><p class="muted-text">Col 2</p></div>
+            </div>
+          </div>
+          <div>
+            <p class="muted-text" style="margin-bottom:var(--sc-space-2)"><code>.sc-grid data-cols="3"</code></p>
+            <div class="sc-grid" data-cols="3">
+              <div class="surface surface-sample"><p class="muted-text">Col 1</p></div>
+              <div class="surface surface-sample"><p class="muted-text">Col 2</p></div>
+              <div class="surface surface-sample"><p class="muted-text">Col 3</p></div>
+            </div>
+          </div>
+          <div>
+            <p class="muted-text" style="margin-bottom:var(--sc-space-2)"><code>.sc-stack</code></p>
+            <div class="sc-stack">
+              <div class="surface surface-sample"><p class="muted-text">Item 1</p></div>
+              <div class="surface surface-sample"><p class="muted-text">Item 2</p></div>
+              <div class="surface surface-sample"><p class="muted-text">Item 3</p></div>
+            </div>
+          </div>
+          <div>
+            <p class="muted-text" style="margin-bottom:var(--sc-space-2)"><code>.sc-cluster</code> — wraps inline, gap preserved</p>
+            <div class="sc-cluster">
+              <div class="surface surface-sample"><p class="muted-text">Alpha</p></div>
+              <div class="surface surface-sample"><p class="muted-text">Beta</p></div>
+              <div class="surface surface-sample"><p class="muted-text">Gamma</p></div>
+              <div class="surface surface-sample"><p class="muted-text">Delta</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Cards And Panels</h2>
+          <p>Surface components are the backbone of page composition.</p>
+        </div>
+        <div class="expo-card-grid">
+          <div class="panel">
+            <div class="panel-header">
+              <span>Monthly Revenue</span>
+              <sc-badge variant="success" dot>Live</sc-badge>
+            </div>
+            <div class="panel-body">
+              <p class="metric-value">$24,530</p>
+              <p class="muted-text">Up 12% from last month</p>
+            </div>
+            <div class="panel-footer">
+              <sc-button variant="ghost" size="sm">View report</sc-button>
+            </div>
+          </div>
+          <div class="card">
+            <p class="eyebrow">Team member</p>
+            <div class="profile-row">
+              <sc-avatar size="lg">JD</sc-avatar>
+              <div>
+                <p class="strong-text">Jane Doe</p>
+                <p class="muted-text">Product Designer</p>
+              </div>
+            </div>
+            <div class="expo-row">
+              <sc-badge variant="primary">Design</sc-badge>
+              <sc-badge variant="muted">Remote</sc-badge>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Full Content Card</h2>
+          <p>A complete card pattern with media, metadata, title, excerpt, tags, and actions.</p>
+        </div>
+        <article class="content-card">
+          <div class="content-card__media"><span>Media preview</span></div>
+          <div class="content-card__body">
+            <div class="content-card__meta">
+              <span>Template System</span>
+              <span>&#8226;</span>
+              <time datetime="2026-05-14">May 14, 2026</time>
+            </div>
+            <h3 class="content-card__title">Build once, port cleanly across every frontend stack</h3>
+            <p class="content-card__copy">A predictable component contract keeps generated templates aligned while themes mutate only token values.</p>
+            <div class="content-card__tags">
+              <sc-badge variant="primary">SuperCSS</sc-badge>
+              <sc-badge variant="muted">Angular</sc-badge>
+              <sc-badge variant="success">Ready</sc-badge>
+            </div>
+            <div class="content-card__footer">
+              <sc-button variant="primary" size="sm">Read case study</sc-button>
+              <sc-button variant="ghost" size="sm">Save</sc-button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Card Grid</h2>
+          <p>Slot-based card system — same <code>.card</code> surface, different content inside.</p>
+        </div>
+        <div class="expo-stack expo-stack--loose">
+          <div class="card-grid-3">
+            <div class="card">
+              <div class="card__media">&#x1F5A5;&#xFE0F;</div>
+              <div class="card__body">
+                <p class="card__eyebrow">Electronics</p>
+                <h3 class="card__title">Wireless Pro Headphones</h3>
+                <p class="card__desc">Studio-grade sound with 40hr battery and active noise cancellation.</p>
+                <div class="card__meta"><span>&#9733;&#9733;&#9733;&#9733;&#9734;</span><span>128 reviews</span></div>
+              </div>
+              <div class="card__footer">
+                <div><span class="card__price">$249</span><span class="card__price-original">$299</span></div>
+                <sc-button variant="primary" size="sm">Add to cart</sc-button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__media">&#x270D;&#xFE0F;</div>
+              <div class="card__body">
+                <p class="card__eyebrow">Design Systems</p>
+                <h3 class="card__title">Building token-driven UI at scale</h3>
+                <p class="card__desc">How a single CSS variable layer eliminates theme drift across every frontend port.</p>
+                <div class="card__meta"><span>May 14, 2025</span><span>&#183;</span><span>6 min read</span></div>
+              </div>
+              <div class="card__footer">
+                <div class="expo-row" style="margin:0"><sc-badge variant="primary">SuperCSS</sc-badge><sc-badge variant="muted">Tokens</sc-badge></div>
+                <sc-button variant="ghost" size="sm">Read &#8594;</sc-button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__media">&#x1F9D1;&#x200D;&#x1F4BB;</div>
+              <div class="card__body">
+                <h3 class="card__title">Maya Osei</h3>
+                <p class="card__desc">Lead Design Engineer &#183; Berlin</p>
+                <div class="card__meta"><sc-badge variant="success">Available</sc-badge><sc-badge variant="muted">Full-time</sc-badge></div>
+              </div>
+              <div class="card__footer">
+                <div class="expo-row" style="margin:0"><sc-badge variant="primary">CSS</sc-badge><sc-badge variant="muted">Angular</sc-badge><sc-badge variant="muted">Figma</sc-badge></div>
+                <sc-button variant="secondary" size="sm">View profile</sc-button>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="expo-section-header" style="margin-bottom:var(--sc-space-4)">
+              <h2>Gallery Grid</h2>
+              <p>Media-first cards. Caption overlays on hover via <code>.card--gallery</code>.</p>
+            </div>
+            <div class="card-grid-gallery">
+              <div class="card card--gallery"><div class="card__media">&#x1F3D4;&#xFE0F;</div><div class="card__overlay"><p class="card__overlay-title">Mountain Range</p><p class="card__overlay-meta">Landscape &#183; 2025</p></div></div>
+              <div class="card card--gallery"><div class="card__media">&#x1F30A;</div><div class="card__overlay"><p class="card__overlay-title">Ocean Waves</p><p class="card__overlay-meta">Nature &#183; 2025</p></div></div>
+              <div class="card card--gallery"><div class="card__media">&#x1F306;</div><div class="card__overlay"><p class="card__overlay-title">City at Dusk</p><p class="card__overlay-meta">Urban &#183; 2025</p></div></div>
+              <div class="card card--gallery"><div class="card__media">&#x1F33F;</div><div class="card__overlay"><p class="card__overlay-title">Forest Floor</p><p class="card__overlay-meta">Macro &#183; 2025</p></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Overlays & Interaction -->
+      <div id="overlays" class="expo-group"><span class="expo-group__label">Overlays &amp; Interaction</span></div>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Carousel</h2>
+          <p>Scroll-snap based slider. Scrollable via CSS — nav buttons and dot indicators.</p>
+        </div>
+        <div class="expo-stack">
+          <div class="carousel">
+            <div class="carousel__track">
+              <div class="carousel__slide" style="background:color-mix(in srgb, var(--sc-color-accent) 10%, var(--sc-color-surface))">
+                <div style="text-align:center;display:grid;gap:var(--sc-space-3)">
+                  <p class="eyebrow">Slide 1 of 3</p>
+                  <h3 style="margin:0;font-size:var(--sc-font-size-2xl)">Build once, ship everywhere</h3>
+                  <p class="muted-text">Token-driven components that survive every theme and framework port.</p>
+                  <div class="sc-cluster" style="justify-content:center">
+                    <sc-button variant="primary">Get started</sc-button>
+                    <sc-button variant="ghost">Learn more</sc-button>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel__slide" style="background:color-mix(in srgb, var(--sc-color-success) 10%, var(--sc-color-surface))">
+                <div style="text-align:center;display:grid;gap:var(--sc-space-3)">
+                  <p class="eyebrow">Slide 2 of 3</p>
+                  <h3 style="margin:0;font-size:var(--sc-font-size-2xl)">Themes in one attribute</h3>
+                  <p class="muted-text">Switch palettes, density, radius, and mode — no CSS rewrites needed.</p>
+                  <div class="sc-cluster" style="justify-content:center">
+                    <sc-badge variant="success">Material</sc-badge>
+                    <sc-badge variant="primary">Fluent</sc-badge>
+                    <sc-badge variant="muted">Brutalist</sc-badge>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel__slide" style="background:color-mix(in srgb, var(--sc-color-warning) 10%, var(--sc-color-surface))">
+                <div style="text-align:center;display:grid;gap:var(--sc-space-3)">
+                  <p class="eyebrow">Slide 3 of 3</p>
+                  <h3 style="margin:0;font-size:var(--sc-font-size-2xl)">Every component, one file</h3>
+                  <p class="muted-text">A single CSS import covers reset, tokens, layout, and all components.</p>
+                  <div class="sc-cluster" style="justify-content:center">
+                    <sc-button variant="primary">View components</sc-button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel__footer">
+            <div class="carousel__nav">
+              <sc-button variant="secondary" size="sm">&#8592; Prev</sc-button>
+              <sc-button variant="secondary" size="sm">Next &#8594;</sc-button>
+            </div>
+            <div class="carousel__dots">
+              <button class="carousel__dot is-active" type="button" aria-label="Slide 1"></button>
+              <button class="carousel__dot" type="button" aria-label="Slide 2"></button>
+              <button class="carousel__dot" type="button" aria-label="Slide 3"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Tooltips</h2>
+          <p>CSS-only tooltips via <code>data-tooltip</code> and <code>data-placement</code>. No JavaScript required.</p>
+        </div>
+        <div class="expo-stack">
+          <div class="expo-row" style="justify-content:center;padding:var(--sc-space-7) 0">
+            <span class="tooltip-anchor" data-tooltip="Top — save your changes" data-placement="top"><sc-button variant="secondary">Top</sc-button></span>
+            <span class="tooltip-anchor" data-tooltip="Bottom — more details below" data-placement="bottom"><sc-button variant="secondary">Bottom</sc-button></span>
+            <span class="tooltip-anchor" data-tooltip="Left — previous step" data-placement="left"><sc-button variant="secondary">Left</sc-button></span>
+            <span class="tooltip-anchor" data-tooltip="Right — next step" data-placement="right"><sc-button variant="secondary">Right</sc-button></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Empty State</h2>
+          <p>Empty states should center properly and breathe without random margins.</p>
+        </div>
+        <div class="panel">
+          <div class="empty-state">
+            <div class="empty-state-icon">&#x1F50D;</div>
+            <p class="empty-state-title">No results found</p>
+            <p class="empty-state-copy">Try adjusting your filters or search terms.</p>
+            <sc-button variant="primary" size="sm">Clear filters</sc-button>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Accordion</h2>
+          <p>Collapsible content panels. One open at a time, chevron rotates to signal state.</p>
+        </div>
+        <sc-accordion>
+          <sc-accordion-item>
+            <sc-accordion-trigger open>What is SuperCSS?</sc-accordion-trigger>
+            <sc-accordion-content>SuperCSS is a token-driven CSS design system. Every component consumes <code>--sc-*</code> custom properties so themes, palettes, and density scales mutate the visual output without touching markup.</sc-accordion-content>
+          </sc-accordion-item>
+          <sc-accordion-item>
+            <sc-accordion-trigger>How does theming work?</sc-accordion-trigger>
+            <sc-accordion-content>Set <code>data-theme</code>, <code>data-palette</code>, <code>data-mode</code>, or <code>data-density</code> on the <code>html</code> element. The mixer layer rewrites the token values and every component updates instantly.</sc-accordion-content>
+          </sc-accordion-item>
+          <sc-accordion-item>
+            <sc-accordion-trigger>Can I use this with React or Vue?</sc-accordion-trigger>
+            <sc-accordion-content>Yes. SuperCSS is framework-agnostic CSS. The Angular template is one port — the same class contracts work in React, Vue, Svelte, or plain HTML.</sc-accordion-content>
+          </sc-accordion-item>
+        </sc-accordion>
+      </section>
+
+      <!-- Data Display -->
+      <div id="data" class="expo-group"><span class="expo-group__label">Data Display</span></div>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Table</h2>
+          <p>Three modifier variants — lined, striped, and compact — on the same base contract.</p>
+        </div>
+        <div class="expo-stack expo-stack--loose">
+          <div class="panel">
+            <div class="panel-header">
+              <div><h3>Lined</h3><p class="muted-text"><code>table--lined</code></p></div>
+              <sc-button variant="ghost" size="sm">Export</sc-button>
+            </div>
+            <div class="table-wrap">
+              <table class="table table--lined">
+                <thead><tr><th>Order</th><th>Customer</th><th>Status</th><th>Total</th><th>Updated</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>#1042</strong></td><td>Jane Doe</td><td><sc-badge variant="success">Paid</sc-badge></td><td>$249.00</td><td>Today</td></tr>
+                  <tr><td><strong>#1041</strong></td><td>Ravi Singh</td><td><sc-badge variant="warning">Pending</sc-badge></td><td>$89.00</td><td>Yesterday</td></tr>
+                  <tr><td><strong>#1040</strong></td><td>Mina Park</td><td><sc-badge variant="muted">Draft</sc-badge></td><td>$149.00</td><td>May 12</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-header"><div><h3>Striped</h3><p class="muted-text"><code>table--striped</code></p></div></div>
+            <div class="table-wrap">
+              <table class="table table--striped">
+                <thead><tr><th>Member</th><th>Role</th><th>Status</th><th>Joined</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Alice Chen</strong></td><td>Admin</td><td><sc-badge variant="success">Active</sc-badge></td><td>Jan 2024</td></tr>
+                  <tr><td><strong>Ben Okafor</strong></td><td>Editor</td><td><sc-badge variant="success">Active</sc-badge></td><td>Mar 2024</td></tr>
+                  <tr><td><strong>Sara Liu</strong></td><td>Viewer</td><td><sc-badge variant="muted">Inactive</sc-badge></td><td>Jun 2024</td></tr>
+                  <tr><td><strong>Tom Brandt</strong></td><td>Editor</td><td><sc-badge variant="warning">Pending</sc-badge></td><td>Aug 2024</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-header"><div><h3>Accent</h3><p class="muted-text"><code>table--accent</code></p></div></div>
+            <div class="table-wrap">
+              <table class="table table--accent">
+                <thead><tr><th>Plan</th><th>Price</th><th>Users</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>Starter</td><td>$9 / mo</td><td>Up to 5</td><td><sc-badge variant="success">Active</sc-badge></td></tr>
+                  <tr><td>Pro</td><td>$29 / mo</td><td>Up to 20</td><td><sc-badge variant="primary">Trial</sc-badge></td></tr>
+                  <tr><td>Team</td><td>$79 / mo</td><td>Unlimited</td><td><sc-badge variant="muted">Inactive</sc-badge></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-header"><div><h3>Compact</h3><p class="muted-text"><code>table--compact</code></p></div></div>
+            <div class="table-wrap">
+              <table class="table table--compact">
+                <thead><tr><th>Event</th><th>Source</th><th>Severity</th><th>Time</th></tr></thead>
+                <tbody>
+                  <tr><td>Login failed</td><td>identity check</td><td><sc-badge variant="danger">High</sc-badge></td><td>09:41:02</td></tr>
+                  <tr><td>Deploy triggered</td><td>ci-runner</td><td><sc-badge variant="primary">Info</sc-badge></td><td>09:38:55</td></tr>
+                  <tr><td>Rate limit hit</td><td>api-gateway</td><td><sc-badge variant="warning">Medium</sc-badge></td><td>09:35:12</td></tr>
+                  <tr><td>Cache cleared</td><td>cache-service</td><td><sc-badge variant="muted">Low</sc-badge></td><td>09:30:00</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Bar Chart</h2>
+          <p>CSS-only bar charts. Bar fill driven by <code>--bar-h</code> inline custom property.</p>
+        </div>
+        <div class="expo-stack expo-stack--loose">
+          <div class="panel">
+            <div class="panel-header"><div><h3>Monthly Revenue</h3><p class="muted-text">Vertical — accent fill.</p></div></div>
+            <div class="panel-body">
+              <div class="bar-chart__header">
+                <div><p class="bar-chart__title">Monthly Revenue</p><p class="bar-chart__subtitle">Jan – Jun 2025 · USD</p></div>
+                <sc-badge variant="success" dot>Live</sc-badge>
+              </div>
+              <div class="bar-chart">
+                <div class="bar-chart__col"><span class="bar-chart__value">$18k</span><div class="bar-chart__bar" style="--bar-h:45%"></div><span class="bar-chart__label">Jan</span></div>
+                <div class="bar-chart__col"><span class="bar-chart__value">$22k</span><div class="bar-chart__bar" style="--bar-h:55%"></div><span class="bar-chart__label">Feb</span></div>
+                <div class="bar-chart__col"><span class="bar-chart__value">$31k</span><div class="bar-chart__bar" style="--bar-h:77%"></div><span class="bar-chart__label">Mar</span></div>
+                <div class="bar-chart__col"><span class="bar-chart__value">$28k</span><div class="bar-chart__bar" style="--bar-h:70%"></div><span class="bar-chart__label">Apr</span></div>
+                <div class="bar-chart__col"><span class="bar-chart__value">$40k</span><div class="bar-chart__bar" style="--bar-h:100%"></div><span class="bar-chart__label">May</span></div>
+                <div class="bar-chart__col"><span class="bar-chart__value">$35k</span><div class="bar-chart__bar" style="--bar-h:87%"></div><span class="bar-chart__label">Jun</span></div>
+              </div>
+              <p class="bar-chart__caption">Peak in May · +122% vs Jan</p>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-header"><div><h3>Traffic by Source</h3><p class="muted-text">Horizontal — same contract, width instead of height.</p></div></div>
+            <div class="panel-body">
+              <div class="bar-chart__header"><div><p class="bar-chart__title">Traffic by Source</p><p class="bar-chart__subtitle">Last 30 days · % of total sessions</p></div></div>
+              <div class="bar-chart bar-chart--horizontal">
+                <div class="bar-chart__col"><span class="bar-chart__label">Organic</span><div class="bar-chart__bar" style="--bar-h:82%"></div><span class="bar-chart__value">82%</span></div>
+                <div class="bar-chart__col"><span class="bar-chart__label">Referral</span><div class="bar-chart__bar" style="--bar-h:54%"></div><span class="bar-chart__value">54%</span></div>
+                <div class="bar-chart__col"><span class="bar-chart__label">Direct</span><div class="bar-chart__bar" style="--bar-h:38%"></div><span class="bar-chart__value">38%</span></div>
+                <div class="bar-chart__col"><span class="bar-chart__label">Social</span><div class="bar-chart__bar" style="--bar-h:21%"></div><span class="bar-chart__value">21%</span></div>
+              </div>
+              <p class="bar-chart__caption">Organic leads · Social underperforming vs last period</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Pie Chart</h2>
+          <p>CSS-only pie via <code>conic-gradient</code>. Slices defined by cumulative percentage stops.</p>
+        </div>
+        <div class="panel">
+          <div class="panel-body">
+            <div class="bar-chart__header">
+              <div><p class="bar-chart__title">Revenue by Category</p><p class="bar-chart__subtitle">Q2 2025 · % of total</p></div>
+            </div>
+            <div class="pie-chart__wrap">
+              <div class="pie-chart"></div>
+              <ul class="pie-chart__legend">
+                <li class="pie-chart__legend-item"><span class="pie-chart__dot" style="--dot-color:var(--sc-color-accent)"></span><span class="pie-chart__legend-label">SaaS</span><span class="pie-chart__legend-value">42%</span></li>
+                <li class="pie-chart__legend-item"><span class="pie-chart__dot" style="--dot-color:var(--sc-color-success)"></span><span class="pie-chart__legend-label">Services</span><span class="pie-chart__legend-value">28%</span></li>
+                <li class="pie-chart__legend-item"><span class="pie-chart__dot" style="--dot-color:var(--sc-color-warning)"></span><span class="pie-chart__legend-label">Licensing</span><span class="pie-chart__legend-value">18%</span></li>
+                <li class="pie-chart__legend-item"><span class="pie-chart__dot" style="--dot-color:var(--sc-color-danger)"></span><span class="pie-chart__legend-label">Other</span><span class="pie-chart__legend-value">12%</span></li>
+              </ul>
+            </div>
+            <p class="bar-chart__caption">SaaS dominates · Services growing +8% QoQ</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Developer Utilities -->
+      <div id="dev" class="expo-group"><span class="expo-group__label">Developer Utilities</span></div>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Keyboard And Code</h2>
+          <p>Inline code, keyboard hints, copy rows, and code blocks should survive every theme.</p>
+        </div>
+        <div class="expo-stack">
+          <div class="expo-row">
+            <span class="muted-text">Save <kbd class="kbd">Ctrl</kbd> <kbd class="kbd">S</kbd></span>
+            <span class="muted-text">Search <kbd class="kbd">Ctrl</kbd> <kbd class="kbd">K</kbd></span>
+            <span class="muted-text">Close <kbd class="kbd">Esc</kbd></span>
+          </div>
+          <div class="copy-row">
+            <code>npm run build</code>
+            <sc-button variant="secondary" size="sm">Copy command</sc-button>
+          </div>
+          <div class="code-card">
+            <pre><code>html[data-theme='material'] {
+  --sc-color-accent: #9b83ff;
+  --sc-radius-lg: 1.25rem;
+}</code></pre>
+            <sc-button variant="ghost" size="sm">Copy selector</sc-button>
+          </div>
+          <hr class="divider" />
+          <div class="divider-label">or continue with</div>
+          <hr class="divider" />
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <sc-core-control></sc-core-control>
+
+  <script src="../shared/icons.js" defer></script>
+  <script src="../components/button/button.transform.js" defer></script>
+  <script src="../components/badge/badge.transform.js" defer></script>
+  <script src="../components/chip/chip.transform.js" defer></script>
+  <script src="../components/avatar/avatar.transform.js" defer></script>
+  <script src="../components/skeleton/skeleton.transform.js" defer></script>
+  <script src="../components/input/input.transform.js" defer></script>
+  <script src="../components/controls/controls.transform.js" defer></script>
+  <script src="../components/progress/progress.transform.js" defer></script>
+  <script src="../components/alert/alert.transform.js" defer></script>
+  <script src="../components/pagination/pagination.transform.js" defer></script>
+  <script src="../components/toast/toast.transform.js" defer></script>
+  <script src="../components/rating/rating.transform.js" defer></script>
+  <script src="../components/navbar/navbar.transform.js" defer></script>
+  <script src="../components/tabs/tabs.transform.js" defer></script>
+  <script src="../components/sidebar-nav/sidebar-nav.transform.js" defer></script>
+  <script src="../components/breadcrumb/breadcrumb.transform.js" defer></script>
+  <script src="../components/site-footer/site-footer.transform.js" defer></script>
+  <script src="../components/accordion/accordion.transform.js" defer></script>
+  <script src="../runtime/sc-runtime.js" defer></script>
+  <script src="../components/core-control/core-control.js" defer></script>
+</body>
+</html>

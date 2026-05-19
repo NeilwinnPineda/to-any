@@ -1,63 +1,51 @@
 # AI Agent Rules
 
-> Source: `_rules/ruleset.md` — Rule 14  
-> Extended by: `AGENT.md` at the root of this repository
+This repo is in the component-contract foundation phase. Agents should keep the workspace small and prove the reusable UI layer before adding app-generation machinery.
 
----
+## Required Reading
 
-## Rule 14 — Agents must read system rules before modifying the project
+1. `_rules/ruleset.md`
+2. `_rules/architecture.md`
+3. `_rules/project-boundaries.md`
+4. `_rules/coding-style.md`
+5. `AGENT.md`
+6. `project-to-any/templates/frontend/README.md`
+7. `project-to-any/templates/frontend/components/registry.json`
+8. `supercss/supercss.css`
 
-AI agents and automation tools must read and respect the current system rules before generating code, modifying files, or introducing new structure.
+## Active SuperCSS Contract
 
-Generated code and automated changes must follow current shared conventions whenever possible.
+| File | Role |
+|------|------|
+| `supercss/supercss.css` | Canonical entrypoint and cascade layer order |
+| `supercss/base/reset.css` | Browser normalization |
+| `supercss/base/tokens.css` | Public `--sc-*` token contract |
+| `supercss/base/typography.css` | Type defaults |
+| `supercss/base/layout.css` | Framework-neutral layout primitives |
+| `supercss/base/components.css` | Reusable component styling contracts |
+| `supercss/base/utilities.css` | Small shared utilities |
+| `supercss/base/accessibility.css` | Focus, reduced motion, and accessibility defaults |
+| `supercss/base/charts.css` | Optional chart/demo support imported by the expo |
+| `supercss/themes/*.css` | Token mutation only |
 
----
+Import frontend templates through `supercss/supercss.css`. Do not recreate the import stack inside a framework target.
 
-## Required reading before acting
+## Component Rule
 
-1. `_rules/ruleset.md` — full system ruleset
-2. `_rules/architecture.md` — structural rules
-3. `_rules/project-boundaries.md` — per-project declarations and boundaries
-4. `_rules/coding-style.md` — scripts, docs, traceability
-5. `supercss/base/notes.md` — visual system intent, file responsibilities, import order
-6. `AGENT.md` — high-level agent operating instructions
+Reusable styling belongs in `supercss/base/components.css`, not in a framework component stylesheet.
 
-## SuperCSS base layer summary (as of 2026-05-12)
+When adding or changing a component:
 
-| File                        | Role                                                          |
-|-----------------------------|---------------------------------------------------------------|
-| `supercss/base/base.css`    | Normalization only. No colors, no themes. Framework-agnostic. |
-| `supercss/base/tokens.css`  | Design tokens — spacing, radius, shadow, z-index, motion      |
-| `supercss/base/theme.css`   | Component classes (btn, badge, input, card, modal, etc.)      |
-| `supercss/base/typography.css` | Font stacks and type scale                                 |
-| `supercss/base/layout.css`  | App shell, toolbar, sidebar, panels, grid/flex utilities      |
-| `supercss/mixer/mixer.css`  | Attribute-driven token overrides (data-theme, data-palette…)  |
-| `supercss/supercss.css`     | Single import entry point for the full system                 |
+1. Update the reusable contract in SuperCSS.
+2. Update the framework-neutral registry.
+3. Demonstrate the pattern on the Angular component expo.
+4. Keep Angular CSS limited to expo layout and spacing.
+5. Avoid inline styles unless the value is genuinely dynamic.
 
-Import order: `base.css` → `tokens.css` → `typography.css` → `theme.css` → `layout.css` → `mixer.css` → themes → palettes
+## Do Not Reintroduce
 
----
-
-## Agent behavior expectations
-
-**Before modifying the project:**
-- Read the root rules
-- Identify the relevant shared systems
-- Avoid duplicating reusable logic
-- Preserve modularity
-- Keep framework-specific code isolated
-- Follow current supercss conventions
-- Prefer composable structures over rigid abstractions
-
-**When uncertain:**
-- Preserve simplicity
-- Preserve modularity
-- Preserve traceability
-- Ask rather than assume
-
-**Never:**
-- Duplicate shared logic into templates
-- Introduce hidden transformations
-- Couple framework-specific behavior into the root system
-- Treat a template as the core system
-- Override shared tokens with raw values in components
+- page catalogs
+- app shells or route maps
+- generated product/auth/dashboard stubs
+- backend connectors, mock DBs, or content generators
+- old SuperCSS docs, mixers, palettes, or external system experiments

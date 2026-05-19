@@ -1,0 +1,12 @@
+﻿:focus-visible {
+  outline: var(--sc-border-medium) solid var(--sc-color-focus-ring);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0ms !important;
+    transition-duration: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}

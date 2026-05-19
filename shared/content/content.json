@@ -1,0 +1,229 @@
+{
+  "users": [
+    { "name": "Jane Doe",    "initials": "JD", "role": "Product Designer" },
+    { "name": "Ravi Singh",  "initials": "RS", "role": "Editor" },
+    { "name": "Mina Park",   "initials": "MP", "role": "Viewer" },
+    { "name": "Alice Chen",  "initials": "AC", "role": "Admin" },
+    { "name": "Ben Okafor",  "initials": "BO", "role": "Editor" },
+    { "name": "Sara Liu",    "initials": "SL", "role": "Viewer" },
+    { "name": "Tom Brandt",  "initials": "TB", "role": "Editor" },
+    { "name": "Maya Osei",   "initials": "MA", "role": "Lead Design Engineer", "location": "Berlin",    "status": "Available · Full-time", "skills": ["CSS","Angular","Figma"] },
+    { "name": "Lena Fischer","initials": "LF", "role": "Senior Product Designer","location": "Amsterdam","status": "Available · Contract",   "skills": ["Figma","UX","React"] }
+  ],
+
+  "tables": {
+    "orders": {
+      "headers": ["Order","Customer","Status","Total","Updated"],
+      "rows": [
+        { "order": "#1042", "customer": "Jane Doe",   "status": "Paid",    "total": "$249.00", "updated": "Today" },
+        { "order": "#1041", "customer": "Ravi Singh",  "status": "Pending", "total": "$89.00",  "updated": "Yesterday" },
+        { "order": "#1040", "customer": "Mina Park",   "status": "Draft",   "total": "$149.00", "updated": "May 12" }
+      ]
+    },
+    "team": {
+      "headers": ["Member","Role","Status","Joined"],
+      "rows": [
+        { "member": "Alice Chen",  "role": "Admin",  "status": "Active",   "joined": "Jan 2024" },
+        { "member": "Ben Okafor",  "role": "Editor", "status": "Active",   "joined": "Mar 2024" },
+        { "member": "Sara Liu",    "role": "Viewer", "status": "Inactive", "joined": "Jun 2024" },
+        { "member": "Tom Brandt",  "role": "Editor", "status": "Pending",  "joined": "Aug 2024" }
+      ]
+    },
+    "pricing": {
+      "headers": ["Plan","Price","Users","Status"],
+      "rows": [
+        { "plan": "Starter", "price": "$9 / mo",  "users": "Up to 5",    "status": "Active" },
+        { "plan": "Pro",     "price": "$29 / mo", "users": "Up to 20",   "status": "Trial" },
+        { "plan": "Team",    "price": "$79 / mo", "users": "Unlimited",  "status": "Inactive" }
+      ]
+    },
+    "events": {
+      "headers": ["Event","Source","Severity","Time"],
+      "rows": [
+        { "event": "Login failed",      "source": "identity check", "severity": "High",   "time": "09:41:02" },
+        { "event": "Deploy triggered",  "source": "ci-runner",      "severity": "Info",   "time": "09:38:55" },
+        { "event": "Rate limit hit",    "source": "api-gateway",    "severity": "Medium", "time": "09:35:12" },
+        { "event": "Cache cleared",     "source": "cache-service",  "severity": "Low",    "time": "09:30:00" }
+      ]
+    }
+  },
+
+  "charts": {
+    "revenue": {
+      "title": "Monthly Revenue",
+      "subtitle": "Jan – Jun 2025 · USD",
+      "caption": "Peak in May · +122% vs Jan",
+      "bars": [
+        { "label": "Jan", "value": "$18k", "pct": 45 },
+        { "label": "Feb", "value": "$22k", "pct": 55 },
+        { "label": "Mar", "value": "$31k", "pct": 77 },
+        { "label": "Apr", "value": "$28k", "pct": 70 },
+        { "label": "May", "value": "$40k", "pct": 100 },
+        { "label": "Jun", "value": "$35k", "pct": 87 }
+      ]
+    },
+    "traffic": {
+      "title": "Traffic by Source",
+      "subtitle": "Last 30 days · % of total sessions",
+      "caption": "Organic leads · Social underperforming vs last period",
+      "bars": [
+        { "label": "Organic",  "value": "82%", "pct": 82 },
+        { "label": "Referral", "value": "54%", "pct": 54 },
+        { "label": "Direct",   "value": "38%", "pct": 38 },
+        { "label": "Social",   "value": "21%", "pct": 21 }
+      ]
+    },
+    "pie": {
+      "title": "Revenue by Category",
+      "subtitle": "Q2 2025 · % of total",
+      "caption": "SaaS dominates · Services growing +8% QoQ",
+      "segments": [
+        { "label": "SaaS",       "value": "42%", "color": "var(--sc-color-accent)" },
+        { "label": "Services",   "value": "28%", "color": "var(--sc-color-tint)" },
+        { "label": "Licensing",  "value": "18%", "color": "var(--sc-color-success)" },
+        { "label": "Other",      "value": "12%", "color": "var(--sc-color-border-strong)" }
+      ]
+    }
+  },
+
+  "nav": {
+    "links": [
+      { "label": "Dashboard", "active": true },
+      { "label": "Products" },
+      { "label": "Pricing" },
+      { "label": "Docs" }
+    ],
+    "sidebar": {
+      "main": [
+        { "label": "Dashboard",   "icon": "layout-dashboard", "active": true },
+        { "label": "Projects",    "icon": "folder",           "badge": "3" },
+        { "label": "Analytics",   "icon": "trending-up" },
+        { "label": "Team",        "icon": "users" }
+      ],
+      "resources": [
+        { "label": "Files",        "icon": "folder",  "badge": "12" },
+        { "label": "Integrations", "icon": "link" }
+      ],
+      "bottom": [
+        { "label": "Settings", "icon": "layers" },
+        { "label": "Profile",  "icon": "user" }
+      ]
+    },
+    "breadcrumbs": [
+      ["Home","Products","Audio","Wireless Headphones"],
+      ["Home","Settings","Notifications"]
+    ]
+  },
+
+  "cards": {
+    "product": {
+      "category": "Electronics",
+      "title": "Wireless Pro Headphones",
+      "description": "Studio-grade sound with 40hr battery and active noise cancellation.",
+      "rating": 4,
+      "reviews": 128,
+      "price": "$249",
+      "originalPrice": "$299"
+    },
+    "article": {
+      "category": "Design Systems",
+      "title": "Building token-driven UI at scale",
+      "description": "How a single CSS variable layer eliminates theme drift across every frontend port.",
+      "date": "May 14, 2025",
+      "readTime": "6 min read",
+      "tags": ["SuperCSS","Tokens"]
+    },
+    "gallery": [
+      { "title": "Mountain Range", "meta": "Landscape · 2025" },
+      { "title": "Ocean Waves",    "meta": "Nature · 2025" },
+      { "title": "City at Dusk",   "meta": "Urban · 2025" },
+      { "title": "Forest Floor",   "meta": "Macro · 2025" },
+      { "title": "Desert Dunes",   "meta": "Landscape · 2025" },
+      { "title": "Spring Bloom",   "meta": "Botanical · 2025" },
+      { "title": "Night Sky",      "meta": "Astrophoto · 2025" },
+      { "title": "Wingspan",       "meta": "Wildlife · 2025" }
+    ]
+  },
+
+  "carousel": [
+    {
+      "heading": "Build once, ship everywhere",
+      "description": "Token-driven components that survive every theme and framework port.",
+      "badges": []
+    },
+    {
+      "heading": "Themes in one attribute",
+      "description": "Switch palettes, density, radius, and mode — no CSS rewrites needed.",
+      "badges": ["Material","Fluent","Brutalist"]
+    },
+    {
+      "heading": "Every component, one file",
+      "description": "A single CSS import covers reset, tokens, layout, and all components.",
+      "badges": []
+    }
+  ],
+
+  "accordion": [
+    {
+      "trigger": "What is SuperCSS?",
+      "content": "SuperCSS is a token-driven CSS design system. Every component consumes <code>--sc-*</code> custom properties so themes, palettes, and density scales mutate the visual output without touching markup."
+    },
+    {
+      "trigger": "How does theming work?",
+      "content": "Set <code>data-theme</code>, <code>data-palette</code>, <code>data-mode</code>, <code>data-density</code>, or <code>data-radius</code> on the <code>html</code> element. The mixer layer rewrites the token values and every component updates instantly."
+    },
+    {
+      "trigger": "Can I use this with React or Vue?",
+      "content": "Yes. SuperCSS is framework-agnostic CSS. The Angular template is one port — the same class contracts work in React, Vue, Svelte, or plain HTML. Only the state wiring changes per framework."
+    }
+  ],
+
+  "alerts": [
+    { "variant": "info",    "message": "Your account will be reviewed within 24 hours." },
+    { "variant": "success", "message": "Payment processed successfully. Receipt sent." },
+    { "variant": "warning", "message": "Your trial expires in 3 days. Upgrade to continue." },
+    { "variant": "error",   "message": "Could not connect to the server. Try again later." }
+  ],
+
+  "toasts": [
+    { "variant": "success", "message": "Payment processed successfully." },
+    { "variant": "warning", "message": "Your trial expires in 3 days." },
+    { "variant": "danger",  "message": "Could not connect to the server." },
+    { "variant": "info",    "message": "New release available." }
+  ],
+
+  "footer": {
+    "copyright": "© 2026 Acme Studio, Inc. All rights reserved.",
+    "tagline": "Built on SuperCSS · Open system, zero lock-in.",
+    "columns": [
+      { "label": "Product",    "links": ["Features","Pricing","Changelog","Roadmap"] },
+      { "label": "Developers", "links": ["Documentation","API Reference","GitHub","Status"] },
+      { "label": "Company",    "links": ["About","Blog","Careers","Contact"] },
+      { "label": "Legal",      "links": ["Privacy","Terms","Cookies","Licenses"] }
+    ],
+    "bottomLinks": ["Privacy Policy","Terms of Service","Cookie Preferences"]
+  },
+
+  "metrics": {
+    "revenue": { "value": "$24,530", "change": "↑ 12% from last month" },
+    "users":   { "value": "1,284",   "change": "↑ 4% from last week" }
+  },
+
+  "tooltips": [
+    { "text": "Top — save your changes",   "placement": "top" },
+    { "text": "Bottom — more details below","placement": "bottom" },
+    { "text": "Left — previous step",      "placement": "left" },
+    { "text": "Right — next step",         "placement": "right" }
+  ],
+
+  "keyboard": [
+    { "action": "Save",   "keys": ["Ctrl","S"] },
+    { "action": "Search", "keys": ["Ctrl","K"] },
+    { "action": "Close",  "keys": ["Esc"] }
+  ],
+
+  "emptyState": {
+    "title": "No results found",
+    "message": "Try adjusting your filters or search terms."
+  }
+}
