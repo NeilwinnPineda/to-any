@@ -1,0 +1,9 @@
+@import "../../../supercss/supercss.css";
+@import "../../../supercss/base/charts.css" layer(components);
+@import "../../master/css/expo.css";
+
+.card-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--sc-space-5);
+}

@@ -1,0 +1,5 @@
+{
+  "template": "nextjs",
+  "entry": "app/page.tsx",
+  "description": "Next.js App Router template backed by the master compiled component expo."
+}

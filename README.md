@@ -1,52 +1,50 @@
-# Project-to-any Component Foundation
+# Template System
 
-This repo is being realigned around one goal:
+A framework-neutral UI component foundation. Goal: prove stable, reusable component contracts in SuperCSS and a plain HTML compiler before generating full apps for any target framework.
 
-> Prove a reusable, framework-neutral UI/component contract layer before generating full apps.
-
-The previous multi-page Angular/static/target experiment has been trimmed out of the active workspace. The current runnable target is a single Angular component expo backed by SuperCSS.
-
-## Active Structure
+## Active Work
 
 ```text
 super-project/
-  supercss/                         # Shared token and component CSS contracts
-    supercss.css                    # Canonical CSS entrypoint
-    base/                           # Reset, tokens, layout, components, utilities, charts
-    themes/                         # Token mutation themes only
-  project-to-any/
-    project-to-any.config.json       # Foundation-phase config
-    templates/frontend/
-      components/registry.json       # Framework-neutral component contract registry
-    production/README.md             # Production projects are paused for this phase
+  supercss/                     # Shared CSS foundation — tokens, components, themes
+    supercss.css                # Canonical entrypoint and layer order
+    base/                       # reset, tokens, typography, layout, components, utilities, accessibility, charts
+    themes/                     # Token mutation themes (material, fluent, brutalist)
   _templates/
-    angular/                         # Single component expo test bench
-  _rules/                            # Agent and architecture rules
+    master/                     # Compiler — builds component transforms, produces static HTML
+      src/                      # TypeScript source (compiler + 18 component transforms) — UNDER REVAMP
+      pages/                    # index.html (DSL source), index.compiled.html (last compiled output)
+      css/                      # styles.css (→ SuperCSS), expo.css (expo layout)
+    angular/                    # Secondary expo — follows master output
+    nextjs/                     # Secondary expo — follows master output
+  server/                       # Theme server (port 3001, GET/POST /theme)
+  _rules/                       # Architecture and coding rules
 ```
 
-## Current Pass Condition
+## Current Focus
 
-A component shown in the expo must have:
+**Master + SuperCSS.** The master template compiler is being revamped. Angular and Next.js are secondary and follow master once it stabilizes.
 
-- a reusable contract
+Pass condition for a component:
+- reusable contract in `supercss/base/components.css`
 - stable semantic classes
-- visual behavior owned by SuperCSS
-- no dependency on route/page/app-shell stubs
+- compiles cleanly by master into static HTML
+- no framework dependency
 
-## Run The Expo
+## Run Master
 
 ```bash
-cd _templates/angular
+cd _templates/master
 npm install
-npm run build
-npm start
+npm run dev    # build (esbuild) then compile (compiler/compile.js)
 ```
 
-## Paused Until The Foundation Is Proven
+Output: `_templates/master/pages/index.compiled.html`
+
+## Paused
 
 - multi-page generation
 - auth/app/marketing shells
 - production sample projects
-- static HTML/React/Ionic/WordPress targets
 - backend/API templates
-- old SuperCSS docs, mixers, palettes, and external system experiments
+- additional framework targets beyond Angular and Next.js

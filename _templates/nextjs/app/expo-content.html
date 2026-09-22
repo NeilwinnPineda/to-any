@@ -1,0 +1,1123 @@
+<div class="expo-page">
+    <div class="expo-wrap">
+
+      <header class="expo-header">
+        <p class="expo-kicker">SuperCSS Sandbox</p>
+        <h1>Component Expo</h1>
+        <p>Every base component should be visible here so theme and framework ports can be checked in one place.</p>
+      </header>
+
+      <!-- Primitives -->
+      <div id="primitives" class="expo-group"><span class="expo-group__label">Primitives</span></div>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Buttons</h2>
+          <p>Primary actions, secondary actions, ghost buttons, destructive actions, sizes, and icon-only actions.</p>
+        </div>
+        <div class="expo-stack">
+          <div class="expo-row">
+            <button class="btn btn-primary" type="button">Primary</button>
+            <button class="btn btn-secondary" type="button">Secondary</button>
+            <button class="btn btn-ghost" type="button">Ghost</button>
+            <button class="btn btn-danger" type="button">Danger</button>
+            <button class="btn btn-primary" type="button" disabled>Disabled</button>
+          </div>
+          <div class="expo-row">
+            <button class="btn btn-primary btn-xs" type="button">Extra small</button>
+            <button class="btn btn-primary btn-sm" type="button">Small</button>
+            <button class="btn btn-primary" type="button">Default</button>
+            <button class="btn btn-primary btn-lg" type="button">Large</button>
+            <button class="btn btn-secondary btn-icon" type="button" aria-label="Spark"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></button>
+            <button class="btn btn-ghost btn-sm btn-icon" type="button" aria-label="Settings"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.38a2 2 0 0 0-.73-2.73l-.15-.09a2 2 0 0 1-1-1.74v-.51a2 2 0 0 1 1-1.72l.15-.1a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2Z"></path><circle cx="12" cy="12" r="3"></circle></svg></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Badges And Chips</h2>
+          <p>Status labels, selectable chips, and removable pills.</p>
+        </div>
+        <div class="expo-row">
+          <span class="badge badge-primary">Primary</span>
+          <span class="badge badge-success">Success</span>
+          <span class="badge badge-warning">Warning</span>
+          <span class="badge badge-danger">Danger</span>
+          <span class="badge badge-muted">Muted</span>
+          <span class="badge badge-primary badge-dot">Online</span>
+          <span class="chip">Default</span>
+          <span class="chip chip--selected">Selected</span>
+          <button class="chip chip--button" type="button">Removable &times;</button>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Avatars And Loading</h2>
+          <p>Identity and loading placeholders need predictable sizing.</p>
+        </div>
+        <div class="expo-stack">
+          <div class="expo-row">
+            <span class="avatar avatar-xs">XS</span>
+            <span class="avatar avatar-sm">SM</span>
+            <span class="avatar">MD</span>
+            <span class="avatar avatar-lg">LG</span>
+            <span class="avatar avatar-xl">XL</span>
+            <span class="avatar avatar-2xl">2X</span>
+            <div class="avatar-group"><span class="avatar">AB</span>
+              <span class="avatar avatar--accent">CD</span>
+              <span class="avatar avatar--success">EF</span>
+              <span class="avatar avatar-sm avatar--muted">+4</span></div>
+          </div>
+          <div class="skeleton-card"><div class="skeleton skeleton-avatar"></div><div class="skeleton-copy"><div class="skeleton skeleton-line skeleton-line--wide"></div><div class="skeleton skeleton-line skeleton-line--short"></div></div></div>
+          <div class="skeleton skeleton-block"></div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Iconography</h2>
+          <p>Lucide icons â€” consistent stroke width, optical sizing, and current-color inheritance across all themes.</p>
+        </div>
+        <div class="expo-stack expo-stack--loose">
+
+          <div>
+            <p class="eyebrow" style="margin-bottom:var(--sc-space-3)">Sizes</p>
+            <div class="expo-row">
+              <div style="display:flex;flex-direction:column;align-items:center;gap:var(--sc-space-2)">
+                <div data-icon="layers"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></ data-icon-size="12"></div>
+                <span class="muted-text" style="font-size:var(--sc-font-size-xs)">12</span>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:var(--sc-space-2)">
+                <div data-icon="layers"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></ data-icon-size="16"></div>
+                <span class="muted-text" style="font-size:var(--sc-font-size-xs)">16</span>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:var(--sc-space-2)">
+                <div data-icon="layers"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></ data-icon-size="20"></div>
+                <span class="muted-text" style="font-size:var(--sc-font-size-xs)">20</span>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:var(--sc-space-2)">
+                <div data-icon="layers"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></ data-icon-size="24"></div>
+                <span class="muted-text" style="font-size:var(--sc-font-size-xs)">24</span>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:var(--sc-space-2)">
+                <div data-icon="layers"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></ data-icon-size="32"></div>
+                <span class="muted-text" style="font-size:var(--sc-font-size-xs)">32</span>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:var(--sc-space-2)">
+                <div data-icon="layers"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></ data-icon-size="40"></div>
+                <span class="muted-text" style="font-size:var(--sc-font-size-xs)">40</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <p class="eyebrow" style="margin-bottom:var(--sc-space-3)">Icon grid</p>
+            <div style="display:flex;flex-wrap:wrap;gap:var(--sc-space-2)">
+              <span class="tooltip-anchor" data-tooltip="house" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="house"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="layout-dashboard" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="layout-dashboard"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="menu" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="menu"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="search" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="search"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="bell" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="bell"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="settings" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="settings"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.38a2 2 0 0 0-.73-2.73l-.15-.09a2 2 0 0 1-1-1.74v-.51a2 2 0 0 1 1-1.72l.15-.1a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2Z"></path><circle cx="12" cy="12" r="3"></circle></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="user" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="user"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="lock" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="lock"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="eye" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="eye"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="plus" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="plus"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="pencil" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="pencil"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="trash-2" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="trash-2"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="copy" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="copy"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="download" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="download"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="share-2" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="share-2"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="external-link" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="external-link"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="check" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="check"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="x" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="x"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="circle-check-big" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="circle-check-big"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="circle-alert" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="circle-alert"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="triangle-alert" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="triangle-alert"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="info" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="info"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="file-text" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="file-text"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="code" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="code"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="folder" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="folder"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="tag" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="tag"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="log-out" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="log-out"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="chevron-down" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="chevron-down"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="chevron-right" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="chevron-right"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="arrow-right" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="arrow-right"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></></div></span>
+              <span class="tooltip-anchor" data-tooltip="layers" data-placement="top"><div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);cursor:default" data-icon="layers"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></></div></span>
+            </div>
+          </div>
+
+          <div>
+            <p class="eyebrow" style="margin-bottom:var(--sc-space-3)">Icons in context</p>
+            <div class="expo-stack">
+              <div class="expo-row">
+                <button class="btn btn-primary btn-sm" type="button"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>New project</button>
+                <button class="btn btn-secondary btn-sm" type="button"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>Export</button>
+                <button class="btn btn-ghost btn-sm" type="button"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>Share</button>
+                <button class="btn btn-danger btn-sm" type="button"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/></svg>Delete</button>
+                <button class="btn btn-secondary btn-sm btn-icon" type="button" aria-label="Settings"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.38a2 2 0 0 0-.73-2.73l-.15-.09a2 2 0 0 1-1-1.74v-.51a2 2 0 0 1 1-1.72l.15-.1a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2Z"></path><circle cx="12" cy="12" r="3"></circle></svg></button>
+                <button class="btn btn-ghost btn-sm btn-icon" type="button" aria-label="Search"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button>
+              </div>
+              <div class="expo-row">
+                <div class="alert alert-success" style="display:flex;align-items:center;gap:var(--sc-space-2)"><div data-icon="circle-check-big"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg></></div> Payment processed successfully.</div>
+              </div>
+              <div class="expo-row">
+                <div class="alert alert-error" style="display:flex;align-items:center;gap:var(--sc-space-2)"><div data-icon="circle-alert"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg></></div> Could not connect to the server.</div>
+              </div>
+              <div class="expo-row">
+                <div class="alert alert-warning" style="display:flex;align-items:center;gap:var(--sc-space-2)"><div data-icon="triangle-alert"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></></div> Your trial expires in 3 days.</div>
+              </div>
+              <div class="expo-row">
+                <div class="alert alert-info" style="display:flex;align-items:center;gap:var(--sc-space-2)"><div data-icon="info"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></></div> New release available.</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Typography</h2>
+          <p>Heading scale, body text, and inline text primitives â€” the base of all readable content.</p>
+        </div>
+        <div class="expo-stack">
+          <div class="expo-stack">
+            <h1 style="margin:0">Heading 1 â€” The quick brown fox</h1>
+            <h2 style="margin:0">Heading 2 â€” The quick brown fox</h2>
+            <h3 style="margin:0">Heading 3 â€” The quick brown fox</h3>
+            <h4 style="margin:0">Heading 4 â€” The quick brown fox</h4>
+            <h5 style="margin:0">Heading 5 â€” The quick brown fox</h5>
+            <h6 style="margin:0">Heading 6 â€” The quick brown fox</h6>
+          </div>
+          <hr class="divider" />
+          <div class="expo-stack">
+            <p style="margin:0">Paragraph â€” Body text is the workhorse of every interface. It should be comfortable to read at length, with good line-height and measured contrast.</p>
+            <p style="margin:0"><small>Small â€” Supporting text, captions, timestamps, metadata.</small></p>
+            <p style="margin:0"><strong>Strong â€” Emphasized importance within running text.</strong></p>
+            <p style="margin:0"><em>Em â€” Stress emphasis, titles, technical terms, foreign words.</em></p>
+            <p style="margin:0"><span>Span â€” Neutral inline container. Inherits everything from its parent.</span></p>
+            <p style="margin:0"><label>Label â€” Associates description with a control. Always paired.</label></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Lists</h2>
+          <p>Unordered, ordered, and definition lists â€” the structural root of nav, cards, and tables.</p>
+        </div>
+        <div class="expo-stack" style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sc-space-6)">
+          <div>
+            <p class="muted-text" style="margin-bottom:var(--sc-space-3);font-size:var(--sc-font-size-xs);text-transform:uppercase;letter-spacing:0.08em">Unordered</p>
+            <ul style="margin:0;padding-left:var(--sc-space-5);display:grid;gap:var(--sc-space-2)">
+              <li>Design tokens</li>
+              <li>Component library</li>
+              <li>Theme system</li>
+              <li>Documentation</li>
+            </ul>
+          </div>
+          <div>
+            <p class="muted-text" style="margin-bottom:var(--sc-space-3);font-size:var(--sc-font-size-xs);text-transform:uppercase;letter-spacing:0.08em">Ordered</p>
+            <ol style="margin:0;padding-left:var(--sc-space-5);display:grid;gap:var(--sc-space-2)">
+              <li>Define base tokens</li>
+              <li>Generate surface scale</li>
+              <li>Map to components</li>
+              <li>Ship</li>
+            </ol>
+          </div>
+          <div>
+            <p class="muted-text" style="margin-bottom:var(--sc-space-3);font-size:var(--sc-font-size-xs);text-transform:uppercase;letter-spacing:0.08em">Definition</p>
+            <dl style="margin:0;display:grid;gap:var(--sc-space-2)">
+              <div style="display:grid;grid-template-columns:auto 1fr;gap:var(--sc-space-3);align-items:baseline">
+                <dt style="font-weight:var(--sc-font-weight-bold);color:var(--sc-color-text);white-space:nowrap">Base</dt>
+                <dd style="margin:0;color:var(--sc-color-text-muted)">Foundation hue and mood</dd>
+              </div>
+              <div style="display:grid;grid-template-columns:auto 1fr;gap:var(--sc-space-3);align-items:baseline">
+                <dt style="font-weight:var(--sc-font-weight-bold);color:var(--sc-color-text);white-space:nowrap">Accent</dt>
+                <dd style="margin:0;color:var(--sc-color-text-muted)">Primary action color</dd>
+              </div>
+              <div style="display:grid;grid-template-columns:auto 1fr;gap:var(--sc-space-3);align-items:baseline">
+                <dt style="font-weight:var(--sc-font-weight-bold);color:var(--sc-color-text);white-space:nowrap">Tint</dt>
+                <dd style="margin:0;color:var(--sc-color-text-muted)">Secondary flavor</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Media</h2>
+          <p>Image, figure, and SVG â€” visual rendering primitives that survive every theme.</p>
+        </div>
+        <div class="expo-stack">
+          <div class="expo-row" style="align-items:flex-start">
+            <figure style="margin:0;display:grid;gap:var(--sc-space-2)">
+              <div style="width:10rem;height:7rem;background:var(--sc-color-surface-sunken);border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);display:flex;align-items:center;justify-content:center">
+                <div data-icon="image"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg></ style="opacity:0.3"></div>
+              </div>
+              <figcaption style="font-size:var(--sc-font-size-xs);color:var(--sc-color-text-muted);text-align:center">figcaption â€” image caption</figcaption>
+            </figure>
+            <figure style="margin:0;display:grid;gap:var(--sc-space-2)">
+              <div style="width:10rem;height:7rem;background:var(--sc-color-surface-sunken);border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);display:flex;align-items:center;justify-content:center">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+                  <circle cx="24" cy="24" r="10" fill="currentColor" opacity="0.15"/>
+                  <circle cx="24" cy="24" r="4" fill="currentColor" opacity="0.6"/>
+                </svg>
+              </div>
+              <figcaption style="font-size:var(--sc-font-size-xs);color:var(--sc-color-text-muted);text-align:center">svg â€” inline vector</figcaption>
+            </figure>
+            <figure style="margin:0;display:grid;gap:var(--sc-space-2)">
+              <div style="width:10rem;height:7rem;background:var(--sc-color-surface-sunken);border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);display:flex;align-items:center;justify-content:center">
+                <div data-icon="video"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8z"/><rect width="14" height="12" x="2" y="6" rx="2" ry="2"/></svg></ style="opacity:0.3"></div>
+              </div>
+              <figcaption style="font-size:var(--sc-font-size-xs);color:var(--sc-color-text-muted);text-align:center">video â€” media embed</figcaption>
+            </figure>
+            <figure style="margin:0;display:grid;gap:var(--sc-space-2)">
+              <div style="width:10rem;height:7rem;background:var(--sc-color-surface-sunken);border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);display:flex;align-items:center;justify-content:center">
+                <div data-icon="square-dashed"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3a2 2 0 0 0-2 2"/><path d="M19 3a2 2 0 0 1 2 2"/><path d="M21 19a2 2 0 0 1-2 2"/><path d="M5 21a2 2 0 0 1-2-2"/><path d="M9 3h1"/><path d="M9 21h1"/><path d="M14 3h1"/><path d="M14 21h1"/><path d="M3 9v1"/><path d="M21 9v1"/><path d="M3 14v1"/><path d="M21 14v1"/></svg></ style="opacity:0.3"></div>
+              </div>
+              <figcaption style="font-size:var(--sc-font-size-xs);color:var(--sc-color-text-muted);text-align:center">canvas â€” 2D render surface</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Semantic State</h2>
+          <p>Native HTML disclosure, progress, and measurement primitives.</p>
+        </div>
+        <div class="expo-stack">
+          <div class="expo-stack">
+            <details style="border:var(--sc-border-thin) solid var(--sc-color-border);border-radius:var(--sc-radius-md);overflow:hidden">
+              <summary style="padding:var(--sc-space-3) var(--sc-space-4);background:var(--sc-color-surface-sunken);cursor:pointer;font-weight:var(--sc-font-weight-medium);color:var(--sc-color-text);list-style:none;display:flex;align-items:center;justify-content:space-between">
+                details / summary â€” native disclosure
+                <div data-icon="chevron-down"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></></div>
+              </summary>
+              <div style="padding:var(--sc-space-4);color:var(--sc-color-text-muted);font-size:var(--sc-font-size-sm)">
+                Content revealed when the disclosure is open. No JavaScript required â€” this is a native HTML primitive.
+              </div>
+            </details>
+          </div>
+          <div class="expo-stack">
+            <div style="display:grid;gap:var(--sc-space-2)">
+              <div style="display:flex;align-items:center;justify-content:space-between">
+                <label style="font-size:var(--sc-font-size-sm);color:var(--sc-color-text-muted)">progress â€” determinate</label>
+                <span style="font-size:var(--sc-font-size-xs);color:var(--sc-color-text-muted)">68%</span>
+              </div>
+              <progress value="68" max="100" style="width:100%;height:0.5rem;appearance:none;border:none;border-radius:var(--sc-radius-round);background:var(--sc-color-surface-sunken);accent-color:var(--sc-color-accent)"></progress>
+            </div>
+            <div style="display:grid;gap:var(--sc-space-2)">
+              <label style="font-size:var(--sc-font-size-sm);color:var(--sc-color-text-muted)">progress â€” indeterminate</label>
+              <progress style="width:100%;height:0.5rem;appearance:none;border:none;border-radius:var(--sc-radius-round);background:var(--sc-color-surface-sunken);accent-color:var(--sc-color-accent)"></progress>
+            </div>
+            <div style="display:grid;gap:var(--sc-space-2)">
+              <div style="display:flex;align-items:center;justify-content:space-between">
+                <label style="font-size:var(--sc-font-size-sm);color:var(--sc-color-text-muted)">meter â€” optimum range</label>
+                <span style="font-size:var(--sc-font-size-xs);color:var(--sc-color-text-muted)">72 / 100</span>
+              </div>
+              <meter value="72" min="0" max="100" low="25" high="75" optimum="80" style="width:100%;height:0.5rem;accent-color:var(--sc-color-success)"></meter>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Form Controls -->
+      <div id="form-controls" class="expo-group"><span class="expo-group__label">Form Controls</span></div>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Inputs</h2>
+          <p>Form fields should keep spacing, radius, labels, and focus states consistent.</p>
+        </div>
+        <div class="expo-form-grid">
+          <div class="field">
+            <label class="label">Default input</label>
+            <input class="input" type="text" placeholder="Enter value...">
+          </div>
+          <div class="field">
+            <label class="label">Error state</label>
+            <input class="input input-error" type="text" value="bad value">
+          </div>
+          <div class="field">
+            <label class="label">Disabled</label>
+            <input class="input" type="text" placeholder="Disabled" disabled>
+          </div>
+        </div>
+        <div class="expo-stack">
+          <div class="field">
+            <label class="label">Textarea</label>
+            <textarea class="textarea" placeholder="Write something..."></textarea>
+          </div>
+          <div class="field">
+            <label class="label">Input group</label>
+            <div class="input-group"><span class="input-prefix">https://</span><input class="input" type="text" placeholder="yourdomain.com"><span class="input-suffix">.io</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Controls</h2>
+          <p>Checkboxes, radios, and toggles must align cleanly without custom page hacks.</p>
+        </div>
+        <div class="expo-control-grid">
+          <div class="expo-stack">
+            <label class="checkbox-label"><input class="checkbox" type="checkbox" checked> Remember me</label>
+            <label class="checkbox-label"><input class="checkbox" type="checkbox"> Subscribe to updates</label>
+            <label class="checkbox-label"><input class="checkbox" type="checkbox" disabled> Disabled option</label>
+          </div>
+          <div class="expo-stack">
+            <label class="radio-label"><input class="radio" type="radio" name="billing" checked> Monthly</label>
+            <label class="radio-label"><input class="radio" type="radio" name="billing"> Annually</label>
+            <label class="radio-label"><input class="radio" type="radio" name="billing" disabled> Enterprise</label>
+          </div>
+          <div class="expo-stack">
+            <label class="toggle-row"><span class="toggle"><input type="checkbox" checked><span class="toggle-track"></span></span> Notifications on</label>
+            <label class="toggle-row"><span class="toggle"><input type="checkbox"><span class="toggle-track"></span></span> Dark mode</label>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feedback & Status -->
+      <div id="feedback" class="expo-group"><span class="expo-group__label">Feedback &amp; Status</span></div>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Progress &amp; Loading</h2>
+          <p>Horizontal progress bars and inline spinners share the same feedback layer.</p>
+        </div>
+        <div class="expo-control-grid">
+          <div class="expo-stack">
+            <p class="eyebrow">Progress Bars</p>
+            <div><div class="progress-label"><span>Storage</span><span>68%</span></div><div class="progress"><div class="progress-bar" style="width:68%"></div></div></div>
+            <div><div class="progress-label"><span>Upload</span><span>42%</span></div><div class="progress"><div class="progress-bar" style="width:42%"></div></div></div>
+            <div><div class="progress-label"><span>Processing</span><span>88%</span></div><div class="progress"><div class="progress-bar" style="width:88%"></div></div></div>
+          </div>
+          <div class="expo-stack">
+            <p class="eyebrow">Spinners</p>
+            <div class="loading-inline" role="status" aria-live="polite"><div class="spinner"></div><span class="muted-text">Loading data...</span></div>
+            <div class="loading-inline" role="status" aria-live="polite"><div class="spinner spinner--sm"></div><span class="muted-text">Saving changes...</span></div>
+            <div class="loading-inline" role="status" aria-live="polite"><div class="spinner spinner--lg"></div><span class="muted-text">Processing request...</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Alerts</h2>
+          <p>Feedback states should be readable and distinct across every theme.</p>
+        </div>
+        <div class="expo-stack">
+          <div class="alert alert-info">Info: Your account will be reviewed within 24 hours.</div>
+          <div class="alert alert-success">Success: Payment processed successfully. Receipt sent.</div>
+          <div class="alert alert-warning">Warning: Your trial expires in 3 days. Upgrade to continue.</div>
+          <div class="alert alert-error">Error: Could not connect to the server. Try again later.</div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Pagination</h2>
+          <p>Page navigation should stand on its own with clear active and disabled states.</p>
+        </div>
+        <nav class="pagination" aria-label="Example pages"><button class="pagination__button" type="button">Prev</button><div class="pagination__pages"><button class="pagination__button" type="button">1</button><button class="pagination__button is-active" type="button" aria-current="page">2</button><button class="pagination__button" type="button">3</button></div><button class="pagination__button" type="button">Next</button></nav>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Toast And Rating</h2>
+          <p>Interactive samples keep behavior visible while CSS stays structural.</p>
+        </div>
+        <div class="expo-stack">
+          <div class="toast-list"><div class="toast toast--success"><span>Payment processed successfully.</span><button class="btn btn-ghost btn-xs" type="button">Dismiss</button></div>
+            <div class="toast toast--warning"><span>Your trial expires in 3 days.</span><button class="btn btn-ghost btn-xs" type="button">Dismiss</button></div>
+            <div class="toast toast--danger"><span>Could not connect to the server.</span><button class="btn btn-ghost btn-xs" type="button">Dismiss</button></div>
+            <div class="toast toast--info"><span>New release available.</span><button class="btn btn-ghost btn-xs" type="button">Dismiss</button></div></div>
+          <div class="rating"><button class="rating-star is-active" type="button">&#9733;</button><button class="rating-star is-active" type="button">&#9733;</button><button class="rating-star is-active" type="button">&#9733;</button><button class="rating-star is-active" type="button">&#9733;</button><button class="rating-star" type="button">&#9733;</button><span class="rating-value">4/5</span></div>
+        </div>
+      </section>
+
+      <!-- Navigation -->
+      <div id="navigation" class="expo-group"><span class="expo-group__label">Navigation</span></div>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Tabs</h2>
+          <p>Segmented and pill tabs share the same state logic.</p>
+        </div>
+        <div class="expo-stack expo-stack--loose">
+          <div>
+            <div class="tabs"><button class="tab active" type="button">Preview</button>
+              <button class="tab" type="button">Code</button>
+              <button class="tab" type="button">Docs</button>
+              <button class="tab" type="button">History</button></div>
+            <div class="panel">
+              <div class="panel-body">
+                <div class="expo-row">
+                  <div class="panel" style="flex:1">
+                    <div class="panel-body">
+                      <p class="muted-text">Monthly Revenue</p>
+                      <p class="metric-value">$24,530</p>
+                      <p class="muted-text">&#8593; 12% from last month</p>
+                    </div>
+                  </div>
+                  <div class="panel" style="flex:1">
+                    <div class="panel-body">
+                      <p class="muted-text">Active Users</p>
+                      <p class="metric-value">1,284</p>
+                      <p class="muted-text">&#8593; 4% from last week</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="tabs-pill"><button class="tab active" type="button">All</button>
+              <button class="tab" type="button">Active</button>
+              <button class="tab" type="button">Draft</button>
+              <button class="tab" type="button">Archived</button></div>
+            <div class="panel">
+              <div class="panel-body">
+                <div class="expo-stack">
+                  <div class="sc-cluster"><span class="strong-text">Homepage redesign</span><span class="badge badge-success">Active</span></div>
+                  <div class="sc-cluster"><span class="strong-text">Token audit</span><span class="badge badge-muted">Draft</span></div>
+                  <div class="sc-cluster"><span class="strong-text">v1.0 launch assets</span><span class="badge badge-muted">Archived</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Navigation Bar</h2>
+          <p>A reusable top navigation contract with brand, centered links, and right-side actions.</p>
+        </div>
+        <nav class="navbar" aria-label="Demo navigation"><a class="navbar__brand" href="#" aria-label="Acme Studio home"><span class="navbar__mark">&#9670;</span><span>Acme Studio</span></a>
+          <div class="navbar__links"><a class="navbar__link is-active" href="#">Dashboard</a>
+            <a class="navbar__link" href="#">Products</a>
+            <a class="navbar__link" href="#">Pricing</a>
+            <a class="navbar__link" href="#">Docs</a></div>
+          <div class="navbar__actions"><button class="btn btn-ghost btn-sm" type="button">Sign in</button>
+            <button class="btn btn-primary btn-sm" type="button">Get started</button></div></nav>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Sidebar Navigation</h2>
+          <p>Vertical nav for dashboard shells. Left variant and right context panel.</p>
+        </div>
+        <div class="expo-stack expo-stack--loose">
+          <div>
+            <p class="muted-text" style="margin-bottom:var(--sc-space-2)">Left sidebar â€” dashboard layout</p>
+            <div style="display:grid;grid-template-columns:13rem 1fr;min-height:22rem;border:var(--sc-border-thin) solid var(--sc-color-border);overflow:hidden">
+              <div class="sidebar-nav"><div class="sidebar-nav__brand"><span style="color:var(--sc-color-accent)">&#9670;</span> Acme Studio</div>
+                <div class="sidebar-nav__section"><span class="sidebar-nav__section-label">Main</span>
+                  <a class="sidebar-nav__item is-active" href="#"><span class="sidebar-nav__icon"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg></span>
+                    <span class="sidebar-nav__label">Dashboard</span></a>
+                  <a class="sidebar-nav__item" href="#"><span class="sidebar-nav__icon"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg></span>
+                    <span class="sidebar-nav__label">Projects</span>
+                    <span class="sidebar-nav__badge">3</span></a>
+                  <a class="sidebar-nav__item" href="#"><span class="sidebar-nav__icon"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></span>
+                    <span class="sidebar-nav__label">Analytics</span></a>
+                  <a class="sidebar-nav__item" href="#"><span class="sidebar-nav__icon"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+                    <span class="sidebar-nav__label">Team</span></a></div>
+                <div class="sidebar-nav__section"><span class="sidebar-nav__section-label">Resources</span>
+                  <a class="sidebar-nav__item" href="#"><span class="sidebar-nav__icon"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg></span>
+                    <span class="sidebar-nav__label">Files</span>
+                    <span class="sidebar-nav__badge">12</span></a>
+                  <a class="sidebar-nav__item" href="#"><span class="sidebar-nav__icon"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>
+                    <span class="sidebar-nav__label">Integrations</span></a></div>
+                <div class="sidebar-nav__section sidebar-nav__section--bottom"><a class="sidebar-nav__item" href="#"><span class="sidebar-nav__icon"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></span>
+                    <span class="sidebar-nav__label">Settings</span></a>
+                  <a class="sidebar-nav__item" href="#"><span class="sidebar-nav__icon"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+                    <span class="sidebar-nav__label">Profile</span></a></div></div>
+              <div style="padding:var(--sc-space-5);background:var(--sc-color-bg);display:grid;gap:var(--sc-space-4);align-content:start">
+                <div>
+                  <p class="eyebrow">Dashboard</p>
+                  <h3 style="margin:0;font-size:var(--sc-font-size-lg)">Good morning, Maya</h3>
+                </div>
+                <div class="sc-grid" data-cols="3">
+                  <div class="panel"><div class="panel-body"><p class="muted-text">Revenue</p><p class="metric-value" style="font-size:var(--sc-font-size-xl)">$24k</p></div></div>
+                  <div class="panel"><div class="panel-body"><p class="muted-text">Projects</p><p class="metric-value" style="font-size:var(--sc-font-size-xl)">12</p></div></div>
+                  <div class="panel"><div class="panel-body"><p class="muted-text">Team</p><p class="metric-value" style="font-size:var(--sc-font-size-xl)">8</p></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Breadcrumb</h2>
+          <p>Navigation trail showing the user's location. Separator and current-page state via CSS only.</p>
+        </div>
+        <div class="expo-stack">
+          <nav class="breadcrumb" aria-label="Slash separator"><ol class="breadcrumb__list"><li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__home" href="#">Home</a></li>
+            <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Products</a></li>
+            <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Audio</a></li>
+            <li class="breadcrumb__item"><span class="breadcrumb__current" aria-current="page">Wireless Headphones</span></li></ol></nav>
+          <nav class="breadcrumb" aria-label="Chevron separator"><ol class="breadcrumb__list breadcrumb__list--chevron"><li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__home" href="#">Home</a></li>
+            <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Settings</a></li>
+            <li class="breadcrumb__item"><span class="breadcrumb__current" aria-current="page">Notifications</span></li></ol></nav>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Footer</h2>
+          <p>Page-level footer â€” brand, link columns, and a bottom copyright bar.</p>
+        </div>
+        <footer class="site-footer"><div class="site-footer__brand"><div class="site-footer__brand-mark"><span style="color:var(--sc-color-accent)">&#9670;</span> Acme Studio</div>
+            <p class="site-footer__tagline">Token-driven UI that ships across every frontend stack without drift.</p>
+            <div class="sc-cluster">
+              <span class="badge badge-primary">SuperCSS</span>
+              <span class="badge badge-muted">v1.4</span>
+            </div></div>
+          <div class="site-footer__col"><span class="site-footer__col-label">Product</span>
+            <a class="site-footer__link" href="#">Features</a>
+            <a class="site-footer__link" href="#">Pricing</a>
+            <a class="site-footer__link" href="#">Changelog</a>
+            <a class="site-footer__link" href="#">Roadmap</a></div>
+          <div class="site-footer__col"><span class="site-footer__col-label">Developers</span>
+            <a class="site-footer__link" href="#">Documentation</a>
+            <a class="site-footer__link" href="#">API Reference</a>
+            <a class="site-footer__link" href="#">GitHub</a>
+            <a class="site-footer__link" href="#">Status</a></div>
+          <div class="site-footer__col"><span class="site-footer__col-label">Company</span>
+            <a class="site-footer__link" href="#">About</a>
+            <a class="site-footer__link" href="#">Blog</a>
+            <a class="site-footer__link" href="#">Careers</a>
+            <a class="site-footer__link" href="#">Contact</a></div>
+          <div class="site-footer__col"><span class="site-footer__col-label">Legal</span>
+            <a class="site-footer__link" href="#">Privacy</a>
+            <a class="site-footer__link" href="#">Terms</a>
+            <a class="site-footer__link" href="#">Cookies</a>
+            <a class="site-footer__link" href="#">Licenses</a></div>
+          <div class="site-footer__bottom"><p class="site-footer__copy">&#169; 2026 Acme Studio, Inc. All rights reserved.</p>
+            <div class="site-footer__bottom-links">
+              <a class="site-footer__link" href="#">Privacy Policy</a>
+              <a class="site-footer__link" href="#">Terms of Service</a>
+              <a class="site-footer__link" href="#">Cookie Preferences</a>
+            </div></div></footer>
+      </section>
+
+      <!-- Surfaces & Layout -->
+      <div id="surfaces" class="expo-group"><span class="expo-group__label">Surfaces &amp; Layout</span></div>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Surfaces</h2>
+          <p>Theme layers should mutate values, not require new markup.</p>
+        </div>
+        <div class="expo-stack">
+          <div class="surface surface-sample"><p class="muted-text">.surface using base surface tokens</p></div>
+          <div class="surface-elevated surface-sample"><p class="muted-text">.surface-elevated using raised surface tokens</p></div>
+          <div class="surface-overlay surface-sample"><p class="muted-text">.surface-overlay using overlay surface tokens</p></div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Grid &amp; Layout</h2>
+          <p>Structural primitives â€” responsive grid, vertical stack, and horizontal cluster via <code>.sc-*</code> classes.</p>
+        </div>
+        <div class="expo-stack expo-stack--loose">
+          <div>
+            <p class="muted-text" style="margin-bottom:var(--sc-space-2)"><code>.sc-grid data-cols="2"</code></p>
+            <div class="sc-grid" data-cols="2">
+              <div class="surface surface-sample"><p class="muted-text">Col 1</p></div>
+              <div class="surface surface-sample"><p class="muted-text">Col 2</p></div>
+            </div>
+          </div>
+          <div>
+            <p class="muted-text" style="margin-bottom:var(--sc-space-2)"><code>.sc-grid data-cols="3"</code></p>
+            <div class="sc-grid" data-cols="3">
+              <div class="surface surface-sample"><p class="muted-text">Col 1</p></div>
+              <div class="surface surface-sample"><p class="muted-text">Col 2</p></div>
+              <div class="surface surface-sample"><p class="muted-text">Col 3</p></div>
+            </div>
+          </div>
+          <div>
+            <p class="muted-text" style="margin-bottom:var(--sc-space-2)"><code>.sc-stack</code></p>
+            <div class="sc-stack">
+              <div class="surface surface-sample"><p class="muted-text">Item 1</p></div>
+              <div class="surface surface-sample"><p class="muted-text">Item 2</p></div>
+              <div class="surface surface-sample"><p class="muted-text">Item 3</p></div>
+            </div>
+          </div>
+          <div>
+            <p class="muted-text" style="margin-bottom:var(--sc-space-2)"><code>.sc-cluster</code> â€” wraps inline, gap preserved</p>
+            <div class="sc-cluster">
+              <div class="surface surface-sample"><p class="muted-text">Alpha</p></div>
+              <div class="surface surface-sample"><p class="muted-text">Beta</p></div>
+              <div class="surface surface-sample"><p class="muted-text">Gamma</p></div>
+              <div class="surface surface-sample"><p class="muted-text">Delta</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Cards And Panels</h2>
+          <p>Surface components are the backbone of page composition.</p>
+        </div>
+        <div class="expo-card-grid">
+          <div class="panel">
+            <div class="panel-header">
+              <span>Monthly Revenue</span>
+              <span class="badge badge-success badge-dot">Live</span>
+            </div>
+            <div class="panel-body">
+              <p class="metric-value">$24,530</p>
+              <p class="muted-text">Up 12% from last month</p>
+            </div>
+            <div class="panel-footer">
+              <button class="btn btn-ghost btn-sm" type="button">View report</button>
+            </div>
+          </div>
+          <div class="card">
+            <p class="eyebrow">Team member</p>
+            <div class="profile-row">
+              <span class="avatar avatar-lg">JD</span>
+              <div>
+                <p class="strong-text">Jane Doe</p>
+                <p class="muted-text">Product Designer</p>
+              </div>
+            </div>
+            <div class="expo-row">
+              <span class="badge badge-primary">Design</span>
+              <span class="badge badge-muted">Remote</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Full Content Card</h2>
+          <p>A complete card pattern with media, metadata, title, excerpt, tags, and actions.</p>
+        </div>
+        <article class="content-card">
+          <div class="content-card__media"><span>Media preview</span></div>
+          <div class="content-card__body">
+            <div class="content-card__meta">
+              <span>Template System</span>
+              <span>&#8226;</span>
+              <time datetime="2026-05-14">May 14, 2026</time>
+            </div>
+            <h3 class="content-card__title">Build once, port cleanly across every frontend stack</h3>
+            <p class="content-card__copy">A predictable component contract keeps generated templates aligned while themes mutate only token values.</p>
+            <div class="content-card__tags">
+              <span class="badge badge-primary">SuperCSS</span>
+              <span class="badge badge-muted">Angular</span>
+              <span class="badge badge-success">Ready</span>
+            </div>
+            <div class="content-card__footer">
+              <button class="btn btn-primary btn-sm" type="button">Read case study</button>
+              <button class="btn btn-ghost btn-sm" type="button">Save</button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Card Grid</h2>
+          <p>Slot-based card system â€” same <code>.card</code> surface, different content inside.</p>
+        </div>
+        <div class="expo-stack expo-stack--loose">
+          <div class="card-grid-3">
+            <div class="card">
+              <div class="card__media">&#x1F5A5;&#xFE0F;</div>
+              <div class="card__body">
+                <p class="card__eyebrow">Electronics</p>
+                <h3 class="card__title">Wireless Pro Headphones</h3>
+                <p class="card__desc">Studio-grade sound with 40hr battery and active noise cancellation.</p>
+                <div class="card__meta"><span>&#9733;&#9733;&#9733;&#9733;&#9734;</span><span>128 reviews</span></div>
+              </div>
+              <div class="card__footer">
+                <div><span class="card__price">$249</span><span class="card__price-original">$299</span></div>
+                <button class="btn btn-primary btn-sm" type="button">Add to cart</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__media">&#x270D;&#xFE0F;</div>
+              <div class="card__body">
+                <p class="card__eyebrow">Design Systems</p>
+                <h3 class="card__title">Building token-driven UI at scale</h3>
+                <p class="card__desc">How a single CSS variable layer eliminates theme drift across every frontend port.</p>
+                <div class="card__meta"><span>May 14, 2025</span><span>&#183;</span><span>6 min read</span></div>
+              </div>
+              <div class="card__footer">
+                <div class="expo-row" style="margin:0"><span class="badge badge-primary">SuperCSS</span><span class="badge badge-muted">Tokens</span></div>
+                <button class="btn btn-ghost btn-sm" type="button">Read &#8594;</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__media">&#x1F9D1;&#x200D;&#x1F4BB;</div>
+              <div class="card__body">
+                <h3 class="card__title">Maya Osei</h3>
+                <p class="card__desc">Lead Design Engineer &#183; Berlin</p>
+                <div class="card__meta"><span class="badge badge-success">Available</span><span class="badge badge-muted">Full-time</span></div>
+              </div>
+              <div class="card__footer">
+                <div class="expo-row" style="margin:0"><span class="badge badge-primary">CSS</span><span class="badge badge-muted">Angular</span><span class="badge badge-muted">Figma</span></div>
+                <button class="btn btn-secondary btn-sm" type="button">View profile</button>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="expo-section-header" style="margin-bottom:var(--sc-space-4)">
+              <h2>Gallery Grid</h2>
+              <p>Media-first cards. Caption overlays on hover via <code>.card--gallery</code>.</p>
+            </div>
+            <div class="card-grid-gallery">
+              <div class="card card--gallery"><div class="card__media">&#x1F3D4;&#xFE0F;</div><div class="card__overlay"><p class="card__overlay-title">Mountain Range</p><p class="card__overlay-meta">Landscape &#183; 2025</p></div></div>
+              <div class="card card--gallery"><div class="card__media">&#x1F30A;</div><div class="card__overlay"><p class="card__overlay-title">Ocean Waves</p><p class="card__overlay-meta">Nature &#183; 2025</p></div></div>
+              <div class="card card--gallery"><div class="card__media">&#x1F306;</div><div class="card__overlay"><p class="card__overlay-title">City at Dusk</p><p class="card__overlay-meta">Urban &#183; 2025</p></div></div>
+              <div class="card card--gallery"><div class="card__media">&#x1F33F;</div><div class="card__overlay"><p class="card__overlay-title">Forest Floor</p><p class="card__overlay-meta">Macro &#183; 2025</p></div></div>
+              <div class="card card--gallery"><div class="card__media">&#x1F3DC;&#xFE0F;</div><div class="card__overlay"><p class="card__overlay-title">Desert Dunes</p><p class="card__overlay-meta">Landscape &#183; 2025</p></div></div>
+              <div class="card card--gallery"><div class="card__media">&#x1F338;</div><div class="card__overlay"><p class="card__overlay-title">Spring Bloom</p><p class="card__overlay-meta">Botanical &#183; 2025</p></div></div>
+              <div class="card card--gallery"><div class="card__media">&#x1F303;</div><div class="card__overlay"><p class="card__overlay-title">Night Sky</p><p class="card__overlay-meta">Astrophoto &#183; 2025</p></div></div>
+              <div class="card card--gallery"><div class="card__media">&#x1F985;</div><div class="card__overlay"><p class="card__overlay-title">Wingspan</p><p class="card__overlay-meta">Wildlife &#183; 2025</p></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Overlays & Interaction -->
+      <div id="overlays" class="expo-group"><span class="expo-group__label">Overlays &amp; Interaction</span></div>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Carousel</h2>
+          <p>Scroll-snap based slider. Scrollable via CSS â€” nav buttons and dot indicators.</p>
+        </div>
+        <div class="expo-stack">
+          <div class="carousel">
+            <div class="carousel__track">
+              <div class="carousel__slide" style="background:color-mix(in srgb, var(--sc-color-accent) 10%, var(--sc-color-surface))">
+                <div style="text-align:center;display:grid;gap:var(--sc-space-3)">
+                  <p class="eyebrow">Slide 1 of 3</p>
+                  <h3 style="margin:0;font-size:var(--sc-font-size-2xl)">Build once, ship everywhere</h3>
+                  <p class="muted-text">Token-driven components that survive every theme and framework port.</p>
+                  <div class="sc-cluster" style="justify-content:center">
+                    <button class="btn btn-primary" type="button">Get started</button>
+                    <button class="btn btn-ghost" type="button">Learn more</button>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel__slide" style="background:color-mix(in srgb, var(--sc-color-success) 10%, var(--sc-color-surface))">
+                <div style="text-align:center;display:grid;gap:var(--sc-space-3)">
+                  <p class="eyebrow">Slide 2 of 3</p>
+                  <h3 style="margin:0;font-size:var(--sc-font-size-2xl)">Themes in one attribute</h3>
+                  <p class="muted-text">Switch palettes, density, radius, and mode â€” no CSS rewrites needed.</p>
+                  <div class="sc-cluster" style="justify-content:center">
+                    <span class="badge badge-success">Material</span>
+                    <span class="badge badge-primary">Fluent</span>
+                    <span class="badge badge-muted">Brutalist</span>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel__slide" style="background:color-mix(in srgb, var(--sc-color-warning) 10%, var(--sc-color-surface))">
+                <div style="text-align:center;display:grid;gap:var(--sc-space-3)">
+                  <p class="eyebrow">Slide 3 of 3</p>
+                  <h3 style="margin:0;font-size:var(--sc-font-size-2xl)">Every component, one file</h3>
+                  <p class="muted-text">A single CSS import covers reset, tokens, layout, and all components.</p>
+                  <div class="sc-cluster" style="justify-content:center">
+                    <button class="btn btn-primary" type="button">View components</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel__footer">
+            <div class="carousel__nav">
+              <button class="btn btn-secondary btn-sm" type="button">&#8592; Prev</button>
+              <button class="btn btn-secondary btn-sm" type="button">Next &#8594;</button>
+            </div>
+            <div class="carousel__dots">
+              <button class="carousel__dot is-active" type="button" aria-label="Slide 1"></button>
+              <button class="carousel__dot" type="button" aria-label="Slide 2"></button>
+              <button class="carousel__dot" type="button" aria-label="Slide 3"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Menus And Overlays</h2>
+          <p>Dropdowns, tooltips, modals, and toasts need strong defaults because they break visibly when spacing drifts.</p>
+        </div>
+        <div class="expo-stack expo-stack--loose">
+          <div>
+            <p class="eyebrow" style="margin-bottom:var(--sc-space-3)">Dropdown â€” open state</p>
+            <div class="expo-row" style="align-items:flex-start">
+              <div class="dropdown-anchor" style="position:relative">
+                <button class="btn btn-secondary" type="button">Actions &#9660;</button>
+                <div class="dropdown" style="position:absolute;top:calc(100% + var(--sc-space-1));left:0;z-index:10;min-width:10rem">
+                  <button class="dropdown-item" type="button">Open</button>
+                  <button class="dropdown-item" type="button">Duplicate</button>
+                  <div class="dropdown-divider"></div>
+                  <button class="dropdown-item danger" type="button">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="eyebrow" style="margin-bottom:var(--sc-space-3)">Modal â€” standard</p>
+            <div class="modal" style="position:static;box-shadow:var(--sc-shadow-lg)">
+              <div class="modal-header">
+                <span>Confirm action</span>
+                <button class="btn btn-ghost btn-icon btn-sm" aria-label="Close"><div data-icon="x"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></></div></button>
+              </div>
+              <div class="modal-body">
+                <p class="modal-copy">Are you sure you want to delete this item? This action cannot be undone.</p>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-ghost btn-sm" type="button">Cancel</button>
+                <button class="btn btn-danger btn-sm" type="button">Delete</button>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="eyebrow" style="margin-bottom:var(--sc-space-3)">Modal â€” danger</p>
+            <div class="modal modal--danger" style="position:static;box-shadow:var(--sc-shadow-lg)">
+              <div class="modal-header">
+                <span>Delete workspace?</span>
+                <button class="btn btn-ghost btn-icon btn-sm" aria-label="Close"><div data-icon="x"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></></div></button>
+              </div>
+              <div class="modal-body">
+                <p class="modal-copy">This will permanently remove the workspace, its projects, and all related activity history.</p>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-ghost btn-sm" type="button">Cancel</button>
+                <button class="btn btn-danger btn-sm" type="button">Delete workspace</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Tooltips</h2>
+          <p>CSS-only tooltips via <code>data-tooltip</code> and <code>data-placement</code>. No JavaScript required.</p>
+        </div>
+        <div class="expo-stack">
+          <div class="expo-row" style="justify-content:center;padding:var(--sc-space-7) 0">
+            <span class="tooltip-anchor" data-tooltip="Top â€” save your changes" data-placement="top"><button class="btn btn-secondary" type="button">Top</button></span>
+            <span class="tooltip-anchor" data-tooltip="Bottom â€” more details below" data-placement="bottom"><button class="btn btn-secondary" type="button">Bottom</button></span>
+            <span class="tooltip-anchor" data-tooltip="Left â€” previous step" data-placement="left"><button class="btn btn-secondary" type="button">Left</button></span>
+            <span class="tooltip-anchor" data-tooltip="Right â€” next step" data-placement="right"><button class="btn btn-secondary" type="button">Right</button></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Accordion</h2>
+          <p>Collapsible content panels. One open at a time, chevron rotates to signal state.</p>
+        </div>
+        <div class="accordion"><div class="accordion-item"><button class="accordion-trigger is-open" type="button"><span class="accordion-trigger__label">What is SuperCSS?</span></button>
+            <div class="accordion-content">SuperCSS is a token-driven CSS design system. Every component consumes <code>--sc-*</code> custom properties so themes, palettes, and density scales mutate the visual output without touching markup.</div></div>
+          <div class="accordion-item"><button class="accordion-trigger" type="button"><span class="accordion-trigger__label">How does theming work?</span></button>
+            <div class="accordion-content">Set <code>data-theme</code>, <code>data-palette</code>, <code>data-mode</code>, <code>data-density</code>, or <code>data-radius</code> on the <code>html</code> element. The mixer layer rewrites the token values and every component updates instantly.</div></div>
+          <div class="accordion-item"><button class="accordion-trigger" type="button"><span class="accordion-trigger__label">Can I use this with React or Vue?</span></button>
+            <div class="accordion-content">Yes. SuperCSS is framework-agnostic CSS. The Angular template is one port â€” the same class contracts work in React, Vue, Svelte, or plain HTML. Only the state wiring changes per framework.</div></div></div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Empty State</h2>
+          <p>Empty states should center properly and breathe without random margins.</p>
+        </div>
+        <div class="panel">
+          <div class="empty-state">
+            <div class="empty-state-icon">&#x1F50D;</div>
+            <p class="empty-state-title">No results found</p>
+            <p class="empty-state-copy">Try adjusting your filters or search terms.</p>
+            <button class="btn btn-primary btn-sm" type="button">Clear filters</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data Display -->
+      <div id="data" class="expo-group"><span class="expo-group__label">Data Display</span></div>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Table</h2>
+          <p>Three modifier variants â€” lined, striped, and compact â€” on the same base contract.</p>
+        </div>
+        <div class="expo-stack expo-stack--loose">
+          <div class="panel">
+            <div class="panel-header">
+              <div><h3>Lined</h3><p class="muted-text"><code>table--lined</code></p></div>
+              <button class="btn btn-ghost btn-sm" type="button">Export</button>
+            </div>
+            <div class="table-wrap">
+              <table class="table table--lined">
+                <thead><tr><th>Order</th><th>Customer</th><th>Status</th><th>Total</th><th>Updated</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>#1042</strong></td><td>Jane Doe</td><td><span class="badge badge-success">Paid</span></td><td>$249.00</td><td>Today</td></tr>
+                  <tr><td><strong>#1041</strong></td><td>Ravi Singh</td><td><span class="badge badge-warning">Pending</span></td><td>$89.00</td><td>Yesterday</td></tr>
+                  <tr><td><strong>#1040</strong></td><td>Mina Park</td><td><span class="badge badge-muted">Draft</span></td><td>$149.00</td><td>May 12</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-header"><div><h3>Striped</h3><p class="muted-text"><code>table--striped</code></p></div></div>
+            <div class="table-wrap">
+              <table class="table table--striped">
+                <thead><tr><th>Member</th><th>Role</th><th>Status</th><th>Joined</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Alice Chen</strong></td><td>Admin</td><td><span class="badge badge-success">Active</span></td><td>Jan 2024</td></tr>
+                  <tr><td><strong>Ben Okafor</strong></td><td>Editor</td><td><span class="badge badge-success">Active</span></td><td>Mar 2024</td></tr>
+                  <tr><td><strong>Sara Liu</strong></td><td>Viewer</td><td><span class="badge badge-muted">Inactive</span></td><td>Jun 2024</td></tr>
+                  <tr><td><strong>Tom Brandt</strong></td><td>Editor</td><td><span class="badge badge-warning">Pending</span></td><td>Aug 2024</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-header"><div><h3>Accent</h3><p class="muted-text"><code>table--accent</code></p></div></div>
+            <div class="table-wrap">
+              <table class="table table--accent">
+                <thead><tr><th>Plan</th><th>Price</th><th>Users</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>Starter</td><td>$9 / mo</td><td>Up to 5</td><td><span class="badge badge-success">Active</span></td></tr>
+                  <tr><td>Pro</td><td>$29 / mo</td><td>Up to 20</td><td><span class="badge badge-primary">Trial</span></td></tr>
+                  <tr><td>Team</td><td>$79 / mo</td><td>Unlimited</td><td><span class="badge badge-muted">Inactive</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-header"><div><h3>Compact</h3><p class="muted-text"><code>table--compact</code></p></div></div>
+            <div class="table-wrap">
+              <table class="table table--compact">
+                <thead><tr><th>Event</th><th>Source</th><th>Severity</th><th>Time</th></tr></thead>
+                <tbody>
+                  <tr><td>Login failed</td><td>identity check</td><td><span class="badge badge-danger">High</span></td><td>09:41:02</td></tr>
+                  <tr><td>Deploy triggered</td><td>ci-runner</td><td><span class="badge badge-primary">Info</span></td><td>09:38:55</td></tr>
+                  <tr><td>Rate limit hit</td><td>api-gateway</td><td><span class="badge badge-warning">Medium</span></td><td>09:35:12</td></tr>
+                  <tr><td>Cache cleared</td><td>cache-service</td><td><span class="badge badge-muted">Low</span></td><td>09:30:00</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Bar Chart</h2>
+          <p>CSS-only bar charts. Bar fill driven by <code>--bar-h</code> inline custom property.</p>
+        </div>
+        <div class="expo-stack expo-stack--loose">
+          <div class="panel">
+            <div class="panel-header"><div><h3>Monthly Revenue</h3><p class="muted-text">Vertical â€” accent fill.</p></div></div>
+            <div class="panel-body">
+              <div class="bar-chart__header">
+                <div><p class="bar-chart__title">Monthly Revenue</p><p class="bar-chart__subtitle">Jan â€“ Jun 2025 Â· USD</p></div>
+                <span class="badge badge-success badge-dot">Live</span>
+              </div>
+              <div class="bar-chart">
+                <div class="bar-chart__col"><span class="bar-chart__value">$18k</span><div class="bar-chart__bar" style="--bar-h:45%"></div><span class="bar-chart__label">Jan</span></div>
+                <div class="bar-chart__col"><span class="bar-chart__value">$22k</span><div class="bar-chart__bar" style="--bar-h:55%"></div><span class="bar-chart__label">Feb</span></div>
+                <div class="bar-chart__col"><span class="bar-chart__value">$31k</span><div class="bar-chart__bar" style="--bar-h:77%"></div><span class="bar-chart__label">Mar</span></div>
+                <div class="bar-chart__col"><span class="bar-chart__value">$28k</span><div class="bar-chart__bar" style="--bar-h:70%"></div><span class="bar-chart__label">Apr</span></div>
+                <div class="bar-chart__col"><span class="bar-chart__value">$40k</span><div class="bar-chart__bar" style="--bar-h:100%"></div><span class="bar-chart__label">May</span></div>
+                <div class="bar-chart__col"><span class="bar-chart__value">$35k</span><div class="bar-chart__bar" style="--bar-h:87%"></div><span class="bar-chart__label">Jun</span></div>
+              </div>
+              <p class="bar-chart__caption">Peak in May Â· +122% vs Jan</p>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-header"><div><h3>Traffic by Source</h3><p class="muted-text">Horizontal â€” same contract, width instead of height.</p></div></div>
+            <div class="panel-body">
+              <div class="bar-chart__header"><div><p class="bar-chart__title">Traffic by Source</p><p class="bar-chart__subtitle">Last 30 days Â· % of total sessions</p></div></div>
+              <div class="bar-chart bar-chart--horizontal">
+                <div class="bar-chart__col"><span class="bar-chart__label">Organic</span><div class="bar-chart__bar" style="--bar-h:82%"></div><span class="bar-chart__value">82%</span></div>
+                <div class="bar-chart__col"><span class="bar-chart__label">Referral</span><div class="bar-chart__bar" style="--bar-h:54%"></div><span class="bar-chart__value">54%</span></div>
+                <div class="bar-chart__col"><span class="bar-chart__label">Direct</span><div class="bar-chart__bar" style="--bar-h:38%"></div><span class="bar-chart__value">38%</span></div>
+                <div class="bar-chart__col"><span class="bar-chart__label">Social</span><div class="bar-chart__bar" style="--bar-h:21%"></div><span class="bar-chart__value">21%</span></div>
+              </div>
+              <p class="bar-chart__caption">Organic leads Â· Social underperforming vs last period</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Pie Chart</h2>
+          <p>CSS-only pie via <code>conic-gradient</code>. Slices defined by cumulative percentage stops.</p>
+        </div>
+        <div class="panel">
+          <div class="panel-body">
+            <div class="bar-chart__header">
+              <div><p class="bar-chart__title">Revenue by Category</p><p class="bar-chart__subtitle">Q2 2025 Â· % of total</p></div>
+            </div>
+            <div class="pie-chart__wrap">
+              <div class="pie-chart"></div>
+              <ul class="pie-chart__legend">
+                <li class="pie-chart__legend-item"><span class="pie-chart__dot" style="--dot-color:var(--sc-color-accent)"></span><span class="pie-chart__legend-label">SaaS</span><span class="pie-chart__legend-value">42%</span></li>
+                <li class="pie-chart__legend-item"><span class="pie-chart__dot" style="--dot-color:var(--sc-color-success)"></span><span class="pie-chart__legend-label">Services</span><span class="pie-chart__legend-value">28%</span></li>
+                <li class="pie-chart__legend-item"><span class="pie-chart__dot" style="--dot-color:var(--sc-color-warning)"></span><span class="pie-chart__legend-label">Licensing</span><span class="pie-chart__legend-value">18%</span></li>
+                <li class="pie-chart__legend-item"><span class="pie-chart__dot" style="--dot-color:var(--sc-color-danger)"></span><span class="pie-chart__legend-label">Other</span><span class="pie-chart__legend-value">12%</span></li>
+              </ul>
+            </div>
+            <p class="bar-chart__caption">SaaS dominates Â· Services growing +8% QoQ</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Developer Utilities -->
+      <div id="dev" class="expo-group"><span class="expo-group__label">Developer Utilities</span></div>
+
+      <section class="expo-section">
+        <div class="expo-section-header">
+          <h2>Keyboard And Code</h2>
+          <p>Inline code, keyboard hints, copy rows, and code blocks should survive every theme.</p>
+        </div>
+        <div class="expo-stack">
+          <div class="expo-row">
+            <span class="muted-text">Save <kbd class="kbd">Ctrl</kbd> <kbd class="kbd">S</kbd></span>
+            <span class="muted-text">Search <kbd class="kbd">Ctrl</kbd> <kbd class="kbd">K</kbd></span>
+            <span class="muted-text">Close <kbd class="kbd">Esc</kbd></span>
+          </div>
+          <div class="copy-row">
+            <code>npm run build</code>
+            <button class="btn btn-secondary btn-sm" type="button">Copy command</button>
+          </div>
+          <div class="code-card">
+            <pre><code>html[data-theme='material'] {
+  --sc-color-accent: #9b83ff;
+  --sc-radius-lg: 1.25rem;
+}</code></pre>
+            <button class="btn btn-ghost btn-sm" type="button">Copy selector</button>
+          </div>
+          <hr class="divider" />
+          <div class="divider-label">or continue with</div>
+          <hr class="divider" />
+        </div>
+      </section>
+
+    </div>
+  </div>
